@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Premium Extra Sauce Design System - Sauce-themed colors with sophisticated gradients */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Brand Colors - Sauce Theme */
+    --background: 0 0% 99%;
+    --foreground: 0 0% 8%;
 
+    /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 8%;
 
+    /* Popover System */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Rich Sauce Red */
+    --primary: 14 85% 55%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 14 90% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Orange */
+    --secondary: 25 95% 60%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Warm Neutrals */
+    --muted: 20 10% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Deep Sauce */
+    --accent: 8 75% 45%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders & Inputs */
+    --border: 20 15% 90%;
+    --input: 20 15% 90%;
+    --ring: 14 85% 55%;
 
-    --radius: 0.5rem;
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Premium Shadows */
+    --shadow-elegant: 0 20px 50px -12px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +123,41 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-4 rounded-2xl font-semibold text-lg shadow-elegant hover:scale-105 transition-all duration-300 hover:shadow-glow;
+  }
+
+  .btn-ghost-premium {
+    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-2xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  /* Premium Card Styles */
+  .card-premium {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-3xl p-8 shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-2;
+  }
+
+  .card-testimonial {
+    @apply bg-gradient-to-br from-card to-muted/30 border border-primary/20 rounded-3xl p-8 shadow-card hover:shadow-glow hover:border-primary/40 transition-all duration-500;
+  }
+
+  /* Animated Underlines */
+  .link-animated {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+
+  /* Container */
+  .container-premium {
+    @apply container mx-auto px-6 lg:px-8;
   }
 }
