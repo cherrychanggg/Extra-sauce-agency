@@ -24,28 +24,35 @@ const BookingPage = () => {
   const testimonials = [
     {
       quote: "We've had old prospects come back to book a demo and thought we were a completely different company.",
-      author: "Vik Sejal",
+      author: "Vik Soni",
       title: "Head Of Sales",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      avatar: "/viksoni.png"
     },
     {
       quote: "I just want to say, I have a good ghostwriter.",
-      author: "Nadia Isani", 
+      author: "Nadia Irani", 
       title: "CEO & Founder",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+      avatar: "/nadiairani.png"
     },
     {
       quote: "Manny came in and helped us streamline our social media distribution system and kept us up to date with the best strategies. We've seen massive growth the last 6 months.",
       author: "Alex Salois",
       title: "Senior Content Manager", 
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      avatar: "/alexsalois.png"
     },
     {
       quote: "Manny's expertise & dedication have been instrumental in crafting a compelling strategic narrative, and generating insightful content on LinkedIn that drives leads.",
-      author: "Sharlene Dumela",
+      author: "Sharlene Gumbs ",
       title: "CEO & Founder",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    }
+      avatar: "/sharlenegumbs.png"
+    },
+    {
+      quote: "I've been able to connect with the exact decision-makers in the companies we want to work with - The relationship is so much better this way than a cold approach.",
+      author: "Phillip Lunn ",
+      title: "CEO & Founder",
+      avatar: "/philliplunn.png"
+    },
+
   ];
 
   // Auto-scroll testimonials
@@ -196,7 +203,7 @@ const BookingPage = () => {
 
               {/* Testimonial Section - Within Left Column */}
               <div className="mb-8">
-                <div className="relative bg-white/30 backdrop-blur-sm rounded-2xl p-6 border border-border/30" style={{background: 'linear-gradient(135deg, #ff6b35, #f7931e)'}}>
+                <div className="relative bg-white/30 backdrop-blur-sm rounded-2xl p-6 border border-border/30" style={{background: 'linear-gradient(135deg, #ff6b35, #f7931e)', height: '220px', overflow: 'hidden'}}>
                   {/* Navigation Arrows */}
                   <button
                     onClick={prevTestimonial}
@@ -274,13 +281,6 @@ const BookingPage = () => {
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                       <Video className="w-4 h-4" />
                       <span>Web conferencing details provided upon confirmation</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm font-medium">
-                      <Calendar className="w-4 h-4" />
-                      <span>2:00pm - 2:45pm, Wednesday, July 9, 2025</span>
-                    </div>
-                    <div className="text-xs text-muted-foreground mt-1">
-                      Eastern Time - US & Canada
                     </div>
                   </div>
                 </div>
@@ -412,11 +412,6 @@ const BookingPage = () => {
                     Schedule Event
                   </Button>
 
-                  <div className="text-center">
-                    <button type="button" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                      Cookie settings
-                    </button>
-                  </div>
                 </form>
               </div>
             </div>
