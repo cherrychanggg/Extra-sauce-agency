@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import ExecutiveGhostwriting from "./pages/services/ExecutiveGhostwriting";
 import VideoContentEngine from "./pages/services/VideoContentEngine";
 import ContentLedGTMCoaching from "./pages/services/ContentLedGTMCoaching";
+import BookingPage from "./pages/BookingPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/services/executive-ghostwriting" element={<ExecutiveGhostwriting />} />
           <Route path="/services/video-content-engine" element={<VideoContentEngine />} />
           <Route path="/services/content-led-gtm-coaching" element={<ContentLedGTMCoaching />} />
+          <Route path="/book-strategy-call" element={<BookingPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -64,9 +64,11 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25">
-              Strategy Call
-            </Button>
+            <Link to="/book-strategy-call">
+              <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25">
+                Strategy Call
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,9 +105,11 @@ const Navigation = () => {
                   </Link>
                 )
               ))}
-              <Button className="btn-hero mt-4">
-                Strategy Call
-              </Button>
+              <Link to="/book-strategy-call">
+                <Button className="btn-hero mt-4">
+                  Strategy Call
+                </Button>
+              </Link>
             </div>
           </div>
         )}

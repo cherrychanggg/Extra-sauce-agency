@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Process = () => {
   const processSteps = [
@@ -96,9 +97,11 @@ const Process = () => {
               <p>2. Learn how to implement & the value of founder-led marketing</p>
               <p>3. Get resources on building a B2B content machine</p>
             </div>
-            <button className="btn-hero">
-              Get On A Strategy Call With Manny
-            </button>
+            <Link to="/book-strategy-call">
+              <button className="btn-hero">
+                Get On A Strategy Call With Manny
+              </button>
+            </Link>
           </div>
         </div>
       </div>
