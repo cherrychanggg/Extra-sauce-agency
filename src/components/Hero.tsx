@@ -4,10 +4,30 @@ import { ArrowDown } from "lucide-react";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-subtle">
-      {/* Enhanced Background Gradient Orbs with Float Animation */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl float-animation"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/25 rounded-full blur-3xl float-animation-delayed"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/20 rounded-full blur-2xl animate-glow-pulse"></div>
+      {/* Modern Geometric Background Pattern */}
+      <div className="absolute inset-0">
+        {/* Animated Grid Pattern */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-primary/20 rounded-3xl rotate-45 animate-spin-slow"></div>
+          <div className="absolute top-3/4 right-1/4 w-24 h-24 border border-secondary/20 rounded-2xl rotate-12 animate-bounce-gentle"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-accent/10 rounded-full animate-pulse"></div>
+        </div>
+        
+        {/* Subtle Mesh Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+        
+        {/* Modern Line Pattern */}
+        <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1"/>
+              <stop offset="100%" stopColor="hsl(var(--secondary))" stopOpacity="0.1"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,50 Q25,20 50,50 T100,50" stroke="url(#lineGradient)" strokeWidth="0.5" fill="none" className="animate-pulse"/>
+          <path d="M0,70 Q25,40 50,70 T100,70" stroke="url(#lineGradient)" strokeWidth="0.3" fill="none" className="animate-pulse" style={{animationDelay: '1s'}}/>
+        </svg>
+      </div>
       
       <div className="container-premium text-center relative z-10 pt-20">
         <div className="max-w-5xl mx-auto animate-fade-in">
