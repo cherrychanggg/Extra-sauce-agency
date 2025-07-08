@@ -323,7 +323,7 @@ const BookingPage = () => {
         </div>
       </div>
 
-      {/* Testimonial Section */}
+      {/* Testimonial Section - Auto-scrolling */}
       <section className="section-padding bg-gradient-to-r from-primary/90 via-secondary/90 to-accent/90">
         <div className="container-premium">
           <div className="max-w-4xl mx-auto">
@@ -331,7 +331,7 @@ const BookingPage = () => {
               <div className="flex items-center gap-8">
                 <div className="w-24 h-24 bg-white rounded-full overflow-hidden flex-shrink-0">
                   <img 
-                    src="/viksoni.png" 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
                     alt="Testimonial" 
                     className="w-full h-full object-cover"
                   />
@@ -357,21 +357,6 @@ const BookingPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-background">
-        <div className="container-premium text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            See The Sauce Recipe™ Live
-          </h2>
-          <p className="text-xl text-primary mb-8 max-w-2xl mx-auto">
-            Discover why executive-led content is outperforming traditional demand gen in 2025.
-          </p>
-          <Button variant="outline" className="px-8 py-4 text-lg">
-            Schedule Conversation →
-          </Button>
         </div>
       </section>
 
