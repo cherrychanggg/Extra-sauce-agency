@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow">
-                  <span className="text-primary-foreground font-bold text-xl">ES</span>
+                  <img src="/sauce.png" alt="Sauce Logo" className="w-7 h-7" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-xl text-accent-foreground">EXTRA SAUCE</span>

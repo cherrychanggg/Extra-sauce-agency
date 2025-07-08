@@ -42,28 +42,11 @@ const Hero = () => {
           </div>
 
           {/* Social Proof */}
-          <div className="animate-slide-in-right delay-500">
-            <p className="text-sm font-medium text-muted-foreground mb-6 uppercase tracking-wider">
-              Trusted by 20+ High-Growth B2B & DTC Companies
-            </p>
-            <div className="flex items-center justify-center gap-8 lg:gap-12 opacity-60 hover:opacity-100 transition-opacity duration-500">
-              {/* Company logos would go here - using placeholder divs */}
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div 
-                  key={i} 
-                  className="w-20 h-12 bg-muted/50 rounded-lg flex items-center justify-center border border-border/50"
-                >
-                  <span className="text-xs font-medium text-muted-foreground">Logo</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Removed redundant logo placeholder section */}
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-muted-foreground" />
-        </div>
+        {/* Removed animated down arrow for a cleaner look */}
       </div>
     </section>
   );

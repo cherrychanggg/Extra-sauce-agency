@@ -35,15 +35,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow animate-glow-pulse">
-              <span className="text-primary-foreground font-bold text-xl">ES</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-xl text-foreground">EXTRA SAUCE</span>
-              <span className="text-xs text-muted-foreground font-medium tracking-wider">
-                AGENCY
-              </span>
-            </div>
+            <img src="/chili.png" alt="Sauce Logo" className="w-20 h-20" />
+            <img src="/sauce.png" alt="Sauce Logo" className="w-60 h-60" />
           </Link>
 
           {/* Desktop Navigation */}
