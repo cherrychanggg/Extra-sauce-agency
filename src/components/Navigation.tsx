@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,8 +17,8 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "The Sauce Recipe", href: "#sauce-recipe" },
-    { name: "Services", href: "#services" },
+    { name: "The Sauce Recipe", href: "/the-sauce-recipe" },
+    { name: "Services", href: "/services" },
     { name: "Success Stories", href: "#success-stories" },
     { name: "Resources", href: "#resources" },
   ];
@@ -33,7 +34,7 @@ const Navigation = () => {
       <div className="container-premium">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow animate-glow-pulse">
               <span className="text-primary-foreground font-bold text-xl">ES</span>
             </div>
@@ -43,18 +44,28 @@ const Navigation = () => {
                 AGENCY
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated"
-              >
-                {item.name}
-              </a>
+              item.href.startsWith('#') ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -79,14 +90,25 @@ const Navigation = () => {
           <div className="lg:hidden py-6 border-t border-border/50">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <Button className="btn-hero mt-4">
                 Strategy Call
