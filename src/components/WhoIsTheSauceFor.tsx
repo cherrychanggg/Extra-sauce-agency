@@ -94,13 +94,6 @@ const WhoIsTheSauceFor = () => {
                   <div className={`text-4xl transition-transform duration-300 ${hoveredCard === index ? 'scale-110' : ''}`}>
                     {card.icon}
                   </div>
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-lg transition-all duration-300 ${
-                    hoveredCard === index 
-                      ? 'bg-primary text-primary-foreground scale-110' 
-                      : 'bg-primary/10 text-primary'
-                  }`}>
-                    {index + 1}
-                  </div>
                 </div>
                 
                 {/* Title with Highlight */}
@@ -117,13 +110,6 @@ const WhoIsTheSauceFor = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {card.description}
                 </p>
-
-                {/* Check Icon */}
-                <div className="flex items-center text-primary">
-                  <CheckCircle className={`w-5 h-5 mr-2 transition-all duration-300 ${hoveredCard === index ? 'scale-110' : ''}`} />
-                  <span className="text-sm font-medium">Perfect fit indicator</span>
-                  <ArrowRight className={`w-4 h-4 ml-auto transition-all duration-300 ${hoveredCard === index ? 'translate-x-1' : ''}`} />
-                </div>
               </div>
 
               {/* Hover Effect Border */}
