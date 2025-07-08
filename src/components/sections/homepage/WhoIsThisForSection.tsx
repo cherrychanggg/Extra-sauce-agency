@@ -9,6 +9,9 @@ const WhoIsThisForSection = () => {
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
             {whoIsThisForSection.headline}
           </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            {whoIsThisForSection.subheadline}
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -28,10 +31,6 @@ const WhoIsThisForSection = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 {company.description}
               </p>
-              
-              <div className="inline-block bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">
-                {company.metrics}
-              </div>
             </div>
           ))}
         </div>

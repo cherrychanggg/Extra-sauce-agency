@@ -1,21 +1,21 @@
 import { ArrowRight } from "lucide-react";
-import { dreamlandProcessSection } from "@/content/homepage";
+import { processSection } from "@/content/homepage";
 
-const DreamlandProcessSection = () => {
+const ProcessSection = () => {
   return (
     <section className="section-padding bg-background">
       <div className="container-premium">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            {dreamlandProcessSection.headline}
+            {processSection.headline}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {dreamlandProcessSection.description}
+            {processSection.description}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {dreamlandProcessSection.steps.map((step, index) => (
+          {processSection.steps.map((step, index) => (
             <div 
               key={index}
               className="text-center group"
@@ -36,7 +36,7 @@ const DreamlandProcessSection = () => {
                 {step.duration}
               </div>
               
-              {index < dreamlandProcessSection.steps.length - 1 && (
+              {index < processSection.steps.length - 1 && (
                 <div className="hidden lg:block absolute top-10 -right-4 text-primary/30">
                   <ArrowRight className="w-6 h-6" />
                 </div>
@@ -49,4 +49,4 @@ const DreamlandProcessSection = () => {
   );
 };
 
-export default DreamlandProcessSection;
+export default ProcessSection; 

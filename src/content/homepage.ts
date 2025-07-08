@@ -14,28 +14,38 @@ export const trustedBySection = {
 };
 
 export const whoIsThisForSection = {
-  headline: "A Perfect Fit For B2B Companies Ready To Grow Through Content",
+  headline: "Who Is The Sauce For?",
+  subheadline: "Our approach is for B2B companies that want to align their GTM strategy for today's buyer.",
   companies: [
     {
-      title: "SaaS Startups",
-      description: "Early-stage companies looking to establish thought leadership and build brand awareness in competitive markets.",
-      metrics: "$1M-$10M ARR"
+      title: "You have an expert on your team to leverage",
+      description: "This is typically the CEO or CTO of the organization or someone who has expertise and deep knowledge in their field."
     },
     {
-      title: "Growing B2B Companies", 
-      description: "Established businesses ready to scale their content efforts and systematize their marketing approach.",
-      metrics: "$10M-$50M ARR"
+      title: "Your seeing unsustainable growth with only outbound efforts",
+      description: "Hiring another SDR costs 60K+ annually plus expenses for training, tradeshows, and tech, which creates high acquisition costs."
     },
     {
-      title: "Enterprise Organizations",
-      description: "Large companies seeking to humanize their brand and leverage executive expertise for market positioning.",
-      metrics: "$50M+ ARR"
+      title: "Your buyer prefers to do their own research",
+      description: "Research shows ~80% of the buyer's journey is done independently and today's buyer is influenced by social media & communities."
+    },
+    {
+      title: "Companies that are looking to stand apart from the crowd",
+      description: "Your prospect got 10 cold emails and 10 LinkedIn connect requests today. There are too many options in every category now."
+    },
+    {
+      title: "Your selling B2B products to sophisticated buyers",
+      description: "Sophisticated buyers require trust and market authority, especially when considering a $20K average contract value."
+    },
+    {
+      title: "Companies that value the exponential gains from brand",
+      description: "When you hear CRM, you think of Hubspot - that is the value of being a category leader through executive content."
     }
   ]
 };
 
-export const dreamlandProcessSection = {
-  headline: "From Idea to Implementation: The Dreamland Process",
+export const processSection = {
+  headline: "From Idea to Implementation: The Process",
   description: "Our proven methodology transforms your vision into reality through strategic planning, expert execution, and measurable results.",
   steps: [
     {
@@ -106,24 +116,16 @@ export const faqSection = {
   description: "Everything you need to know about our services and process.",
   questions: [
     {
-      question: "How quickly will I see results?",
-      answer: "Most clients start seeing increased engagement within 30 days and qualified leads within 60-90 days. However, building thought leadership is a long-term strategy that compounds over time."
+      question: "How long until we should expect results?",
+      answer: "You will be able to generate 11-16 high-converting leads in your inbox every month after generating an initial realm of influence anywhere from 2-5 months and the client's product typical sales cycle plays a role."
     },
     {
-      question: "Do you work with companies outside of B2B SaaS?",
-      answer: "While we specialize in B2B SaaS, we also work with professional services, consulting firms, and other B2B companies. Our strategies are adaptable to most business models."
+      question: "What is the difference between founder-led marketing & personal branding?",
+      answer: "Founder-led marketing focuses on building business value and driving pipeline through strategic content, while personal branding is more about individual reputation. We align your personal expertise with business goals."
     },
     {
-      question: "What makes your approach different?",
-      answer: "We focus on founder-led content that builds authentic relationships and drives pipeline. Unlike traditional agencies, we align content with your sales process and business goals."
-    },
-    {
-      question: "How much time commitment is required from our team?",
-      answer: "We designed our process to be efficient. Most clients spend 2-4 hours per month on content creation and strategy calls. We handle the heavy lifting."
-    },
-    {
-      question: "Can you help with our existing content strategy?",
-      answer: "Absolutely! We can audit your current approach and optimize what's working while filling gaps in your content ecosystem."
+      question: "Why should we work with your agency for B2B content?",
+      answer: "We've built our own agency using the same SAUCE™ Recipe we share with clients. We understand the challenges of B2B growth and have proven systems that work across multiple industries."
     }
   ]
 };

@@ -3,7 +3,7 @@ import HeroSection from "@/components/sections/homepage/HeroSection";
 import TrustedBySection from "@/components/sections/homepage/TrustedBySection";
 import WhoIsThisForSection from "@/components/sections/homepage/WhoIsThisForSection";
 import Testimonials from "@/components/Testimonials";
-import DreamlandProcessSection from "@/components/sections/homepage/DreamlandProcessSection";
+import ProcessSection from "@/components/sections/homepage/ProcessSection";
 import ServicesOverviewSection from "@/components/sections/homepage/ServicesOverviewSection";
 import FAQSection from "@/components/sections/homepage/FAQSection";
 import CTASection from "@/components/sections/homepage/CTASection";
@@ -17,7 +17,7 @@ const HomePage = () => {
       <TrustedBySection />
       <WhoIsThisForSection />
       <Testimonials />
-      <DreamlandProcessSection />
+      <ProcessSection />
       <ServicesOverviewSection />
       <FAQSection />
       <CTASection />
