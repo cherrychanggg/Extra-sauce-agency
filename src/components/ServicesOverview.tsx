@@ -60,13 +60,13 @@ const ServicesOverview = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`card-premium p-8 group hover:scale-[1.03] hover:shadow-2xl transition-all duration-500 relative overflow-hidden bg-gradient-to-br ${service.bgColor} border-2 ${service.borderColor} hover:border-primary/40`}
+              className={`card-premium p-8 group hover:scale-[1.03] hover:shadow-2xl transition-all duration-500 relative overflow-hidden bg-gradient-to-br ${service.bgColor} border-2 ${service.borderColor} hover:border-primary/40 flex flex-col justify-between h-full`}
             >
-              <div className="relative z-10">
+              <div className="flex-1 flex flex-col justify-between">
                 {/* Header */}
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -91,15 +91,15 @@ const ServicesOverview = () => {
                     ))}
                   </ul>
                 </div>
-
-                {/* CTA */}
-                <Link to={service.link}>
-                  <Button className="w-full btn-hero group focus-enhanced">
-                    <span className="group-hover:scale-105 transition-transform duration-200">Learn more</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-                  </Button>
-                </Link>
               </div>
+
+              {/* CTA */}
+              <Link to={service.link} className="mt-auto">
+                <Button className="w-full btn-hero group focus-enhanced">
+                  <span className="group-hover:scale-105 transition-transform duration-200">Learn more</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
