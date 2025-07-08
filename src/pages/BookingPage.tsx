@@ -188,6 +188,63 @@ const BookingPage = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
                           </div>
                         </div>
+                       ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial Section - Within Left Column */}
+              <div className="mb-8">
+                <div className="relative bg-white/30 backdrop-blur-sm rounded-2xl p-6 border border-border/30" style={{background: 'linear-gradient(135deg, #ff6b35, #f7931e)'}}>
+                  {/* Navigation Arrows */}
+                  <button
+                    onClick={prevTestimonial}
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+                    aria-label="Previous testimonial"
+                  >
+                    <ChevronLeft className="w-4 h-4 text-white" />
+                  </button>
+                  
+                  <button
+                    onClick={nextTestimonial}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+                    aria-label="Next testimonial"
+                  >
+                    <ChevronRight className="w-4 h-4 text-white" />
+                  </button>
+
+                  <div className="px-6">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 bg-white rounded-full overflow-hidden flex-shrink-0">
+                        <img 
+                          src={testimonials[currentTestimonial].avatar}
+                          alt={testimonials[currentTestimonial].author}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <blockquote className="text-lg font-semibold text-white mb-2 leading-tight">
+                          "{testimonials[currentTestimonial].quote}"
+                        </blockquote>
+                        <div className="text-white/90 text-sm font-medium">
+                          {testimonials[currentTestimonial].author}<br />
+                          <span className="text-white/70 text-xs">{testimonials[currentTestimonial].title}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Pagination dots */}
+                    <div className="flex justify-center gap-2">
+                      {testimonials.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentTestimonial(index)}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                            index === currentTestimonial ? 'bg-white' : 'bg-white/50'
+                          }`}
+                          aria-label={`Go to testimonial ${index + 1}`}
+                        />
                       ))}
                     </div>
                   </div>
@@ -367,64 +424,6 @@ const BookingPage = () => {
         </div>
       </div>
 
-      {/* Testimonial Section - Auto-scrolling with Navigation */}
-      <section className="section-padding" style={{background: 'linear-gradient(135deg, #ff6b35, #f7931e)'}}>
-        <div className="container-premium">
-          <div className="max-w-5xl mx-auto">
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/20">
-              {/* Navigation Arrows */}
-              <button
-                onClick={prevTestimonial}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft className="w-6 h-6 text-white" />
-              </button>
-              
-              <button
-                onClick={nextTestimonial}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight className="w-6 h-6 text-white" />
-              </button>
-
-              <div className="flex items-center gap-8 px-8">
-                <div className="w-20 h-20 lg:w-24 lg:h-24 bg-white rounded-full overflow-hidden flex-shrink-0">
-                  <img 
-                    src={testimonials[currentTestimonial].avatar}
-                    alt={testimonials[currentTestimonial].author}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1">
-                  <blockquote className="text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-4 leading-tight">
-                    "{testimonials[currentTestimonial].quote}"
-                  </blockquote>
-                  <div className="text-white/90 font-semibold">
-                    {testimonials[currentTestimonial].author}<br />
-                    <span className="text-white/70 text-sm">{testimonials[currentTestimonial].title}</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Pagination dots */}
-              <div className="flex justify-center gap-2 mt-8">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial ? 'bg-white' : 'bg-white/50'
-                    }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
       
