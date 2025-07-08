@@ -51,6 +51,20 @@ const ScrollingLogos = () => {
 
       <div className="container-premium relative z-10">
 
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 tracking-tight">
+            Trusted by{" "}
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              20+ High-Growth
+            </span>{" "}
+            Companies
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            From startups to enterprise, we help B2B and DTC companies build profitable content engines.
+          </p>
+        </div>
+
         {/* Logo Grid - Modern Layout */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center max-w-6xl mx-auto mb-12">
           {logos.map((logo, idx) => (
