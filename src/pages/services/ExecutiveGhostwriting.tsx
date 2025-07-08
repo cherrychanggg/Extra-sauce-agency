@@ -90,16 +90,47 @@ const ExecutiveGhostwriting = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding pt-32 bg-gradient-subtle relative overflow-hidden">
+      <section className="section-padding pt-32 bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-secondary/90 to-accent/90"></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        
+        <div className="container-premium relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+              Executive <span className="text-accent">Ghostwriting</span>
+            </h1>
+            <p className="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed opacity-90">
+              Transform your expertise into thought leadership content that positions you as an industry authority and drives qualified leads to your business.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link to="/book-strategy-call">
+                <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
+                  Get Started Today
+                </Button>
+              </Link>
+              <Button 
+                variant="outline" 
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-12 py-6 text-lg font-semibold rounded-2xl transition-all duration-300"
+              >
+                See Examples
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary Hero Section */}
+      <section className="section-padding bg-gradient-subtle">
         <div className="container-premium">
           <div className="max-w-6xl mx-auto text-center animate-fade-in">
             <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-8">
               EXECUTIVE GHOSTWRITING
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
               Become a <span className="text-foreground">thought leader.</span>
-            </h1>
+            </h2>
             
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
               Great executive content is the perfect blend of your expertise and personality.
