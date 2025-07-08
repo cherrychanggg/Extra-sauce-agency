@@ -1,9 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import SauceRecipe from "@/components/SauceRecipe";
 import WhoIsTheSauceFor from "@/components/WhoIsTheSauceFor";
 import Testimonials from "@/components/Testimonials";
-import Process from "@/components/Process";
+import ServicesOverview from "@/components/ServicesOverview";
+import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -12,10 +12,10 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
-      <SauceRecipe />
       <WhoIsTheSauceFor />
       <Testimonials />
-      <Process />
+      <ServicesOverview />
+      <FAQ />
       <CTA />
       <Footer />
     </div>
