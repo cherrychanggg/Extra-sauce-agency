@@ -16,28 +16,20 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/20">
-      {/* Interactive Background Elements */}
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-subtle">
+      {/* Subtle Background Elements - Similar to Rest of Site */}
       <div className="absolute inset-0">
-        {/* Animated Mesh Gradient */}
+        {/* Interactive Mouse Gradient */}
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-20"
           style={{
-            background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 107, 107, 0.15), transparent 40%)`
+            background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 107, 107, 0.1), transparent 40%)`
           }}
         />
         
-        {/* Floating Geometric Shapes */}
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-primary/20 rounded-3xl rotate-45 animate-spin-slow"></div>
-        <div className="absolute top-3/4 right-1/4 w-24 h-24 border border-secondary/20 rounded-2xl rotate-12 animate-bounce-gentle"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-accent/10 rounded-full animate-pulse"></div>
-        
-        {/* Modern Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,107,107,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,107,107,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        
-        {/* Gradient Orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }}></div>
+        {/* Subtle Gradient Orbs - Consistent with Other Sections */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
       </div>
       
       <div className="container-premium text-center relative z-10 pt-20">
@@ -57,7 +49,6 @@ const Hero = () => {
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
                 SAUCE™ Recipe
               </span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
             </span>{" "}
             helps B2B SaaS companies build profitable{" "}
             <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
