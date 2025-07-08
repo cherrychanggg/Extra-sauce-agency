@@ -46,9 +46,10 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-subtle">
+    <section className="section-padding bg-gradient-subtle relative">
+      <div className="section-divider mb-20"></div>
       <div className="container-premium">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
             We are not just another <span className="bg-gradient-primary bg-clip-text text-transparent">B2B content agency</span> - 
             <br />we align your marketing & sales efforts
@@ -63,7 +64,7 @@ const ServicesOverview = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`card-premium p-8 group hover:scale-105 transition-all duration-300 relative overflow-hidden bg-gradient-to-br ${service.bgColor} border-2 ${service.borderColor}`}
+              className={`card-premium p-8 group hover:scale-[1.03] hover:shadow-2xl transition-all duration-500 relative overflow-hidden bg-gradient-to-br ${service.bgColor} border-2 ${service.borderColor} hover:border-primary/40`}
             >
               <div className="relative z-10">
                 {/* Header */}
@@ -93,9 +94,9 @@ const ServicesOverview = () => {
 
                 {/* CTA */}
                 <Link to={service.link}>
-                  <Button className="w-full btn-hero group">
-                    Learn more
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <Button className="w-full btn-hero group focus-enhanced">
+                    <span className="group-hover:scale-105 transition-transform duration-200">Learn more</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
                   </Button>
                 </Link>
               </div>

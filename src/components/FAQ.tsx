@@ -20,12 +20,16 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="section-padding bg-card/30">
+    <section className="section-padding bg-card/30 relative">
+      <div className="section-divider mb-20"></div>
       <div className="container-premium">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">FAQ</span>
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-4xl lg:text-6xl font-bold mb-8">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">Frequently Asked Questions</span>
           </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Get answers to common questions about our founder-led content strategy.
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -35,7 +39,7 @@ const FAQ = () => {
               className="border-b border-border/50 last:border-b-0"
             >
               <button
-                className="w-full py-6 flex items-center justify-between text-left hover:text-primary transition-colors duration-300"
+                className="w-full py-8 flex items-center justify-between text-left hover:text-primary transition-all duration-300 focus-enhanced group"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <h3 className="text-lg font-semibold text-foreground pr-4">
@@ -48,12 +52,14 @@ const FAQ = () => {
                 />
               </button>
               
-              <div className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
+              <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                openIndex === index ? 'max-h-96 pb-8 opacity-100' : 'max-h-0 opacity-0'
               }`}>
-                <p className="text-muted-foreground leading-relaxed">
-                  {faq.answer}
-                </p>
+                <div className="animate-fade-in-up">
+                  <p className="text-muted-foreground leading-relaxed text-base">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

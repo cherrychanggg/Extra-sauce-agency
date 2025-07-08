@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Linkedin, Twitter, Instagram, Youtube, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -59,16 +60,25 @@ const Footer = () => {
                 Location
               </h3>
               <div className="space-y-4 text-accent-foreground/70">
-                <p>Headquarters located in<br />Toronto, Canada</p>
-                
-                <div>
-                  <h4 className="font-semibold text-accent-foreground mb-2">Phone</h4>
-                  <p>+1 (647) 537 0157</p>
+                <div className="flex items-center gap-3">
+                  <MapPin className="w-4 h-4 text-primary" />
+                  <p>Headquarters located in<br />Toronto, Canada</p>
                 </div>
                 
-                <div>
-                  <h4 className="font-semibold text-accent-foreground mb-2">Email</h4>
-                  <p>manny@extrasauceagency.com</p>
+                <div className="flex items-center gap-3">
+                  <Phone className="w-4 h-4 text-primary" />
+                  <div>
+                    <h4 className="font-semibold text-accent-foreground mb-1">Phone</h4>
+                    <p>+1 (647) 537 0157</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <Mail className="w-4 h-4 text-primary" />
+                  <div>
+                    <h4 className="font-semibold text-accent-foreground mb-1">Email</h4>
+                    <p>manny@extrasauceagency.com</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -84,23 +94,26 @@ const Footer = () => {
               © 2024 Extra Sauce Agency. All rights reserved.
             </p>
             
-            {/* Social Links */}
+            {/* Enhanced Social Links */}
             <div className="flex items-center space-x-4">
               {[
-                { name: "LinkedIn", icon: "💼" },
-                { name: "Twitter", icon: "🐦" },
-                { name: "Instagram", icon: "📸" },
-                { name: "YouTube", icon: "📺" }
-              ].map((social) => (
-                <a
-                  key={social.name}
-                  href="#"
-                  className="w-10 h-10 bg-accent-foreground/10 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
-                  title={social.name}
-                >
-                  <span className="text-lg">{social.icon}</span>
-                </a>
-              ))}
+                { name: "LinkedIn", icon: Linkedin },
+                { name: "Twitter", icon: Twitter },
+                { name: "Instagram", icon: Instagram },
+                { name: "YouTube", icon: Youtube }
+              ].map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href="#"
+                    className="w-12 h-12 bg-accent-foreground/10 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg focus-enhanced group"
+                    title={social.name}
+                  >
+                    <Icon className="w-5 h-5 text-accent-foreground group-hover:text-primary-foreground transition-colors" />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

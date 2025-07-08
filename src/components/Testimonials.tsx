@@ -31,9 +31,10 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-background relative">
+      <div className="section-divider mb-20"></div>
       <div className="container-premium">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
             What Our <span className="bg-gradient-primary bg-clip-text text-transparent">Clients</span> Say
           </h2>
@@ -46,8 +47,8 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="card-testimonial animate-fade-in group"
-              style={{ animationDelay: `${index * 150}ms` }}
+              className="card-testimonial animate-fade-in-up group hover:scale-[1.02] transition-all duration-300"
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Quote */}
               <div className="mb-8">

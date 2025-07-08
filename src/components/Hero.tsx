@@ -4,22 +4,24 @@ import { ArrowDown } from "lucide-react";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-subtle">
-      {/* Background Gradient Orbs */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Enhanced Background Gradient Orbs with Float Animation */}
+      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl float-animation"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/25 rounded-full blur-3xl float-animation-delayed"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/20 rounded-full blur-2xl animate-glow-pulse"></div>
       
       <div className="container-premium text-center relative z-10 pt-20">
         <div className="max-w-5xl mx-auto animate-fade-in">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full mb-8">
-            <span className="text-sm font-medium text-primary">
-              🔥 Trusted by 20+ High-Growth B2B & DTC Companies
+          {/* Enhanced Badge with Glassmorphism */}
+          <div className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-md border border-primary/30 rounded-full mb-10 hover:bg-white/20 transition-all duration-300 group">
+            <div className="w-3 h-3 bg-primary rounded-full mr-3 animate-bounce-gentle"></div>
+            <span className="text-sm font-semibold text-primary group-hover:text-primary/80 transition-colors">
+              Trusted by 20+ High-Growth B2B & DTC Companies
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-            Our <span className="bg-gradient-primary bg-clip-text text-transparent">SAUCE™ Recipe</span> helps B2B SaaS companies build profitable{" "}
+          {/* Enhanced Main Headline */}
+          <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] mb-10">
+            Our <span className="bg-gradient-primary bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">SAUCE™ Recipe</span> helps B2B SaaS companies build profitable{" "}
             <span className="bg-gradient-secondary bg-clip-text text-transparent">
               founder-led content engines
             </span>
@@ -31,12 +33,12 @@ const Hero = () => {
             into binge-worthy social content that cultivates awareness, trust, and credibility.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <Button className="btn-hero text-lg px-12 py-6">
-              Book a demo with Manny
+          {/* Enhanced CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
+            <Button className="btn-hero text-lg px-12 py-6 focus-enhanced group">
+              <span className="group-hover:scale-105 transition-transform duration-200">Book a demo with Manny</span>
             </Button>
-            <Button variant="outline" className="btn-ghost-premium text-lg px-12 py-6">
+            <Button variant="outline" className="btn-ghost-premium text-lg px-12 py-6 focus-enhanced hover:shadow-lg">
               View The Process
             </Button>
           </div>

@@ -33,9 +33,10 @@ const WhoIsTheSauceFor = () => {
   ];
 
   return (
-    <section id="who-is-sauce-for" className="section-padding bg-gradient-subtle">
+    <section id="who-is-sauce-for" className="section-padding bg-gradient-subtle relative">
+      <div className="section-divider mb-20"></div>
       <div className="container-premium">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
             Who Is <span className="bg-gradient-primary bg-clip-text text-transparent">The Sauce</span> For?
           </h2>
@@ -48,8 +49,8 @@ const WhoIsTheSauceFor = () => {
           {audienceCards.map((card, index) => (
             <div 
               key={index}
-              className="card-premium group animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="card-premium group animate-fade-in-up hover:scale-[1.02] transition-all duration-500"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="mb-6">
                 <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">

@@ -122,8 +122,13 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.7;
   }
 }
 
@@ -137,13 +142,17 @@
     @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-2xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300;
   }
 
-  /* Premium Card Styles */
+  /* Premium Card Styles with Glassmorphism */
   .card-premium {
-    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-3xl p-8 shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-2;
+    @apply bg-card/60 backdrop-blur-md border border-border/30 rounded-3xl p-8 shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-3 hover:bg-card/80 hover:border-primary/30;
   }
 
   .card-testimonial {
-    @apply bg-gradient-to-br from-card to-muted/30 border border-primary/20 rounded-3xl p-8 shadow-card hover:shadow-glow hover:border-primary/40 transition-all duration-500;
+    @apply bg-gradient-to-br from-card/70 to-muted/40 backdrop-blur-md border border-primary/20 rounded-3xl p-8 shadow-card hover:shadow-glow hover:border-primary/50 transition-all duration-500 hover:-translate-y-2;
+  }
+
+  .card-glassmorphism {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300;
   }
 
   /* Animated Underlines */
@@ -151,13 +160,38 @@
     @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 
-  /* Section Spacing */
+  /* Section Spacing - More breathing room */
   .section-padding {
-    @apply py-20 lg:py-32;
+    @apply py-24 lg:py-40;
   }
 
   /* Container */
   .container-premium {
     @apply container mx-auto px-6 lg:px-8;
+  }
+
+  /* Floating Animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-animation-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+
+  /* Parallax Effect */
+  .parallax-slow {
+    transform: translateY(var(--scroll-y, 0) * 0.5);
+  }
+
+  /* Enhanced Focus States */
+  .focus-enhanced:focus {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background outline-none;
+  }
+
+  /* Section Dividers */
+  .section-divider {
+    @apply relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-border before:to-transparent before:h-px before:top-1/2;
   }
 }
