@@ -63,10 +63,6 @@ const Testimonials = () => {
       <div className="section-divider mb-20"></div>
       <div className="container-premium relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full mb-6">
-            <Star className="w-4 h-4 text-primary mr-2" />
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Client Success Stories</span>
-          </div>
           <h2 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
             What Our{" "}
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">

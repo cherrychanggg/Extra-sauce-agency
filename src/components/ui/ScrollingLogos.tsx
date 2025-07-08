@@ -50,22 +50,6 @@ const ScrollingLogos = () => {
       </div>
 
       <div className="container-premium relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full mb-6">
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Trusted Partners</span>
-          </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Trusted by{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              20+ High-Growth
-            </span>{" "}
-            Companies
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From startups to enterprise, we help B2B and DTC companies build profitable content engines.
-          </p>
-        </div>
 
         {/* Logo Grid - Modern Layout */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center max-w-6xl mx-auto mb-12">
@@ -122,26 +106,6 @@ const ScrollingLogos = () => {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
-          {[
-            { number: "20+", label: "Companies Served", description: "Across various industries" },
-            { number: "500%", label: "Average Growth", description: "In content engagement" },
-            { number: "15-16", label: "Leads Per Month", description: "High-converting prospects" }
-          ].map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                {stat.number}
-              </div>
-              <div className="text-lg font-semibold text-foreground mb-1">
-                {stat.label}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {stat.description}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
       <style>{`

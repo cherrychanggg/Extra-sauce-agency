@@ -83,29 +83,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Modern Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              { number: "15-16", label: "High-Converting Leads", suffix: "/month" },
-              { number: "2-5", label: "Months to Build", suffix: "influence" },
-              { number: "20+", label: "Companies", suffix: "trust us" }
-            ].map((stat, index) => (
-              <div 
-                key={index}
-                className="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
-              >
-                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-muted-foreground font-medium">
-                  {stat.label}
-                </div>
-                <div className="text-xs text-primary/70 mt-1">
-                  {stat.suffix}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

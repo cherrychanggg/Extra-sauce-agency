@@ -54,9 +54,6 @@ const WhoIsTheSauceFor = () => {
       <div className="section-divider mb-20"></div>
       <div className="container-premium relative z-10">
         <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full mb-6">
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Perfect Fit Assessment</span>
-          </div>
           <h2 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
             Who Is{" "}
             <span className="relative">
@@ -118,15 +115,6 @@ const WhoIsTheSauceFor = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-20">
-          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl border border-primary/20">
-            <span className="text-lg font-medium text-foreground mr-4">
-              Sound like your company?
-            </span>
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-          </div>
-        </div>
       </div>
     </section>
   );
