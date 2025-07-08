@@ -27,7 +27,7 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-elegant border-b border-border/50"
+          ? "bg-background/80 backdrop-blur-xl shadow-elegant border-b border-border/30"
           : "bg-transparent"
       }`}
     >
@@ -35,8 +35,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/chili.png" alt="Sauce Logo" className="w-20 h-20" />
-            <img src="/sauce.png" alt="Sauce Logo" className="w-60 h-60" />
+            <img src="/chili.png" alt="Sauce Logo" className="w-16 h-16 hover:scale-110 transition-transform duration-300" />
+            <img src="/sauce.png" alt="Sauce Logo" className="w-48 h-48 hover:scale-105 transition-transform duration-300" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -64,7 +64,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button className="btn-hero">
+            <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25">
               Strategy Call
             </Button>
           </div>

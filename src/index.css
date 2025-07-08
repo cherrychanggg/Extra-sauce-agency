@@ -47,6 +47,7 @@
     /* Premium Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
 
@@ -190,8 +191,48 @@
     @apply ring-2 ring-primary ring-offset-2 ring-offset-background outline-none;
   }
 
+  /* Modern Glassmorphism Effects */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+
+  .glass-button {
+    @apply bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 transition-all duration-300;
+  }
+
+  /* Interactive Hover States */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow hover:scale-105;
+  }
+
   /* Section Dividers */
   .section-divider {
     @apply relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-border before:to-transparent before:h-px before:top-1/2;
+  }
+
+  /* Modern Scroll Animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Improved Typography */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Modern Gradients */
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
   }
 }
