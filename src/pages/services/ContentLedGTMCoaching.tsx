@@ -1,84 +1,53 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowRight, Users, Target, Zap, BarChart3 } from "lucide-react";
+import { User, Eye, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ContentLedGTMCoaching = () => {
-  const benefits = [
+  const systemSteps = [
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Aligned GTM Strategy",
-      description: "Integrate content seamlessly into your entire go-to-market motion from awareness to conversion and retention."
+      icon: <User className="w-8 h-8" />,
+      title: "We Execute Together, Not Just Slides",
+      description: "We don't hand you a playbook and wish you luck. Every session is hands-on—we workshop your messaging, shape your content strategy, and troubleshoot in real time. You'll leave each call with clarity and action steps that move your GTM forward."
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Team Enablement", 
-      description: "Train your sales, marketing, and leadership teams to leverage content effectively throughout the customer journey."
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Accelerated Pipeline",
-      description: "Build a content engine that consistently generates qualified leads and shortens your sales cycle."
+      icon: <Eye className="w-8 h-8" />,
+      title: "Battle-tested Across Organizations", 
+      description: "Our system has been applied across agencies, SaaS companies, consultants, and solopreneurs. We shortcut the content learning curve, helping you find your voice, build demand, and drive revenue—without months of guessing and wasted cycles."
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Measurable Results",
-      description: "Implement tracking and optimization systems to measure content ROI and continuously improve performance."
+      title: "We Specialize In GTM Content Execution",
+      description: "We don't just coach—we build. From strategic narrative development to content systems that align with your sales motion, we help you create high-impact content that drives pipeline, and positions your brand as the go-to option."
     }
   ];
 
-  const process = [
+  const benefits = [
     {
-      step: "01",
-      title: "GTM Assessment",
-      description: "Audit your current go-to-market strategy and identify content opportunities across the entire customer journey."
+      number: "1",
+      title: "Fast track your results",
+      description: "We cut the content strategy timeline in half with best-in-class execution, so you can launch sooner, post with purpose, and build pipeline without wasting months figuring it out alone."
     },
     {
-      step: "02", 
-      title: "Strategy Development",
-      description: "Create a comprehensive content-led GTM strategy with clear objectives, tactics, and success metrics."
+      number: "2", 
+      title: "Keep content creation in-house",
+      description: "You don't need a big team to scale demand. We help you turn your insights into a repeatable content system—with structure, clarity, and strategic intent built in."
     },
     {
-      step: "03",
-      title: "Team Training", 
-      description: "Equip your team with the knowledge, tools, and processes to execute your content-led GTM strategy effectively."
+      number: "3",
+      title: "Learn the art of content",
+      description: "We teach you how to write, repurpose, and position content that converts. Build a voice that drives trust, opens conversations, and gets remembered—without sounding like everyone else online."
     },
     {
-      step: "04",
-      title: "Implementation & Optimization",
-      description: "Launch your strategy with ongoing coaching, performance monitoring, and continuous optimization."
-    }
-  ];
-
-  const features = [
-    "Comprehensive GTM strategy development",
-    "Content-sales alignment workshops",
-    "Lead generation system setup",
-    "Team training and enablement sessions", 
-    "Performance tracking and analytics setup",
-    "Monthly coaching and optimization calls",
-    "Custom playbooks and frameworks",
-    "Technology stack recommendations",
-    "Conversion funnel optimization",
-    "Ongoing strategic support and guidance"
-  ];
-
-  const outcomes = [
-    {
-      title: "Increased Lead Quality",
-      description: "Generate higher-quality leads that are pre-educated and more likely to convert through strategic content."
+      number: "4",
+      title: "Become the obvious choice",
+      description: "When your content shows up consistently across the buyer journey, your credibility compounds. We help you build assets that put you in the top 1-2 options—before sales even enters the chat."
     },
     {
-      title: "Shorter Sales Cycles",
-      description: "Reduce time-to-close by nurturing prospects with valuable content before they reach your sales team."
-    },
-    {
-      title: "Better Team Alignment",
-      description: "Create cohesion between marketing, sales, and leadership teams with unified messaging and goals."
-    },
-    {
-      title: "Scalable Growth Engine",
-      description: "Build sustainable systems that continue generating results and can scale with your business growth."
+      number: "5",
+      title: "Content systems tailored to you",
+      description: "One proven system. Zero one-size-fits-all. Our coaching is tailored to your team, bandwidth, and GTM motions—so your content works with your company infrastructure, not against it."
     }
   ];
 
@@ -101,137 +70,72 @@ const ContentLedGTMCoaching = () => {
               Strategic coaching to integrate content into your entire go-to-market motion, from awareness to conversion, creating a predictable growth engine.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
-                Start Your GTM Journey
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-12 py-6 text-lg font-semibold rounded-2xl transition-all duration-300"
-              >
-                Book Strategy Call
-              </Button>
+              <Link to="/book-strategy-call">
+                <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
+                  Start Your GTM Journey
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="section-padding">
-        <div className="container-premium">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              Why Content Led <span className="bg-gradient-primary bg-clip-text text-transparent">GTM</span> Works
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Align your entire organization around content that educates, nurtures, and converts your ideal customers.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index}
-                className="card-premium p-8 group hover:scale-105 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
-                    {benefit.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">
-                      {benefit.title}
-                    </h3>
-                  </div>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Expected Outcomes Section */}
+      {/* Secondary Hero Section */}
       <section className="section-padding bg-gradient-subtle">
         <div className="container-premium">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              Expected <span className="bg-gradient-primary bg-clip-text text-transparent">Outcomes</span>
+          <div className="max-w-6xl mx-auto text-center animate-fade-in">
+            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
+              Don't waste months trying out content. Use our proven systems.
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real results that transform your business and create sustainable growth through strategic content.
+            
+            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+              Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {outcomes.map((outcome, index) => (
-              <div 
-                key={index}
-                className="card-premium p-8 group hover:scale-105 transition-all duration-300"
-              >
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  {outcome.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {outcome.description}
-                </p>
+            {/* Pricing/Timeline Info */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">6 Sessions</div>
+                <div className="text-sm text-muted-foreground">Full GTM Ready Execution</div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What's Included Section */}
-      <section className="section-padding">
-        <div className="container-premium">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              What's <span className="bg-gradient-primary bg-clip-text text-transparent">Included</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive coaching and strategic guidance to transform your go-to-market approach.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
-                  <span className="text-lg text-foreground">{feature}</span>
-                </div>
-              ))}
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">1-on-1 Video</div>
+                <div className="text-sm text-muted-foreground">Call Structure</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">&gt; $30K</div>
+                <div className="text-sm text-muted-foreground">Minimum Savings</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="section-padding bg-gradient-subtle">
+      {/* System Section */}
+      <section className="section-padding">
         <div className="container-premium">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              Our <span className="bg-gradient-primary bg-clip-text text-transparent">Process</span>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 max-w-4xl mx-auto">
+              THIS ISN'T THEORY, WE'RE IN THE TRENCHES WITH YOU.
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A systematic approach to transforming your go-to-market strategy through strategic content integration.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              The SAUCE Recipe™ isn't theory. We roll up our sleeves and work alongside you to craft strategy, create content, and drive real GTM results.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {process.map((step, index) => (
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {systemSteps.map((step, index) => (
               <div 
                 key={index}
-                className="text-center group"
+                className="bg-gradient-to-br from-card/90 to-muted/50 backdrop-blur-sm border border-border/50 rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-20 h-20 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow">
-                  {step.step}
+                <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center text-accent mx-auto mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
+                  {step.icon}
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">
+                <h3 className="text-lg font-bold text-accent mb-4 leading-tight">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -240,34 +144,87 @@ const ContentLedGTMCoaching = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-accent/90 via-primary/90 to-secondary/90"></div>
-        <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        
-        <div className="container-premium relative z-10">
-          <div className="text-center max-w-4xl mx-auto text-white">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-8">
-              Ready to transform your GTM strategy?
-            </h2>
-            <p className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed opacity-90">
-              Let's build a content-led go-to-market strategy that aligns your team, accelerates growth, and creates predictable results.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
-                Start Your Transformation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-12 py-6 text-lg font-semibold rounded-2xl transition-all duration-300"
-              >
-                Schedule a Call
-              </Button>
+      {/* Testimonial Section */}
+      <section className="section-padding bg-gradient-to-r from-accent/90 via-primary/90 to-secondary/90">
+        <div className="container-premium">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
+              <div className="flex items-center gap-8">
+                <div className="w-24 h-24 bg-white rounded-full overflow-hidden flex-shrink-0">
+                  <img 
+                    src="/chili.png" 
+                    alt="Forest Khalil" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <blockquote className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                    "Working with Extra Sauce has been a game-changer for my business. Manny brings 
+                    incredible clarity to our marketing and messaging, and their strategic narratives and 
+                    content creation are top-notch. I love how systemized their process is; I can see 
+                    real progress with every single session. Highly recommend!"
+                  </blockquote>
+                  <div className="text-primary font-semibold">
+                    Forest Khalil<br />
+                    <span className="text-white/80 text-sm">Founder</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="section-padding bg-background">
+        <div className="container-premium">
+          <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+            {/* Left Side */}
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-8">
+                <span className="text-primary">BENEFITS:</span><br />
+                <span className="text-foreground">CONTENT COACHING</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Our content coaching offer doesn't just help you create better content—it helps you think, speak, and 
+                show up like the go-to in your category. We build trust, drive pipeline, and give you the systems to scale—one 
+                high-impact session at a time.
+              </p>
+            </div>
+
+            {/* Right Side - Benefits List */}
+            <div className="space-y-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex gap-6">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm flex-shrink-0 mt-1">
+                    {benefit.number}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-primary mb-2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-r from-primary to-secondary">
+        <div className="container-premium text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+            Ready for a strategy call?
+          </h2>
+          <Link to="/book-strategy-call">
+            <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
+              Talk with Manny
+            </Button>
+          </Link>
         </div>
       </section>
 
