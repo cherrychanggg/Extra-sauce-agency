@@ -11,8 +11,7 @@ const Testimonials = () => {
       author: "Vik Soni",
       title: "Head of Sales",
       company: "TechCorp",
-      avatar: "/api/placeholder/60/60",
-      rating: 5,
+      avatar: "/viksoni.png",
       impact: "300% increase in demo bookings"
     },
     {
@@ -20,26 +19,23 @@ const Testimonials = () => {
       author: "Nadia Isani",
       title: "CEO & Founder",
       company: "InnovateLabs",
-      avatar: "/api/placeholder/60/60",
-      rating: 5,
+      avatar: "/nadiairani.png",
       impact: "Built thought leadership presence"
     },
     {
       quote: "Manny came in and helped us streamline our social media distribution system and kept us up to date with the best strategies. We've seen massive growth the last 6 months.",
-      author: "Alex Garcia",
+      author: "Alex Salois",
       title: "Senior Content Manager",
       company: "GrowthTech",
-      avatar: "/api/placeholder/60/60",
-      rating: 5,
+      avatar: "/alexsalois.png",
       impact: "500% growth in 6 months"
     },
     {
       quote: "Manny's expertise & dedication have been instrumental in crafting a compelling strategic narrative, and generating insightful content on LinkedIn that drives leads.",
-      author: "Sharlena Dumela",
+      author: "Sharlene Dumela",
       title: "CEO & Founder",
       company: "ScaleUp Inc",
-      avatar: "/api/placeholder/60/60",
-      rating: 5,
+      avatar: "/sharlenegumbs.png",
       impact: "Consistent lead generation"
     }
   ];
@@ -109,9 +105,17 @@ const Testimonials = () => {
 
               {/* Author */}
               <div className="flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold text-lg mr-4">
-                  {testimonials[currentTestimonial].author.split(' ').map(n => n[0]).join('')}
-                </div>
+                {testimonials[currentTestimonial].avatar ? (
+                  <img
+                    src={testimonials[currentTestimonial].avatar}
+                    alt={testimonials[currentTestimonial].author}
+                    className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary"
+                  />
+                ) : (
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold text-lg mr-4">
+                    {testimonials[currentTestimonial].author.split(' ').map(n => n[0]).join('')}
+                  </div>
+                )}
                 <div className="text-center">
                   <div className="font-bold text-lg text-foreground">
                     {testimonials[currentTestimonial].author}
@@ -180,9 +184,17 @@ const Testimonials = () => {
 
               {/* Author */}
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
-                  {testimonial.author.split(' ').map(n => n[0]).join('')}
-                </div>
+                {testimonial.avatar ? (
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.author}
+                    className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary group-hover:scale-110 transition-transform duration-300"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
+                    {testimonial.author.split(' ').map(n => n[0]).join('')}
+                  </div>
+                )}
                 <div>
                   <div className="font-bold text-foreground">{testimonial.author}</div>
                   <div className="text-sm text-muted-foreground">
