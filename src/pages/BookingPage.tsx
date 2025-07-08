@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Check, Clock, Video, Calendar } from "lucide-react";
-import { useState } from "react";
+import { Check, Clock, Video, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 
 const BookingPage = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,6 +20,49 @@ const BookingPage = () => {
     timeline: '',
     hearAbout: ''
   });
+
+  const testimonials = [
+    {
+      quote: "We've had old prospects come back to book a demo and thought we were a completely different company.",
+      author: "Vik Sejal",
+      title: "Head Of Sales",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      quote: "I just want to say, I have a good ghostwriter.",
+      author: "Nadia Isani", 
+      title: "CEO & Founder",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      quote: "Manny came in and helped us streamline our social media distribution system and kept us up to date with the best strategies. We've seen massive growth the last 6 months.",
+      author: "Alex Salois",
+      title: "Senior Content Manager", 
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      quote: "Manny's expertise & dedication have been instrumental in crafting a compelling strategic narrative, and generating insightful content on LinkedIn that drives leads.",
+      author: "Sharlene Dumela",
+      title: "CEO & Founder",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    }
+  ];
+
+  // Auto-scroll testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   const benefits = [
     "Unpack the latest algorithm shifts across LinkedIn & YouTube—and how to leverage them for pipeline, not vanity metrics.",
@@ -323,37 +367,59 @@ const BookingPage = () => {
         </div>
       </div>
 
-      {/* Testimonial Section - Auto-scrolling */}
-      <section className="section-padding bg-gradient-to-r from-primary/90 via-secondary/90 to-accent/90">
+      {/* Testimonial Section - Auto-scrolling with Navigation */}
+      <section className="section-padding" style={{background: 'linear-gradient(135deg, #ff6b35, #f7931e)'}}>
         <div className="container-premium">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
-              <div className="flex items-center gap-8">
-                <div className="w-24 h-24 bg-white rounded-full overflow-hidden flex-shrink-0">
+          <div className="max-w-5xl mx-auto">
+            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/20">
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevTestimonial}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              
+              <button
+                onClick={nextTestimonial}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+                aria-label="Next testimonial"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+
+              <div className="flex items-center gap-8 px-8">
+                <div className="w-20 h-20 lg:w-24 lg:h-24 bg-white rounded-full overflow-hidden flex-shrink-0">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
-                    alt="Testimonial" 
+                    src={testimonials[currentTestimonial].avatar}
+                    alt={testimonials[currentTestimonial].author}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-1">
-                  <blockquote className="text-2xl lg:text-3xl font-bold text-white mb-4">
-                    "We've had old prospects come back to book a demo and thought we were a 
-                    completely different company."
+                  <blockquote className="text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-4 leading-tight">
+                    "{testimonials[currentTestimonial].quote}"
                   </blockquote>
-                  <div className="text-primary font-semibold">
-                    Vik Sejal<br />
-                    <span className="text-white/80 text-sm">Head Of Sales</span>
+                  <div className="text-white/90 font-semibold">
+                    {testimonials[currentTestimonial].author}<br />
+                    <span className="text-white/70 text-sm">{testimonials[currentTestimonial].title}</span>
                   </div>
                 </div>
               </div>
               
               {/* Pagination dots */}
               <div className="flex justify-center gap-2 mt-8">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentTestimonial ? 'bg-white' : 'bg-white/50'
+                    }`}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
