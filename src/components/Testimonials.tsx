@@ -12,7 +12,8 @@ const Testimonials = () => {
       title: "Head of Sales",
       company: "TechCorp",
       avatar: "/viksoni.png",
-      impact: "300% increase in demo bookings"
+      impact: "300% increase in demo bookings",
+      rating: 5
     },
     {
       quote: "I just want to say, I have a good ghostwriter.",
@@ -20,7 +21,8 @@ const Testimonials = () => {
       title: "CEO & Founder",
       company: "InnovateLabs",
       avatar: "/nadiairani.png",
-      impact: "Built thought leadership presence"
+      impact: "Built thought leadership presence",
+      rating: 5
     },
     {
       quote: "Manny came in and helped us streamline our social media distribution system and kept us up to date with the best strategies. We've seen massive growth the last 6 months.",
@@ -28,7 +30,8 @@ const Testimonials = () => {
       title: "Senior Content Manager",
       company: "GrowthTech",
       avatar: "/alexsalois.png",
-      impact: "500% growth in 6 months"
+      impact: "500% growth in 6 months",
+      rating: 5
     },
     {
       quote: "Manny's expertise & dedication have been instrumental in crafting a compelling strategic narrative, and generating insightful content on LinkedIn that drives leads.",
@@ -36,7 +39,8 @@ const Testimonials = () => {
       title: "CEO & Founder",
       company: "ScaleUp Inc",
       avatar: "/sharlenegumbs.png",
-      impact: "Consistent lead generation"
+      impact: "Consistent lead generation",
+      rating: 5
     }
   ];
 

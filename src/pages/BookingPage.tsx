@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Check, Clock, Video, Calendar } from "lucide-react";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -45,12 +46,45 @@ const BookingPage = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    // For now, we'll just show an alert
-    alert('Thank you! Your strategy call request has been submitted.');
+    
+    try {
+      const templateParams = {
+        to_email: 'manny@extrasauceagency.com',
+        from_name: formData.name,
+        from_email: formData.email,
+        guests: formData.guests || 'None',
+        goals: formData.goals,
+        budget: formData.budget,
+        challenges: formData.challenges,
+        timeline: formData.timeline,
+        hear_about: formData.hearAbout
+      };
+
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // You'll need to replace this with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // You'll need to replace this with your EmailJS template ID
+        templateParams,
+        'YOUR_PUBLIC_KEY' // You'll need to replace this with your EmailJS public key
+      );
+
+      alert('Thank you! Your strategy call request has been sent successfully.');
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        guests: '',
+        goals: '',
+        budget: '',
+        challenges: '',
+        timeline: '',
+        hearAbout: ''
+      });
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      alert('Sorry, there was an error sending your request. Please try again.');
+    }
   };
 
   return (
