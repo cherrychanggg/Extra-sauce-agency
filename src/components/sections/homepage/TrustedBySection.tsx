@@ -3,11 +3,11 @@ import { trustedBySection } from "@/content/homepage";
 const companies = [
   {
     name: "Goalcast",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Goalcast_logo.png",
+    logo: "/goalcast.png",
   },
   {
     name: "Alam Law",
-    logo: "https://www.alamlaw.com/wp-content/uploads/2020/09/ALAM-LAW-FIRM-LOGO.png",
+    logo: "/alam.png",
   },
   {
     name: "FuelPlus",
