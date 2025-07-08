@@ -109,12 +109,6 @@ const ExecutiveGhostwriting = () => {
                   Get Started Today
                 </Button>
               </Link>
-              <Button 
-                variant="outline" 
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-12 py-6 text-lg font-semibold rounded-2xl transition-all duration-300"
-              >
-                See Examples
-              </Button>
             </div>
           </div>
         </div>
@@ -124,10 +118,6 @@ const ExecutiveGhostwriting = () => {
       <section className="section-padding bg-gradient-subtle">
         <div className="container-premium">
           <div className="max-w-6xl mx-auto text-center animate-fade-in">
-            <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-8">
-              EXECUTIVE GHOSTWRITING
-            </div>
-            
             <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
               Become a <span className="text-foreground">thought leader.</span>
             </h2>
@@ -151,12 +141,6 @@ const ExecutiveGhostwriting = () => {
                 <div className="text-sm text-muted-foreground">Expected ROI</div>
               </div>
             </div>
-
-            <Link to="/book-strategy-call">
-              <Button variant="outline" className="px-8 py-3 text-lg">
-                Learn More
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
@@ -258,64 +242,6 @@ const ExecutiveGhostwriting = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What's Included Section */}
-      <section className="section-padding bg-gradient-subtle">
-        <div className="container-premium">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              What's <span className="bg-gradient-primary bg-clip-text text-transparent">Included</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Everything you need to establish thought leadership and drive business results through content.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
-                  <span className="text-lg text-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="section-padding">
-        <div className="container-premium">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              Our <span className="bg-gradient-primary bg-clip-text text-transparent">Process</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A proven system that transforms your expertise into compelling content that drives results.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {process.map((step, index) => (
-              <div 
-                key={index}
-                className="text-center group"
-              >
-                <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow">
-                  {step.step}
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
