@@ -49,18 +49,22 @@ const TrustedBySection = () => {
         </div>
         
         <div className="relative overflow-hidden rounded-3xl bg-white/30 backdrop-blur-sm border border-border/30 p-8">
-          <div className="flex items-center whitespace-nowrap animate-scroll">
-            {[...companies, ...companies].map((company, idx) => (
+          <div className="flex items-center justify-center gap-8 md:gap-12">
+            {companies.map((company, idx) => (
               <div
                 key={idx}
-                className="flex items-center mx-12 opacity-60 hover:opacity-100 transition-all duration-300 group"
+                className="flex items-center opacity-60 hover:opacity-100 transition-all duration-300 group flex-shrink-0"
               >
                 <div className="relative">
                   <img
                     src={company.logo}
                     alt={company.name}
-                    className="h-14 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
+                    className="h-12 w-auto max-w-[120px] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
                     draggable="false"
+                    onError={(e) => {
+                      console.log(`Failed to load image for ${company.name}:`, company.logo);
+                      e.currentTarget.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMTIwIDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDgiIGZpbGw9IiNmM2Y0ZjYiLz48dGV4dCB4PSI2MCIgeT0iMjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2Yjc2ODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiI+TG9nbzwvdGV4dD48L3N2Zz4=";
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
                 </div>
