@@ -1,7 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { Play, Users, Target, TrendingUp, Building } from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SauceRecipe = () => {
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const steps = [
+    {
+      number: 1,
+      title: "Become An Extension Of You",
+      description: "Schedule the kick-off call to get access to your client portal and a communication portal with us."
+    },
+    {
+      number: 2,
+      title: "Enter The MarketFit Spinner™",
+      description: "We optimize the omnichannel presence to present your audience and offer your audience feels damn to say no to."
+    },
+    {
+      number: 3,
+      title: "Begin A Scroll-Stopping Engine™",
+      description: "We begin sharing your thought leadership in an insightful and entertaining way for your realm of influence."
+    },
+    {
+      number: 4,
+      title: "Begin Our Social Selling Strategy",
+      description: "We increase response rates for your sales efforts by starting conversations with people in your realm of influence."
+    },
+    {
+      number: 5,
+      title: "Watch your DMs start to blow up",
+      description: "You start to notice your DMs with more active conversations from qualified pipeline."
+    },
+    {
+      number: 6,
+      title: "Are you ready to handle more qualified sales opportunities?",
+      description: "Ready to take the next step in your content journey?"
+    }
+  ];
+
   const journeyStages = [
     {
       title: "HAVE NO IDEA HOW TO INVEST IN CONTENT & SOCIAL MEDIA",
@@ -15,15 +52,6 @@ const SauceRecipe = () => {
       title: "READY TO BUILD A COMPANY VIDEO ENGINE THAT IS ENTERTAINING",
       description: "Scale content production with engaging video content systems"
     }
-  ];
-
-  const processSteps = [
-    { number: 1, title: "STEP 1", active: true },
-    { number: 2, title: "STEP 2", active: false },
-    { number: 3, title: "STEP 3", active: false },
-    { number: 4, title: "STEP 4", active: false },
-    { number: 5, title: "STEP 5", active: false },
-    { number: 6, title: "STEP 6", active: false }
   ];
 
   const benefits = [
@@ -170,27 +198,28 @@ const SauceRecipe = () => {
           </div>
         </div>
 
-        {/* Process Steps */}
+        {/* Process Steps - Interactive */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              <span className="text-primary">Become An Extension Of You</span>
+              <span className="text-primary">The SAUCE Recipe™</span> Process
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Schedule the kick-off call to get access to your client portal and a communication portal with us.
+              Our proven 6-step methodology that transforms your expertise into a profitable content engine.
             </p>
           </div>
 
           {/* Step Navigation */}
           <div className="flex justify-center items-center gap-4 mb-8 flex-wrap">
-            {processSteps.map((step, index) => (
+            {steps.map((step, index) => (
               <Button
                 key={index}
-                variant={step.active ? "default" : "outline"}
+                variant={currentStep === step.number ? "default" : "outline"}
                 size="sm"
-                className={`rounded-full ${step.active ? 'bg-primary text-primary-foreground' : 'bg-card text-foreground'}`}
+                className={`rounded-full ${currentStep === step.number ? 'bg-primary text-primary-foreground' : 'bg-card text-foreground'}`}
+                onClick={() => setCurrentStep(step.number)}
               >
-                {step.title}
+                STEP {step.number}
               </Button>
             ))}
           </div>
@@ -198,7 +227,36 @@ const SauceRecipe = () => {
           {/* Progress Bar */}
           <div className="w-full max-w-4xl mx-auto mb-12">
             <div className="h-2 bg-muted rounded-full">
-              <div className="h-2 bg-gradient-primary rounded-full w-1/6"></div>
+              <div 
+                className="h-2 bg-gradient-primary rounded-full transition-all duration-500"
+                style={{ width: `${(currentStep / steps.length) * 100}%` }}
+              ></div>
+            </div>
+          </div>
+
+          {/* Current Step Display */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-primary/90 to-secondary/90 rounded-3xl p-12 text-center text-white shadow-elegant">
+              <div className="text-sm font-semibold text-primary-foreground/80 mb-4">
+                STEP {currentStep}
+              </div>
+              <h3 className="text-3xl lg:text-4xl font-bold mb-6 text-accent">
+                {steps[currentStep - 1].title}
+              </h3>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                {steps[currentStep - 1].description}
+              </p>
+              
+              {/* Special CTA for Step 6 */}
+              {currentStep === 6 && (
+                <div className="mt-8">
+                  <Link to="/book-strategy-call">
+                    <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
+                      Book a Strategy Call
+                    </Button>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
