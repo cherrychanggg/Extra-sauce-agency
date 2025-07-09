@@ -7,19 +7,19 @@ const PrivacyPolicy = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding pt-32 bg-gradient-to-br from-green-100 to-green-200">
+      <section className="section-padding pt-32 bg-gradient-subtle">
         <div className="container-premium text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-4 text-foreground">
-              Protecting Your Privacy:
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+              Protecting Your <span className="bg-gradient-primary bg-clip-text text-transparent">Privacy</span>:
             </h1>
             <h2 className="text-3xl lg:text-5xl font-bold leading-tight mb-8 text-foreground">
               Our Commitment
             </h2>
-            <p className="text-lg lg:text-xl text-foreground/80 mb-6 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
               Navigating Data with Integrity in the Digital Marketing Landscape
             </p>
-            <p className="text-sm text-foreground/70">
+            <p className="text-sm text-muted-foreground">
               Last Updated: March 11th, 2024
             </p>
           </div>
@@ -27,11 +27,11 @@ const PrivacyPolicy = () => {
       </section>
 
       {/* Content Section */}
-      <section className="section-padding bg-gradient-to-br from-green-200 to-green-100">
+      <section className="section-padding">
         <div className="container-premium">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-12">
-              <p className="text-foreground/80 leading-relaxed">
+            <div className="card-premium p-12 mb-12">
+              <p className="text-muted-foreground leading-relaxed">
                 Welcome to Extra Sauce Agency, a B2B marketing agency based in Brampton, Canada, specializing in the SAAS 
                 space. Our mission is to assist teams in creating compelling content for inbound leads, leveraging our expertise to 
                 fuel their growth and success. As a 100% remote company, we are committed to maintaining the highest level of 
@@ -43,10 +43,10 @@ const PrivacyPolicy = () => {
             <div className="space-y-12">
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">1. Information Collection</h3>
-                <p className="text-foreground/80 leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   We collect information in the following ways:
                 </p>
-                <ul className="space-y-3 text-foreground/80 leading-relaxed">
+                <ul className="space-y-3 text-muted-foreground leading-relaxed">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span><strong>Information You Provide:</strong> This includes information submitted when you inquire about our services, sign up for 
@@ -66,10 +66,10 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">2. Use of Information</h3>
-                <p className="text-foreground/80 leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   The information we collect is used to:
                 </p>
-                <ul className="space-y-3 text-foreground/80 leading-relaxed">
+                <ul className="space-y-3 text-muted-foreground leading-relaxed">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span>Provide, operate, and maintain our services</span>
@@ -104,10 +104,10 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">3. Sharing of Information</h3>
-                <p className="text-foreground/80 leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   Your information is not sold, rented, or shared with third parties, except in the following cases:
                 </p>
-                <ul className="space-y-3 text-foreground/80 leading-relaxed">
+                <ul className="space-y-3 text-muted-foreground leading-relaxed">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span><strong>Compliance with Laws:</strong> We may disclose your information where required by law or subpoena or if we reasonably 
@@ -124,8 +124,8 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">4. Data Security</h3>
-                <p className="text-foreground/80 leading-relaxed">
-                  We take the security of your personal information seriously and implement a variety of security measures to maintain 
+                <p className="text-muted-foreground leading-relaxed">
+                  We take the security of your personal information seriously and implement a variety of security measures to maintain
                   the safety of your personal information. However, no method of transmission over the internet or method of 
                   electronic storage is 100% secure, and we cannot guarantee its absolute security.
                 </p>
@@ -133,7 +133,7 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">5. International Transfers</h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   Given that we are a 100% remote company, your information may be transferred to — and maintained on — 
                   computers located outside of your state, province, country, or other governmental jurisdiction where the data 
                   protection laws may differ from those of your jurisdiction.
@@ -142,7 +142,7 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">6. Your Rights</h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   You have the right to access the personal information we hold about you, to correct any inaccuracies, and to request 
                   its deletion. You are also entitled to restrict or object to our processing of your personal information.
                 </p>
@@ -150,7 +150,7 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">7. Changes to This Privacy Policy</h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy 
                   Policy on this page and updating the "Last Updated" date at the top.
                 </p>
@@ -158,15 +158,15 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">8. Contact Us</h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at 
                   manny@extrasauceagency.com. Extra Sauce Agency is dedicated to respecting your privacy and protecting your 
                   personal information. Your trust is important to us, and we are committed to ensuring the security and confidentiality 
                   of the data you entrust to us.
                 </p>
-              </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
