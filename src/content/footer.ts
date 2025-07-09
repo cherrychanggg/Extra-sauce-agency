@@ -34,9 +34,9 @@ export const email = {
 };
 
 export const socialMedia = {
-  linkedin: "https://linkedin.com/company/extra-sauce",
-  tiktok: "https://tiktok.com/@extrasauce",
-  instagram: "https://instagram.com/extrasauce",
-  mastodon: "https://mastodon.social/@extrasauce",
-  spotify: "https://open.spotify.com/show/extrasauce"
+  linkedin: "https://www.linkedin.com/company/extra-sauce-agency/",
+  tiktok: "https://www.tiktok.com/@findyoursauce",
+  instagram: "https://www.instagram.com/extrasauceagency/",
+  facebook: "https://www.facebook.com/ExtraSauceAgency",
+  spotify: "https://open.spotify.com/show/6b4SuGSg3MBwyCGhKU6Jv1?si=20f8ee0db1b4437c&nd=1&dlsi=3879f31603da40ae"
 };

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Linkedin, Music, Instagram, Twitter, Hash } from "lucide-react";
+import { Linkedin, Music, Instagram, Facebook, Hash } from "lucide-react";
 import { Link } from "react-router-dom";
 import { companyInfo, quickLinks, location, contact, email, socialMedia } from "@/content/footer";
 
@@ -104,11 +104,11 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href={socialMedia.mastodon}
+                href={socialMedia.facebook}
                 className="text-white/60 hover:text-white transition-colors duration-300"
-                aria-label="Mastodon"
+                aria-label="Facebook"
               >
-                <Twitter className="w-5 h-5" />
+                <Facebook className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.spotify}

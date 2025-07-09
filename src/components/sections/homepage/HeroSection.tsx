@@ -95,13 +95,14 @@ const HeroSection = () => {
               </Button>
             </Link>
             
-            <Button 
-              variant="outline" 
-              className="group relative overflow-hidden border-2 border-primary/30 text-foreground bg-white/50 backdrop-blur-sm px-12 py-6 text-lg font-semibold rounded-2xl hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-105 focus-enhanced"
-            >
-              <Sparkles className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-              {heroSection.secondaryButton}
-            </Button>
+            <Link to="/the-sauce-recipe">
+              <Button 
+                variant="outline" 
+                className="group relative overflow-hidden border-2 border-primary/30 text-foreground bg-white/50 backdrop-blur-sm px-12 py-6 text-lg font-semibold rounded-2xl hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-105 focus-enhanced">
+                <Sparkles className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                {heroSection.secondaryButton}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
