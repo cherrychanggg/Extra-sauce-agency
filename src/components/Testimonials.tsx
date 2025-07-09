@@ -82,13 +82,6 @@ const Testimonials = () => {
                 </div>
               </div>
 
-              {/* Rating */}
-              <div className="flex justify-center mb-6">
-                {Array.from({ length: testimonials[currentTestimonial].rating }).map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                ))}
-              </div>
-
               {/* Quote */}
               <blockquote className="text-2xl lg:text-3xl font-medium text-center text-foreground mb-8 leading-relaxed">
                 "{testimonials[currentTestimonial].quote}"
