@@ -1,7 +1,7 @@
 import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowRight, Users, Target, TrendingUp, Clock, User, Eye, BarChart3 } from "lucide-react";
+import { CheckCircle, Clock, User, Eye, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ExecutiveGhostwriting = () => {
@@ -51,61 +51,23 @@ const ExecutiveGhostwriting = () => {
     }
   ];
 
-  const features = [
-    "3-5 LinkedIn posts per week",
-    "Monthly long-form thought leadership articles", 
-    "Content calendar planning and strategy",
-    "Personal brand messaging development",
-    "Audience engagement and community building",
-    "Performance analytics and optimization",
-    "Industry trend integration",
-    "Cross-platform content adaptation"
-  ];
-
-  const process = [
-    {
-      step: "01",
-      title: "Discovery & Strategy",
-      description: "Deep dive into your expertise, audience, and business goals to create a personalized content strategy."
-    },
-    {
-      step: "02",
-      title: "Content Creation", 
-      description: "Our team crafts compelling posts and articles that capture your voice and showcase your thought leadership."
-    },
-    {
-      step: "03",
-      title: "Review & Refinement",
-      description: "You review and approve all content to ensure it perfectly represents your brand and messaging."
-    },
-    {
-      step: "04", 
-      title: "Publishing & Optimization",
-      description: "We handle publishing, engagement, and performance tracking to maximize your content's impact."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding pt-32 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-secondary/90 to-accent/90"></div>
-        <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        
-        <div className="container-premium relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
+      <section className="section-padding pt-32">
+        <div className="container-premium text-center">
+          <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-              Executive <span className="text-accent">Ghostwriting</span>
+              Executive <span className="text-primary">Ghostwriting</span>
             </h1>
-            <p className="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed opacity-90">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Transform your expertise into thought leadership content that positions you as an industry authority and drives qualified leads to your business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link to="/book-strategy-call">
-                <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
+                <Button className="btn-hero">
                   Get Started Today
                 </Button>
               </Link>
@@ -115,18 +77,18 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* Secondary Hero Section */}
-      <section className="section-padding bg-gradient-subtle">
+      <section className="section-padding bg-muted/30">
         <div className="container-premium">
           <div className="max-w-6xl mx-auto text-center animate-fade-in">
             <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
-              Become a <span className="text-foreground">thought leader.</span>
+              Become a <span className="text-primary">thought leader.</span>
             </h2>
             
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
               Great executive content is the perfect blend of your expertise and personality.
             </p>
 
-            {/* Pricing/Timeline Info */}
+            {/* Metrics */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">4 Hr/mo</div>
@@ -161,12 +123,12 @@ const ExecutiveGhostwriting = () => {
             {systemSteps.map((step, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-card/90 to-muted/50 backdrop-blur-sm border border-border/50 rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-300"
+                className="card-premium text-center group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-primary mx-auto mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                   {step.icon}
                 </div>
-                <h3 className="text-lg font-bold text-accent mb-4 leading-tight">
+                <h3 className="text-lg font-bold text-foreground mb-4 leading-tight">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -179,27 +141,23 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="section-padding bg-gradient-to-r from-primary/90 via-secondary/90 to-accent/90">
+      <section className="section-padding bg-muted/30">
         <div className="container-premium">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-card/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
+            <div className="card-premium p-12">
               <div className="flex items-center gap-8">
-                <div className="w-24 h-24 bg-white rounded-full overflow-hidden flex-shrink-0">
-                  <img 
-                    src="/chili.png" 
-                    alt="Marlene Gamba" 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-24 h-24 bg-primary rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-2xl">MG</span>
                 </div>
                 <div className="flex-1">
-                  <blockquote className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                  <blockquote className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                     "Manny's expertise and dedication have been instrumental in packaging our service 
                     offerings with clarity, crafting a compelling strategic narrative, and generating 
                     insightful content on LinkedIn that drives leads."
                   </blockquote>
                   <div className="text-primary font-semibold">
                     Marlene Gamba<br />
-                    <span className="text-white/80 text-sm">CEO, Company</span>
+                    <span className="text-muted-foreground text-sm">CEO, Company</span>
                   </div>
                 </div>
               </div>
@@ -209,7 +167,7 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding">
         <div className="container-premium">
           <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Left Side */}
@@ -247,9 +205,9 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary to-secondary">
+      <section className="section-padding bg-primary">
         <div className="container-premium text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-8">
             Ready for a strategy call?
           </h2>
           <Link to="/book-strategy-call">

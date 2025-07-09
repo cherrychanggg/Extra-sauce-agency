@@ -56,22 +56,18 @@ const VideoContentEngine = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding pt-32 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-accent/90 to-primary/90"></div>
-        <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        
-        <div className="container-premium relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
+      <section className="section-padding pt-32">
+        <div className="container-premium text-center">
+          <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-              Video Content <span className="text-accent">Engine</span>
+              Video Content <span className="text-primary">Engine</span>
             </h1>
-            <p className="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed opacity-90">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Build a systematic video content production process that turns your expertise into binge-worthy content that drives leads and builds trust.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link to="/book-strategy-call">
-                <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
+                <Button className="btn-hero">
                   Launch Your Engine
                 </Button>
               </Link>
@@ -81,7 +77,7 @@ const VideoContentEngine = () => {
       </section>
 
       {/* Secondary Hero Section */}
-      <section className="section-padding bg-gradient-subtle">
+      <section className="section-padding bg-muted/30">
         <div className="container-premium">
           <div className="max-w-6xl mx-auto text-center animate-fade-in">
             <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
@@ -92,7 +88,7 @@ const VideoContentEngine = () => {
               Launch a binge-worthy video series—podcast, masterclass, or webinar—that fuels LinkedIn, YouTube, and your entire content engine while turning dream prospects into pipeline.
             </p>
 
-            {/* Pricing/Timeline Info */}
+            {/* Metrics */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">4 Hr/mo</div>
@@ -127,12 +123,12 @@ const VideoContentEngine = () => {
             {systemSteps.map((step, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-card/90 to-muted/50 backdrop-blur-sm border border-border/50 rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-300"
+                className="card-premium text-center group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mx-auto mb-6 group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors duration-300">
                   {step.icon}
                 </div>
-                <h3 className="text-lg font-bold text-accent mb-4 leading-tight">
+                <h3 className="text-lg font-bold text-foreground mb-4 leading-tight">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -145,20 +141,16 @@ const VideoContentEngine = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="section-padding bg-gradient-to-r from-secondary/90 via-accent/90 to-primary/90">
+      <section className="section-padding bg-muted/30">
         <div className="container-premium">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-card/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
+            <div className="card-premium p-12">
               <div className="flex items-center gap-8">
-                <div className="w-24 h-24 bg-white rounded-full overflow-hidden flex-shrink-0">
-                  <img 
-                    src="/chili.png" 
-                    alt="Vik Sejal" 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-24 h-24 bg-primary rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-2xl">VS</span>
                 </div>
                 <div className="flex-1">
-                  <blockquote className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                  <blockquote className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                     "Extra Sauce completely shifted how we approach lead generation. Instead of 
                     wasting time at tradeshows or chasing cold leads, we now have warm 
                     conversations weekly with prospects who already trust us. The content positions 
@@ -166,7 +158,7 @@ const VideoContentEngine = () => {
                   </blockquote>
                   <div className="text-primary font-semibold">
                     Vik Sejal<br />
-                    <span className="text-white/80 text-sm">Head of Sales</span>
+                    <span className="text-muted-foreground text-sm">Head of Sales</span>
                   </div>
                 </div>
               </div>
@@ -176,7 +168,7 @@ const VideoContentEngine = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding">
         <div className="container-premium">
           <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Left Side */}
@@ -214,9 +206,9 @@ const VideoContentEngine = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary to-secondary">
+      <section className="section-padding bg-primary">
         <div className="container-premium text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-8">
             Ready for a strategy call?
           </h2>
           <Link to="/book-strategy-call">

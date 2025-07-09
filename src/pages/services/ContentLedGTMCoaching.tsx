@@ -56,22 +56,18 @@ const ContentLedGTMCoaching = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding pt-32 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-accent/90 via-primary/90 to-secondary/90"></div>
-        <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        
-        <div className="container-premium relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
+      <section className="section-padding pt-32">
+        <div className="container-premium text-center">
+          <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-              Content Led <span className="text-accent">GTM Coaching</span>
+              Content Led <span className="text-primary">GTM Coaching</span>
             </h1>
-            <p className="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed opacity-90">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Strategic coaching to integrate content into your entire go-to-market motion, from awareness to conversion, creating a predictable growth engine.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link to="/book-strategy-call">
-                <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
+                <Button className="btn-hero">
                   Start Your GTM Journey
                 </Button>
               </Link>
@@ -81,7 +77,7 @@ const ContentLedGTMCoaching = () => {
       </section>
 
       {/* Secondary Hero Section */}
-      <section className="section-padding bg-gradient-subtle">
+      <section className="section-padding bg-muted/30">
         <div className="container-premium">
           <div className="max-w-6xl mx-auto text-center animate-fade-in">
             <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
@@ -92,7 +88,7 @@ const ContentLedGTMCoaching = () => {
               Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.
             </p>
 
-            {/* Pricing/Timeline Info */}
+            {/* Metrics */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">6 Sessions</div>
@@ -103,7 +99,7 @@ const ContentLedGTMCoaching = () => {
                 <div className="text-sm text-muted-foreground">Call Structure</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">&gt; $30K</div>
+                <div className="text-3xl font-bold text-primary mb-2">> $30K</div>
                 <div className="text-sm text-muted-foreground">Minimum Savings</div>
               </div>
             </div>
@@ -127,12 +123,12 @@ const ContentLedGTMCoaching = () => {
             {systemSteps.map((step, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-card/90 to-muted/50 backdrop-blur-sm border border-border/50 rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-300"
+                className="card-premium text-center group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center text-accent mx-auto mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
                   {step.icon}
                 </div>
-                <h3 className="text-lg font-bold text-accent mb-4 leading-tight">
+                <h3 className="text-lg font-bold text-foreground mb-4 leading-tight">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -145,20 +141,16 @@ const ContentLedGTMCoaching = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="section-padding bg-gradient-to-r from-accent/90 via-primary/90 to-secondary/90">
+      <section className="section-padding bg-muted/30">
         <div className="container-premium">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-card/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
+            <div className="card-premium p-12">
               <div className="flex items-center gap-8">
-                <div className="w-24 h-24 bg-white rounded-full overflow-hidden flex-shrink-0">
-                  <img 
-                    src="/chili.png" 
-                    alt="Forest Khalil" 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-24 h-24 bg-primary rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-2xl">FK</span>
                 </div>
                 <div className="flex-1">
-                  <blockquote className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                  <blockquote className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                     "Working with Extra Sauce has been a game-changer for my business. Manny brings 
                     incredible clarity to our marketing and messaging, and their strategic narratives and 
                     content creation are top-notch. I love how systemized their process is; I can see 
@@ -166,7 +158,7 @@ const ContentLedGTMCoaching = () => {
                   </blockquote>
                   <div className="text-primary font-semibold">
                     Forest Khalil<br />
-                    <span className="text-white/80 text-sm">Founder</span>
+                    <span className="text-muted-foreground text-sm">Founder</span>
                   </div>
                 </div>
               </div>
@@ -176,7 +168,7 @@ const ContentLedGTMCoaching = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding">
         <div className="container-premium">
           <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Left Side */}
@@ -215,9 +207,9 @@ const ContentLedGTMCoaching = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary to-secondary">
+      <section className="section-padding bg-primary">
         <div className="container-premium text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-8">
             Ready for a strategy call?
           </h2>
           <Link to="/book-strategy-call">
