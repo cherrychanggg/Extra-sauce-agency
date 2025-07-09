@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Navigation from "@/components/shared/Navigation";
+import Footer from "@/components/shared/Footer";
 
 const NotFound = () => {
   const location = useLocation();

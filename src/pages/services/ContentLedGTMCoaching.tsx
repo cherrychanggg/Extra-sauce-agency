@@ -1,5 +1,5 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Navigation from "@/components/shared/Navigation";
+import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { User, Eye, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
