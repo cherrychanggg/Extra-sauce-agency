@@ -13,8 +13,8 @@ export const companyInfo = {
 export const quickLinks = {
   title: "QUICK LINKS",
   links: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms & Conditions", href: "#" }
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms & Condition", href: "/terms-of-service" }
   ]
 };
 
