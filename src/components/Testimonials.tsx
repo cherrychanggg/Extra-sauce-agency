@@ -32,7 +32,7 @@ const Testimonials = () => {
     },
     {
       quote: "Manny's expertise & dedication have been instrumental in crafting a compelling strategic narrative, and generating insightful content on LinkedIn that drives leads.",
-      author: "Sharlene Dumela",
+      author: "Sharlene Gumbs",
       title: "CEO & Founder",
       company: "ScaleUp Inc",
       avatar: "/sharlenegumbs.png",

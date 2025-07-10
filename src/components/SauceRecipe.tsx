@@ -218,23 +218,19 @@ const SauceRecipe = () => {
             </h3>
           </div>
           
-          {/* Video Embed Placeholder */}
+          {/* Embedded YouTube Video */}
           <div className="max-w-4xl mx-auto bg-card border border-border rounded-2xl overflow-hidden shadow-elegant mb-12">
             <div className="aspect-video bg-gradient-to-br from-muted/50 to-background flex items-center justify-center relative">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto shadow-glow">
-                  <Play className="w-8 h-8 text-primary-foreground ml-1" />
-                </div>
-                <h4 className="text-2xl font-bold text-foreground mb-2">THE SAUCE RECIPE™</h4>
-                <p className="text-lg text-primary font-semibold">VIDEO CONTENT ENGINE</p>
-                <p className="text-sm text-muted-foreground mt-4">WHAT IF YOU COULD GET 15-16 HIGH-CONVERTING LEADS EVERY MONTH?</p>
-              </div>
-              {/* YouTube-style overlay */}
-              <div className="absolute bottom-4 right-4">
-                <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  CLICK TO LEARN 🎯
-                </Button>
-              </div>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/uAaoV40NhuQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -247,13 +243,10 @@ const SauceRecipe = () => {
                 WHERE ARE YOU IN YOUR <span className="text-primary">CONTENT JOURNEY?</span>
               </h3>
             </div>
-            <div className="flex justify-end mt-4">
-              <button 
-                className="bg-green-400 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-500 transition-colors duration-300"
-                onClick={() => setSelectedJourneyCard(null)}
-              >
+            <div className="flex justify-center mt-4">
+              <span className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold">
                 CLICK TO LEARN ✨
-              </button>
+              </span>
             </div>
           </div>
           
@@ -277,7 +270,7 @@ const SauceRecipe = () => {
                         </div>
                       </div>
                     ) : (
-                      <div className="w-20 h-20 bg-green-400 rounded-full shadow-lg group-hover:bg-green-500 transition-colors duration-300"></div>
+                      <div className="w-20 h-20 bg-primary rounded-full shadow-lg group-hover:bg-primary/90 transition-colors duration-300"></div>
                     )}
                   </div>
                   
@@ -297,7 +290,7 @@ const SauceRecipe = () => {
                   {selectedJourneyCard === index && (
                     <div className="mt-6">
                       <Link to={stage.link}>
-                        <button className="bg-green-400 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-500 transition-colors duration-300">
+                        <button className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors duration-300">
                           CLICK TO LEARN ✨
                         </button>
                       </Link>

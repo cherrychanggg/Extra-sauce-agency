@@ -147,7 +147,11 @@ const ExecutiveGhostwriting = () => {
             <div className="card-premium p-12">
               <div className="flex items-center gap-8">
                 <div className="w-24 h-24 bg-primary rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-2xl">MG</span>
+                  <img
+                    src="/sharlenegumbs.png"
+                    alt="Sharlene Gumbs"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="flex-1">
                   <blockquote className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
@@ -156,7 +160,7 @@ const ExecutiveGhostwriting = () => {
                     insightful content on LinkedIn that drives leads."
                   </blockquote>
                   <div className="text-primary font-semibold">
-                    Marlene Gamba<br />
+                    Sharlene Gumbs<br />
                     <span className="text-muted-foreground text-sm">CEO, Company</span>
                   </div>
                 </div>
