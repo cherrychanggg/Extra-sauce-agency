@@ -42,16 +42,22 @@ const SauceRecipe = () => {
 
   const journeyStages = [
     {
-      title: "HAVE NO IDEA HOW TO INVEST IN CONTENT & SOCIAL MEDIA",
-      description: "Starting from scratch with content strategy and social media presence"
+      title: "READY TO MAKE CONTENT IN-HOUSE?",
+      description: "We'll coach you or your team to produce quality content that stops the scroll and builds influence with your buyer.",
+      iconType: "pie", // red pie chart
+      link: "/services/content-led-gtm-coaching"
     },
     {
       title: "LOOKING TO PUT OUT EXECUTIVE THOUGHT LEADERSHIP CONTENT", 
-      description: "Ready to establish thought leadership but need guidance and strategy"
+      description: "We'll turn your executive team into trusted thought leaders by being their secret social media ghostwriter.",
+      iconType: "circle", // green circle
+      link: "/services/executive-ghostwriting"
     },
     {
       title: "READY TO BUILD A COMPANY VIDEO ENGINE THAT IS ENTERTAINING",
-      description: "Scale content production with engaging video content systems"
+      description: "Work with dream clients & scale revenue with an executive video engine (e.g. podcast, webinar, episodic series)",
+      iconType: "circle", // green circle
+      link: "/services/video-content-engine"
     }
   ];
 
@@ -244,20 +250,45 @@ const SauceRecipe = () => {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {journeyStages.map((stage, index) => (
-              <div 
+              <Link 
                 key={index}
-                className="card-premium p-8 text-center group hover:scale-105 transition-all duration-300"
+                to={stage.link}
+                className="block group"
               >
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <div className="w-8 h-8 bg-current rounded-full"></div>
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 text-center hover:scale-105 transition-all duration-300 border border-slate-700/50 hover:border-primary/30 shadow-xl hover:shadow-2xl">
+                  {/* Icon - Pie Chart for first card, Circle for others */}
+                  <div className="flex justify-center mb-8">
+                    {stage.iconType === "pie" ? (
+                      <div className="w-20 h-20 relative">
+                        {/* Red pie chart */}
+                        <div className="w-20 h-20 rounded-full bg-slate-700 relative overflow-hidden">
+                          <div className="absolute inset-0 rounded-full" style={{
+                            background: `conic-gradient(from 0deg, hsl(14, 85%, 55%) 0deg 120deg, hsl(var(--muted)) 120deg 360deg)`
+                          }}></div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="w-20 h-20 bg-green-500 rounded-full shadow-lg group-hover:bg-green-400 transition-colors duration-300"></div>
+                    )}
+                  </div>
+                  
+                  <h4 className="text-xl font-bold text-white mb-6 leading-tight">
+                    {stage.title}
+                  </h4>
+                  
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    {stage.description}
+                  </p>
+                  
+                  {/* Hover indicator */}
+                  <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="inline-flex items-center text-green-400 text-sm font-medium">
+                      Click to Learn More
+                      <span className="ml-2">→</span>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="text-lg font-bold text-accent mb-4 leading-tight">
-                  {stage.title}
-                </h4>
-                <p className="text-muted-foreground text-sm">
-                  {stage.description}
-                </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
