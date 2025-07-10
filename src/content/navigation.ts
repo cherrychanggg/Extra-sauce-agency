@@ -4,7 +4,7 @@
 export const navigationItems = [
   { name: "The Sauce Recipe", href: "/the-sauce-recipe" },
   { name: "Services", href: "/services" },
-  { name: "Success Stories", href: "#success-stories" },
+  { name: "Success Stories", href: "/success-stories" },
   { name: "Resources", href: "#resources" },
 ];
 

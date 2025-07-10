@@ -79,11 +79,17 @@ export const servicesOverviewSection = {
       title: "Video Content Engine",
       description: "Get a consistent video engine to position yourself as a thought leader and staying on top of mind.",
       features: [
+        "Dedicated Content Strategist",
+        "Director of Demand Gen", 
+        "Dedicated video editor",
+        "Dedicated copywriter",
+        "1 long-format series / week",
+        "20 pieces of short-form videos / mo",
         "20 Video Thumbnails / month",
-        "Warm Outbound Strategy Installed", 
+        "Warm Outbound Strategy Installed",
         "Invite-Only Outbound Software",
-        "Create 1 Long-form newsletter / mo",
-        "Social selling consulting"
+        "Create 1 long-form newsletter/ mo",
+        "Social selling consulting",
       ],
       link: "/services/video-content-engine"
     },
@@ -91,10 +97,16 @@ export const servicesOverviewSection = {
       title: "Content-led GTM Coaching",
       description: "Get consulting to build a pipeline-generating content engine & get your company ready for market.", 
       features: [
+        "1-on-1 consulting video calls",
+        "Dedicated GTM Consultant",
+        "Personal Branding",
+        "Develop A Strategic Narrative",
+        "Messaging Optimization",
+        "Social Media Strategy",
         "Content Ideation + system building",
         "Website Optimization",
         "Social Selling consulting",
-        "Invite-Only Outbound Software"
+        "Invite-Only Outbound Software",
       ],
       link: "/services/content-led-gtm-coaching"
     },
@@ -102,9 +114,15 @@ export const servicesOverviewSection = {
       title: "Executive Ghostwriting",
       description: "Get high-quality thought leadership narrative-driven content created for you to build a realm of influence.",
       features: [
+        "Dedicated social strategist/copywriter",
+        "20-30 pieces of written content/ mo",
+        "Up to 4 short-form video scripts/ mo",
+        "Social Media Management",
+        "1 content ideation call/week",
+        "Monthly analytical report",
         "Ongoing social media optimization",
         "Social selling consulting",
-        "Invite-Only Outbound Software"
+        "Invite-Only Outbound Software",
       ],
       link: "/services/executive-ghostwriting"
     }

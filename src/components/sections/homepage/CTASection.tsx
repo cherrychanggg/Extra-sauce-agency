@@ -52,14 +52,16 @@ const CTASection = () => {
                 </span>
               </Button>
             </Link>
-            <Button 
-              variant="outline" 
-              className="group border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground px-12 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105"
-            >
-              <span className="group-hover:scale-110 transition-transform duration-300">
-                View Success Stories
-              </span>
-            </Button>
+            <Link to="/success-stories">
+              <Button 
+                variant="outline" 
+                className="group border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground px-12 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105"
+              >
+                <span className="group-hover:scale-110 transition-transform duration-300">
+                  View Success Stories
+                </span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

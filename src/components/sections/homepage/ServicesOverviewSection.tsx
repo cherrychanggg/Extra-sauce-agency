@@ -31,9 +31,9 @@ const ServicesOverviewSection = () => {
           {servicesOverviewSection.services.map((service, index) => (
             <div 
               key={index}
-              className={`card-premium p-8 group hover:scale-[1.03] hover:shadow-2xl transition-all duration-500 relative overflow-hidden bg-gradient-to-br ${serviceColors[index].bgColor} border-2 ${serviceColors[index].borderColor} hover:border-primary/40 flex flex-col justify-between h-full`}
+              className={`card-premium p-8 group hover:scale-[1.03] hover:shadow-2xl transition-all duration-500 relative overflow-hidden bg-gradient-to-br ${serviceColors[index].bgColor} border-2 ${serviceColors[index].borderColor} hover:border-primary/40 flex flex-col h-full`}
             >
-              <div className="flex-1 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col">
                 {/* Header */}
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -61,12 +61,14 @@ const ServicesOverviewSection = () => {
               </div>
 
               {/* CTA */}
-              <Link to={service.link} className="mt-auto">
-                <Button className="w-full btn-hero group focus-enhanced">
-                  <span className="group-hover:scale-105 transition-transform duration-200">Learn more</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-                </Button>
-              </Link>
+              <div className="mt-auto">
+                <Link to={service.link}>
+                  <Button className="w-full btn-hero group focus-enhanced">
+                    <span className="group-hover:scale-105 transition-transform duration-200">Learn more</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

@@ -3,6 +3,7 @@ import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Clock, User, Eye, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
+import CTASection from "@/components/sections/homepage/CTASection";
 
 const ExecutiveGhostwriting = () => {
   const systemSteps = [
@@ -56,7 +57,7 @@ const ExecutiveGhostwriting = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding pt-32">
+      <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-gradient-subtle pt-20">
         <div className="container-premium text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
@@ -208,19 +209,10 @@ const ExecutiveGhostwriting = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary">
-        <div className="container-premium text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-8">
-            Ready for a strategy call?
-          </h2>
-          <Link to="/book-strategy-call">
-            <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
-              Talk with Manny
-            </Button>
-          </Link>
-        </div>
-      </section>
+      {/* Full-width CTA Section */}
+      <div className="mt-20">
+        <CTASection />
+      </div>
 
       <Footer />
     </div>
