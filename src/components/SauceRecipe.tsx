@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Play, Users, Target, TrendingUp, Building } from "lucide-react";
+import { Play, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, BarChart3, Handshake, Zap, Eye, FileText, Lightbulb, PieChart, Coins } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SauceRecipe = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [activeDepartment, setActiveDepartment] = useState("C-SUITE");
 
   const steps = [
     {
@@ -54,35 +55,98 @@ const SauceRecipe = () => {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Executive Brand Growth",
-      description: "We build your executive brand into a long-term asset. Every piece of content compounds — creating credibility, attracting opportunities, and building influence that lasts beyond your current company."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Organizational Synergy", 
-      description: "When the founder's message leads, the rest of the team follows. Our framework aligns your UVP, narrative, and messaging across departments — so everyone speaks the same language to the market."
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Leverage Your Unfair Advantage",
-      description: "Your story is a strategic asset. Most mid-market companies hide their execs team behind the brand — but buyers connect with people. We help you stand out by putting your origin story and leadership front and center."
-    },
-    {
-      icon: <Building className="w-8 h-8" />,
-      title: "Investor-Ready Positioning",
-      description: "When investors search your brand, what do they find? We help you shape a memorable, high-conviction narrative that signals vision, traction, and leadership — before the first pitch deck is even opened."
-    }
-  ];
+  const departmentBenefits = {
+    "C-SUITE": [
+      {
+        icon: <TrendingUp className="w-8 h-8" />,
+        title: "Executive Brand Growth",
+        description: "We build your executive brand into a long-term asset. Every piece of content compounds — creating credibility, attracting opportunities, and building influence that lasts beyond your current company."
+      },
+      {
+        icon: <Target className="w-8 h-8" />,
+        title: "Leverage Your Unfair Advantage",
+        description: "Your story is a strategic asset. Most mid-market companies hide their exec team behind the brand — but buyers connect with people. We help you stand out by putting your origin story and leadership front and center."
+      },
+      {
+        icon: <Users className="w-8 h-8" />,
+        title: "Organizational Synergy",
+        description: "When the founder's message leads, the rest of the team follows. Our framework aligns your UVP, narrative, and messaging across departments — so everyone speaks the same language to the market."
+      },
+      {
+        icon: <Building className="w-8 h-8" />,
+        title: "Investor-Ready Positioning",
+        description: "When investors search your brand, what do they find? We help you shape a memorable, high-conviction narrative that signals vision, traction, and leadership — before the first pitch deck is even opened."
+      }
+    ],
+    "SALES": [
+      {
+        icon: <MessageSquare className="w-8 h-8" />,
+        title: "Warmer Leads, Shorter Cycles",
+        description: "Sales shouldn't start at zero. Our content builds familiarity and trust with buyers before the first touchpoint — so your reps walk into conversations halfway to closed."
+      },
+      {
+        icon: <Zap className="w-8 h-8" />,
+        title: "Unlock Huge Deal Opportunities",
+        description: "Having your exec team build trusted brands in the industry will open doors for sales opportunities that wouldn't of happened otherwise due to the influence your leadership has in the space."
+      },
+      {
+        icon: <FileText className="w-8 h-8" />,
+        title: "Content That Sells For You",
+        description: "We don't just make noise — we create sales enablement disguised as thought leadership. Every post answers objections, frames the problem, and moves buyers closer to \"yes.\""
+      },
+      {
+        icon: <Handshake className="w-8 h-8" />,
+        title: "Raving Fans On Sale Calls",
+        description: "No more chasing ghost prospects. Our content warms up buyers before they ever book a meeting — so when they show up, they already trust your brand and just need help crossing the finish line."
+      }
+    ],
+    "MARKETING": [
+      {
+        icon: <BarChart3 className="w-8 h-8" />,
+        title: "Content-led Pipeline Growth",
+        description: "No more relying solely on outbound or paid. Founder-led content attracts, educates, and qualifies buyers — turning your content into a pipeline engine, not just a support function."
+      },
+      {
+        icon: <Eye className="w-8 h-8" />,
+        title: "Deep Customer Resonance",
+        description: "Your founder has insights that no keyword tool can surface. We help you extract and package those into content that actually speaks your buyer's language — not just marketing jargon."
+      },
+      {
+        icon: <Lightbulb className="w-8 h-8" />,
+        title: "Unique Thought Leadership",
+        description: "Instead of waiting months to \"build brand,\" we plug into your founder's POV and turn it into scroll-stopping, conversation-starting content that elevates your positioning fast."
+      },
+      {
+        icon: <FileText className="w-8 h-8" />,
+        title: "Less Content Bottlenecks",
+        description: "Say goodbye to the content drought. Our system gives your marketing team a consistent stream of authentic, strategic content — without waiting on approvals or reinventing the wheel."
+      }
+    ],
+    "FINANCE": [
+      {
+        icon: <DollarSign className="w-8 h-8" />,
+        title: "Lower CAC Over Time",
+        description: "Content doesn't just educate — it compounds. By investing in founder-led content, you build brand equity that drives inbound interest and reduces your dependency on expensive paid channels."
+      },
+      {
+        icon: <PieChart className="w-8 h-8" />,
+        title: "Asset Creation, Not Just Spend",
+        description: "Every post, video, and POV we create becomes a long-term business asset — not a sunk cost. It's an investment in your market positioning that pays off across sales, hiring, fundraising, and brand value."
+      },
+      {
+        icon: <TrendingUp className="w-8 h-8" />,
+        title: "Higher ROI on GTM Efforts",
+        description: "Instead of hiring more SDRs or spinning up new ad campaigns, we maximize the impact of your existing GTM team by letting your founder become a magnet for qualified buyers."
+      },
+      {
+        icon: <Coins className="w-8 h-8" />,
+        title: "Increases Enterprise Value",
+        description: "Brands with visible, credible founders tend to attract better deal terms, partnerships, and media attention. Founder-led content adds intangible value — strengthen future valuation during M&A or early-stage funding."
+      }
+    ]
+  };
 
-  const departments = [
-    { name: "C-SUITE", active: false },
-    { name: "SALES", active: false },
-    { name: "MARKETING", active: true },
-    { name: "FINANCE", active: false }
-  ];
+  const departments = ["C-SUITE", "SALES", "MARKETING", "FINANCE"];
 
   return (
     <section id="sauce-recipe" className="section-padding bg-background">
@@ -276,18 +340,19 @@ const SauceRecipe = () => {
             {departments.map((dept, index) => (
               <Button
                 key={index}
-                variant={dept.active ? "default" : "outline"}
+                variant={activeDepartment === dept ? "default" : "outline"}
                 size="sm"
-                className={`rounded-full ${dept.active ? 'bg-primary text-primary-foreground' : 'bg-card text-foreground'}`}
+                className={`rounded-full ${activeDepartment === dept ? 'bg-primary text-primary-foreground' : 'bg-card text-foreground'}`}
+                onClick={() => setActiveDepartment(dept)}
               >
-                {dept.name}
+                {dept}
               </Button>
             ))}
           </div>
 
           {/* Benefits Grid */}
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
+            {departmentBenefits[activeDepartment as keyof typeof departmentBenefits]?.map((benefit, index) => (
               <div 
                 key={index}
                 className="card-premium p-8 group hover:scale-105 transition-all duration-300"
