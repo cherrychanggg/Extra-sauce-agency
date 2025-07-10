@@ -99,7 +99,7 @@ const ContentLedGTMCoaching = () => {
                 <div className="text-sm text-muted-foreground">Call Structure</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">> $30K</div>
+                <div className="text-3xl font-bold text-primary mb-2">{'>'} $30K</div>
                 <div className="text-sm text-muted-foreground">Minimum Savings</div>
               </div>
             </div>
