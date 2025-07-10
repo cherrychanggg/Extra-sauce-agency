@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const SauceRecipe = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [activeDepartment, setActiveDepartment] = useState("C-SUITE");
+  const [selectedJourneyCard, setSelectedJourneyCard] = useState<number | null>(null);
 
   const steps = [
     {
@@ -42,21 +43,21 @@ const SauceRecipe = () => {
 
   const journeyStages = [
     {
-      title: "READY TO MAKE CONTENT IN-HOUSE?",
-      description: "We'll coach you or your team to produce quality content that stops the scroll and builds influence with your buyer.",
-      iconType: "pie", // red pie chart
+      initialTitle: "HAVE NO IDEA HOW TO INVEST IN CONTENT & SOCIAL MEDIA",
+      expandedTitle: "READY TO MAKE CONTENT IN-HOUSE?",
+      expandedDescription: "We'll coach you or your team to produce quality content that stops the scroll and builds influence with your buyer.",
       link: "/services/content-led-gtm-coaching"
     },
     {
-      title: "LOOKING TO PUT OUT EXECUTIVE THOUGHT LEADERSHIP CONTENT", 
-      description: "We'll turn your executive team into trusted thought leaders by being their secret social media ghostwriter.",
-      iconType: "circle", // green circle
+      initialTitle: "LOOKING TO PUT OUT EXECUTIVE THOUGHT LEADERSHIP CONTENT",
+      expandedTitle: "READY TO BE A TRUSTED LEADER?",
+      expandedDescription: "We'll turn your executive team into trusted thought leaders by being their secret social media ghostwriter.",
       link: "/services/executive-ghostwriting"
     },
     {
-      title: "READY TO BUILD A COMPANY VIDEO ENGINE THAT IS ENTERTAINING",
-      description: "Work with dream clients & scale revenue with an executive video engine (e.g. podcast, webinar, episodic series)",
-      iconType: "circle", // green circle
+      initialTitle: "READY TO BUILD A COMPANY VIDEO ENGINE THAT IS ENTERTAINING",
+      expandedTitle: "WANT TO LEVEL UP WITH VIDEO?",
+      expandedDescription: "Work with dream clients & scale revenue with an executive video engine (e.g. podcast, webinar, episodic series)",
       link: "/services/video-content-engine"
     }
   ];
@@ -246,49 +247,64 @@ const SauceRecipe = () => {
                 WHERE ARE YOU IN YOUR <span className="text-primary">CONTENT JOURNEY?</span>
               </h3>
             </div>
+            <div className="flex justify-end mt-4">
+              <button 
+                className="bg-green-400 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-500 transition-colors duration-300"
+                onClick={() => setSelectedJourneyCard(null)}
+              >
+                CLICK TO LEARN ✨
+              </button>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {journeyStages.map((stage, index) => (
-              <Link 
+              <div
                 key={index}
-                to={stage.link}
-                className="block group"
+                className="group cursor-pointer"
+                onClick={() => setSelectedJourneyCard(selectedJourneyCard === index ? null : index)}
               >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 text-center hover:scale-105 transition-all duration-300 border border-slate-700/50 hover:border-primary/30 shadow-xl hover:shadow-2xl">
-                  {/* Icon - Pie Chart for first card, Circle for others */}
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 text-center hover:scale-105 transition-all duration-300 border border-slate-700/50 hover:border-primary/30 shadow-xl hover:shadow-2xl min-h-[300px] flex flex-col justify-between">
+                  {/* Icon - Circle initially, Pie Chart when selected */}
                   <div className="flex justify-center mb-8">
-                    {stage.iconType === "pie" ? (
+                    {selectedJourneyCard === index ? (
                       <div className="w-20 h-20 relative">
                         {/* Red pie chart */}
                         <div className="w-20 h-20 rounded-full bg-slate-700 relative overflow-hidden">
                           <div className="absolute inset-0 rounded-full" style={{
-                            background: `conic-gradient(from 0deg, hsl(14, 85%, 55%) 0deg 120deg, hsl(var(--muted)) 120deg 360deg)`
+                            background: `conic-gradient(from 0deg, #ff6b6b 0deg 270deg, #4a5568 270deg 360deg)`
                           }}></div>
                         </div>
                       </div>
                     ) : (
-                      <div className="w-20 h-20 bg-green-500 rounded-full shadow-lg group-hover:bg-green-400 transition-colors duration-300"></div>
+                      <div className="w-20 h-20 bg-green-400 rounded-full shadow-lg group-hover:bg-green-500 transition-colors duration-300"></div>
                     )}
                   </div>
                   
-                  <h4 className="text-xl font-bold text-white mb-6 leading-tight">
-                    {stage.title}
-                  </h4>
+                  <div className="flex-1 flex flex-col justify-center">
+                    <h4 className="text-xl font-bold text-white mb-6 leading-tight">
+                      {selectedJourneyCard === index ? stage.expandedTitle : stage.initialTitle}
+                    </h4>
                   
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    {stage.description}
-                  </p>
-                  
-                  {/* Hover indicator */}
-                  <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="inline-flex items-center text-green-400 text-sm font-medium">
-                      Click to Learn More
-                      <span className="ml-2">→</span>
-                    </div>
+                    {selectedJourneyCard === index && (
+                      <p className="text-white/80 text-sm leading-relaxed mb-4">
+                        {stage.expandedDescription}
+                      </p>
+                    )}
                   </div>
+                  
+                  {/* Action button when expanded */}
+                  {selectedJourneyCard === index && (
+                    <div className="mt-6">
+                      <Link to={stage.link}>
+                        <button className="bg-green-400 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-500 transition-colors duration-300">
+                          CLICK TO LEARN ✨
+                        </button>
+                      </Link>
+                    </div>
+                  )}
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
