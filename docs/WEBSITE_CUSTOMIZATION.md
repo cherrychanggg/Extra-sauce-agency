@@ -186,15 +186,6 @@ export const heroSection = {
 
 ---
 
-## 📊 Analytics & Tracking
-
-### **Google Analytics**
-Add tracking code to `index.html`:
-```html
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-```
-
 ### **Contact Form Tracking**
 Monitor form submissions through:
 - Email notifications
@@ -214,13 +205,6 @@ Monitor form submissions through:
 | Layout broken | Undo recent changes, check for missing brackets |
 | Mobile issues | Test responsive design, check image sizes |
 
-### **Emergency Contacts**
-- **Developer:** [Contact information]
-- **Hosting Support:** [Platform support]
-- **Domain Support:** [Domain registrar]
-
----
-
 ## 📋 Maintenance Checklist
 
 ### **Monthly Tasks**
@@ -238,5 +222,3 @@ Monitor form submissions through:
 - [ ] Check mobile responsiveness
 
 ---
-
-*This guide covers most customization needs. For major changes or new features, consult your developer.*

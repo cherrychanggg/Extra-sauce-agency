@@ -112,8 +112,6 @@ export const contact = {
 
 ---
 
-## 📞 Need Help?
-
 ### Common Issues:
 - **Missing comma:** Add `,` after each line except the last
 - **Missing quote:** Make sure text is wrapped in `"quotes"`
@@ -134,5 +132,3 @@ Before publishing changes:
 - [ ] Website displays correctly on desktop and mobile
 
 ---
-
-*This guide covers 90% of content editing needs. For advanced changes, consult your developer.*
