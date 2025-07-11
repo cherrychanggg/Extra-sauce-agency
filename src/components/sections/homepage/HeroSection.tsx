@@ -65,7 +65,7 @@ const HeroSection = () => {
             Our{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
-                aSAUCE™ Recipe
+                SAUCE™ Recipe
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </span>{" "}
