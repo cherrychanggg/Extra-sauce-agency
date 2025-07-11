@@ -3,8 +3,13 @@
 
 export const navigationItems = [
   { name: "The Sauce Recipe", href: "/the-sauce-recipe" },
-  { name: "Services", href: "/services" },
   { name: "Success Stories", href: "/success-stories" },
+];
+
+export const servicesDropdown = [
+  { name: "Executive Ghostwriting", href: "/services/executive-ghostwriting" },
+  { name: "Video Content Engine", href: "/services/video-content-engine" },
+  { name: "Content-Led GTM Coaching", href: "/services/content-led-gtm-coaching" },
 ];
 
 export const resourcesDropdown = [

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { navigationItems, resourcesDropdown, ctaButton, logo } from "@/content/navigation";
+import { navigationItems, servicesDropdown, resourcesDropdown, ctaButton, logo } from "@/content/navigation";
 import { ChevronDown } from "lucide-react";
 
 const Navigation = () => {
@@ -45,6 +45,29 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated flex items-center space-x-1">
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+              </button>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-2">
+                  {servicesDropdown.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block px-4 py-2 text-foreground hover:text-primary hover:bg-accent transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             
             {/* Resources Dropdown */}
             <div className="relative group">
@@ -102,6 +125,21 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Services Section */}
+              <div className="border-t border-border/30 pt-4">
+                <div className="text-foreground font-medium mb-2">Services</div>
+                {servicesDropdown.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block text-foreground hover:text-primary transition-colors duration-300 py-2 pl-4"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
               
               {/* Mobile Resources Section */}
               <div className="border-t border-border/30 pt-4">
