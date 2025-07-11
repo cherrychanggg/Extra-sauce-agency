@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Check, Clock, Video, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
+import { InlineWidget } from "react-calendly";
 
 const BookingPage = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -52,7 +53,6 @@ const BookingPage = () => {
       title: "CEO & Founder",
       avatar: "/philliplunn.png"
     },
-
   ];
 
   // Auto-scroll testimonials
@@ -121,6 +121,7 @@ const BookingPage = () => {
       );
 
       alert('Thank you! Your strategy call request has been sent successfully.');
+      
       // Reset form
       setFormData({
         name: '',
@@ -195,7 +196,7 @@ const BookingPage = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
                           </div>
                         </div>
-                       ))}
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -203,7 +204,14 @@ const BookingPage = () => {
 
               {/* Testimonial Section - Within Left Column */}
               <div className="mb-8">
-                <div className="relative bg-white/30 backdrop-blur-sm rounded-2xl p-6 border border-border/30" style={{background: 'linear-gradient(135deg, #ff6b35, #f7931e)', height: '220px', overflow: 'hidden'}}>
+                <div 
+                  className="relative bg-white/30 backdrop-blur-sm rounded-2xl p-6 border border-border/30" 
+                  style={{
+                    background: 'linear-gradient(135deg, #ff6b35, #f7931e)', 
+                    height: '220px', 
+                    overflow: 'hidden'
+                  }}
+                >
                   {/* Navigation Arrows */}
                   <button
                     onClick={prevTestimonial}
@@ -236,7 +244,9 @@ const BookingPage = () => {
                         </blockquote>
                         <div className="text-white/90 text-sm font-medium">
                           {testimonials[currentTestimonial].author}<br />
-                          <span className="text-white/70 text-xs">{testimonials[currentTestimonial].title}</span>
+                          <span className="text-white/70 text-xs">
+                            {testimonials[currentTestimonial].title}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -260,7 +270,7 @@ const BookingPage = () => {
             </div>
 
             {/* Right Calendly Widget */}
-            <div className="lg:sticky lg:top-32">
+            <div className="flex flex-col justify-center items-center h-full min-h-[500px] lg:min-h-[700px] -mt-14">
               <div className="w-full max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-6">
@@ -273,73 +283,17 @@ const BookingPage = () => {
                 </div>
 
                 {/* Calendly Embed */}
-                <div className="card-premium p-0 overflow-hidden">
-                  <div className="bg-white rounded-lg">
-                    {/* Calendly Header */}
-                    <div className="p-6 border-b border-border/20">
-                      <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                          <span className="text-primary-foreground font-bold text-lg">ES</span>
-                        </div>
-                        <div className="text-center">
-                          <h3 className="text-xl font-bold text-foreground">Extra Sauce Agency</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Welcome to my scheduling page. Please follow the instructions to add an event to my calendar.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Calendly Session Info */}
-                    <div className="p-6">
-                      <div className="flex items-start gap-4 p-4 bg-muted/30 rounded-lg mb-6">
-                        <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <div className="flex-1">
-                          <h4 className="text-lg font-semibold text-foreground mb-2">GTM Strategy Session</h4>
-                          <p className="text-sm text-muted-foreground mb-3">
-                            In an ever-evolving digital landscape, your SaaS company requires a do-it-for-you GTM strategy that not only aligns with your vision but also accelerates your growth.
-                          </p>
-                          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-1">
-                              <Clock className="w-4 h-4" />
-                              <span>45 min</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <Video className="w-4 h-4" />
-                              <span>Web conferencing</span>
-                            </div>
-                          </div>
-                        </div>
-                        <Button variant="outline" size="sm">
-                          <span>→</span>
-                        </Button>
-                      </div>
-
-                      {/* Placeholder for Calendly Widget */}
-                      {/* Calendly Widget */}
-                      <div className="calendly-wrapper">
-                        <div 
-                          className="calendly-inline-widget" 
-                          data-url="https://calendly.com/extrasauceagency" 
-                          style={{minWidth: '320px', height: '630px'}}
-                        ></div>
-                      </div>
-
-                      {/* Footer */}
-                      <div className="mt-6 pt-4 border-t border-border/20">
-                        <div className="text-xs text-muted-foreground text-center">
-                          By proceeding, you confirm that you have read and agree to Calendly's Terms of Use and Privacy Notice.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div
+                  className="card-premium p-0 overflow-hidden rounded-2xl border-2 border-orange-400 shadow-lg bg-gradient-to-br from-orange-50 via-white to-white"
+                  style={{ height: 520 }}
+                >
+                  <InlineWidget url="https://calendly.com/extrasauceagency" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
 
       <Footer />
       
