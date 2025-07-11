@@ -259,160 +259,85 @@ const BookingPage = () => {
               </div>
             </div>
 
-            {/* Right Contact Form */}
+            {/* Right Calendly Widget */}
             <div className="lg:sticky lg:top-32">
-              <div className="card-premium p-8 max-w-md mx-auto">
+              <div className="w-full max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-6">
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-sm">ES</span>
+                  <h2 className="text-3xl font-bold mb-4">
+                    Schedule Your <span className="text-primary">Strategy Call</span>
+                  </h2>
+                  <p className="text-muted-foreground">
+                    Book a one-on-one session with our content experts and discover how founder-led content can transform your B2B pipeline
+                  </p>
+                </div>
+
+                {/* Calendly Embed */}
+                <div className="card-premium p-0 overflow-hidden">
+                  <div className="bg-white rounded-lg">
+                    {/* Calendly Header */}
+                    <div className="p-6 border-b border-border/20">
+                      <div className="flex items-center justify-center gap-3 mb-4">
+                        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                          <span className="text-primary-foreground font-bold text-lg">ES</span>
+                        </div>
+                        <div className="text-center">
+                          <h3 className="text-xl font-bold text-foreground">Extra Sauce Agency</h3>
+                          <p className="text-sm text-muted-foreground">
+                            Welcome to my scheduling page. Please follow the instructions to add an event to my calendar.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-left">
-                      <h3 className="text-lg font-bold">GTM Strategy Session</h3>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Clock className="w-4 h-4" />
-                        <span>45 min</span>
+
+                    {/* Calendly Session Info */}
+                    <div className="p-6">
+                      <div className="flex items-start gap-4 p-4 bg-muted/30 rounded-lg mb-6">
+                        <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-semibold text-foreground mb-2">GTM Strategy Session</h4>
+                          <p className="text-sm text-muted-foreground mb-3">
+                            In an ever-evolving digital landscape, your SaaS company requires a do-it-for-you GTM strategy that not only aligns with your vision but also accelerates your growth.
+                          </p>
+                          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-1">
+                              <Clock className="w-4 h-4" />
+                              <span>45 min</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Video className="w-4 h-4" />
+                              <span>Web conferencing</span>
+                            </div>
+                          </div>
+                        </div>
+                        <Button variant="outline" size="sm">
+                          <span>→</span>
+                        </Button>
+                      </div>
+
+                      {/* Placeholder for Calendly Widget */}
+                      <div className="bg-muted/20 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
+                        <div>
+                          <Calendar className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+                          <h4 className="text-lg font-semibold text-foreground mb-2">Calendly Widget</h4>
+                          <p className="text-muted-foreground mb-4">
+                            The Calendly booking widget will be embedded here
+                          </p>
+                          <div className="text-xs text-muted-foreground">
+                            Replace this placeholder with actual Calendly embed code
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Footer */}
+                      <div className="mt-6 pt-4 border-t border-border/20">
+                        <div className="text-xs text-muted-foreground text-center">
+                          By proceeding, you confirm that you have read and agree to Calendly's Terms of Use and Privacy Notice.
+                        </div>
                       </div>
                     </div>
                   </div>
-                  
-                  <div className="bg-muted/30 rounded-lg p-4 mb-4">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                      <Video className="w-4 h-4" />
-                      <span>Web conferencing details provided upon confirmation</span>
-                    </div>
-                  </div>
                 </div>
-
-                {/* Contact Form */}
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Label htmlFor="name" className="text-sm font-medium">
-                      Name *
-                    </Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="mt-1"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="email" className="text-sm font-medium">
-                      Email *
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="mt-1"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="guests" className="text-sm font-medium">
-                      Add Guests
-                    </Label>
-                    <Input
-                      id="guests"
-                      name="guests"
-                      value={formData.guests}
-                      onChange={handleInputChange}
-                      placeholder="Optional"
-                      className="mt-1"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="goals" className="text-sm font-medium">
-                      What specific, measurable goals do you aim to achieve in the next 90 days through Founder-led Marketing? *
-                    </Label>
-                    <Textarea
-                      id="goals"
-                      name="goals"
-                      value={formData.goals}
-                      onChange={handleInputChange}
-                      required
-                      className="mt-1"
-                      rows={3}
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="budget" className="text-sm font-medium">
-                      Could you provide insight into the budget and thought leadership resources you're prepared to allocate for your digital marketing initiative? *
-                    </Label>
-                    <Textarea
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      required
-                      className="mt-1"
-                      rows={3}
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="challenges" className="text-sm font-medium">
-                      What are the revenue challenges that have prompted you to seek external assistance? *
-                    </Label>
-                    <Textarea
-                      id="challenges"
-                      name="challenges"
-                      value={formData.challenges}
-                      onChange={handleInputChange}
-                      required
-                      className="mt-1"
-                      rows={3}
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="timeline" className="text-sm font-medium">
-                      What is the ideal timeline for implementing founder-led marketing in your organization? *
-                    </Label>
-                    <Textarea
-                      id="timeline"
-                      name="timeline"
-                      value={formData.timeline}
-                      onChange={handleInputChange}
-                      required
-                      className="mt-1"
-                      rows={2}
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="hearAbout" className="text-sm font-medium">
-                      How did you hear about us? *
-                    </Label>
-                    <Input
-                      id="hearAbout"
-                      name="hearAbout"
-                      value={formData.hearAbout}
-                      onChange={handleInputChange}
-                      required
-                      className="mt-1"
-                    />
-                  </div>
-
-                  <div className="text-xs text-muted-foreground py-2">
-                    By proceeding, you confirm that you have read and agree to Calendly's Terms of Use and Privacy Notice.
-                  </div>
-
-                  <Button type="submit" className="w-full btn-hero">
-                    Schedule Event
-                  </Button>
-
-                </form>
               </div>
             </div>
           </div>
