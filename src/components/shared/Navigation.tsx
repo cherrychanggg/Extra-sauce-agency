@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { navigationItems, ctaButton, logo } from "@/content/navigation";
+import { navigationItems, resourcesDropdown, ctaButton, logo } from "@/content/navigation";
+import { ChevronDown } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,24 +37,37 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              item.href.startsWith('#') ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated"
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated"
-                >
-                  {item.name}
-                </Link>
-              )
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated"
+              >
+                {item.name}
+              </Link>
             ))}
+            
+            {/* Resources Dropdown */}
+            <div className="relative group">
+              <button className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated flex items-center space-x-1">
+                <span>Resources</span>
+                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+              </button>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-2">
+                  {resourcesDropdown.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block px-4 py-2 text-foreground hover:text-primary hover:bg-accent transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* CTA Button */}
@@ -79,26 +93,31 @@ const Navigation = () => {
           <div className="lg:hidden py-6 border-t border-border/50">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
-                item.href.startsWith('#') ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* Mobile Resources Section */}
+              <div className="border-t border-border/30 pt-4">
+                <div className="text-foreground font-medium mb-2">Resources</div>
+                {resourcesDropdown.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                    className="block text-foreground hover:text-primary transition-colors duration-300 py-2 pl-4"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
-                )
-              ))}
+                ))}
+              </div>
+              
               <Link to={ctaButton.link}>
                 <Button className="btn-hero mt-4">
                   {ctaButton.text}

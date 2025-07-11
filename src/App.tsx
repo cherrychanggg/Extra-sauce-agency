@@ -15,6 +15,9 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import SuccessStories from "./pages/SuccessStories";
+import Blogs from "./pages/resources/Blogs";
+import Newsletters from "./pages/resources/Newsletters";
+import CompanyNews from "./pages/resources/CompanyNews";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,9 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/success-stories" element={<SuccessStories />} />
+          <Route path="/resources/blogs" element={<Blogs />} />
+          <Route path="/resources/newsletters" element={<Newsletters />} />
+          <Route path="/resources/company-news" element={<CompanyNews />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
