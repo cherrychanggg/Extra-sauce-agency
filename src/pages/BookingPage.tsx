@@ -316,17 +316,13 @@ const BookingPage = () => {
                       </div>
 
                       {/* Placeholder for Calendly Widget */}
-                      <div className="bg-muted/20 rounded-lg p-8 text-center min-h-[400px] flex items-center justify-center">
-                        <div>
-                          <Calendar className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                          <h4 className="text-lg font-semibold text-foreground mb-2">Calendly Widget</h4>
-                          <p className="text-muted-foreground mb-4">
-                            The Calendly booking widget will be embedded here
-                          </p>
-                          <div className="text-xs text-muted-foreground">
-                            Replace this placeholder with actual Calendly embed code
-                          </div>
-                        </div>
+                      {/* Calendly Widget */}
+                      <div className="calendly-wrapper">
+                        <div 
+                          className="calendly-inline-widget" 
+                          data-url="https://calendly.com/extrasauceagency" 
+                          style={{minWidth: '320px', height: '630px'}}
+                        ></div>
                       </div>
 
                       {/* Footer */}
