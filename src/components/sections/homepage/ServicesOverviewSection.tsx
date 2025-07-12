@@ -64,7 +64,7 @@ const ServicesOverviewSection = () => {
               <div className="mt-auto">
                 <Link to={service.link}>
                   <Button className="w-full btn-hero group focus-enhanced">
-                    <span className="group-hover:scale-105 transition-transform duration-200">Learn more</span>
+                    <span className="group-hover:scale-105 transition-transform duration-200">Learn more about {service.title}</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
                   </Button>
                 </Link>
