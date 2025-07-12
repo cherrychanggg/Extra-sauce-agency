@@ -60,7 +60,7 @@ const HeroSection = () => {
             </span>
           </div>
 
-          {/* Enhanced Main Headline */}
+          {/* Enhanced Main Headline - Optimized for SEO */}
           <h1 className="text-6xl lg:text-8xl font-bold leading-[0.9] mb-12 tracking-tight">
             Our{" "}
             <span className="relative inline-block">
