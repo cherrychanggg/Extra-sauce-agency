@@ -68,7 +68,7 @@ const ExecutiveGhostwriting = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link to="/book-strategy-call">
-                <Button className="btn-hero" aria-label="Book a strategy call for Executive Ghostwriting service">
+                <Button className="btn-hero">
                   Get Started Today
                 </Button>
               </Link>
