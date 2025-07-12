@@ -68,7 +68,7 @@ const ContentLedGTMCoaching = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link to="/book-strategy-call">
-                <Button className="btn-hero">
+                <Button className="btn-hero" aria-label="Book a strategy call for Content-Led GTM Coaching service">
                   Start Your GTM Journey
                 </Button>
               </Link>
