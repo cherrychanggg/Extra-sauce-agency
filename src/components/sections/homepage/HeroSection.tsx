@@ -50,8 +50,8 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className="w-full max-w-screen-2xl text-center relative z-10 pt-20 mx-auto px-6 lg:px-8">
-        <div className={`max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className="w-full text-center relative z-10 pt-20 mx-auto px-4 lg:px-6">
+        <div className={`max-w-none mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Enhanced Badge with Glassmorphism */}
           <div className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 rounded-full mb-10 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-primary/25">
             <Sparkles className="w-4 h-4 text-primary mr-3 animate-pulse" />
@@ -61,7 +61,7 @@ const HeroSection = () => {
           </div>
 
           {/* Enhanced Main Headline - Optimized for SEO */}
-          <h1 className="text-6xl lg:text-8xl xl:text-9xl font-bold leading-[1.05] mb-12 tracking-tight max-w-none mx-auto">
+          <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-12 tracking-tight max-w-none mx-auto">
             Our{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
