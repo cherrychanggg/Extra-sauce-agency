@@ -50,18 +50,18 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className="w-full text-center relative z-10 pt-20 mx-auto px-4 lg:px-6">
-        <div className={`max-w-none mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className="w-full text-center relative z-10 pt-16 mx-auto px-4 lg:px-6">
+        <div className={`max-w-5xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Enhanced Badge with Glassmorphism */}
-          <div className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-xl border border-primary/30 rounded-full mb-10 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-primary/25">
-            <Sparkles className="w-4 h-4 text-primary mr-3 animate-pulse" />
+          <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl border border-primary/30 rounded-full mb-8 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-primary/25">
+            <Sparkles className="w-4 h-4 text-primary mr-2 animate-pulse" />
             <span className="text-sm font-semibold text-primary group-hover:text-primary/80 transition-colors">
               {heroSection.badge}
             </span>
           </div>
 
           {/* Enhanced Main Headline - Optimized for SEO */}
-          <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-12 tracking-tight max-w-none mx-auto">
+          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-8 tracking-tight">
             Our{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
@@ -69,14 +69,16 @@ const HeroSection = () => {
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </span>{" "}
-            helps B2B SaaS companies build profitable{" "}
+            helps B2B SaaS<br />
+            companies build profitable{" "}
             <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
-              founder-led content engines
+              founder-led<br />
+              content engines
             </span>
           </h1>
 
           {/* Enhanced Subheadline */}
-          <p className="text-xl lg:text-2xl text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-lg lg:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
             Build a realm of influence with the modern B2B buyer by sharing your CEO's expertise 
             into <span className="text-primary font-semibold">binge-worthy social content</span> that cultivates awareness, trust, and credibility.
           </p>
