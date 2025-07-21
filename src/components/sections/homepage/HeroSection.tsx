@@ -61,16 +61,17 @@ const HeroSection = () => {
           </div>
 
           {/* Enhanced Main Headline - Optimized for SEO */}
-          <h1 className="text-6xl lg:text-8xl font-bold leading-[0.9] mb-12 tracking-tight">
-            Turn your CEO into a{" "}
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
-              thought leader
-            </span>{" "}
-            with our{" "}
+          <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-12 tracking-tight max-w-5xl mx-auto">
+            Our{" "}
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
                 SAUCE™ Recipe
               </span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </span>{" "}
+            helps B2B SaaS companies build profitable{" "}
+            <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
+              founder-led content engines
             </span>
           </h1>
 
