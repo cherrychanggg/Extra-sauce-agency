@@ -42,7 +42,7 @@ const TrustedBySection = () => {
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background/0 to-background/100"></div>
       </div>
       
-      <div className="container-premium relative z-10">
+      <div className="w-full relative z-10">
         <div className="text-center mb-6">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             {trustedBySection.title}
@@ -50,7 +50,7 @@ const TrustedBySection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
         </div>
         
-        <div className="relative overflow-hidden rounded-3xl bg-white/30 backdrop-blur-sm border border-border/30 p-8 mt-0 mb-0">
+        <div className="relative overflow-hidden rounded-3xl bg-white/30 backdrop-blur-sm border border-border/30 p-8 mt-0 mb-0 w-full">
           <div className="scrolling-logos-wrapper">
             <div className="scrolling-logos animate-scroll">
               {allCompanies.map((company, idx) => (

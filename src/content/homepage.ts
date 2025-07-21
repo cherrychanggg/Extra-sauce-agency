@@ -45,28 +45,33 @@ export const whoIsThisForSection = {
 };
 
 export const processSection = {
-  headline: "From Idea to Implementation: The Process",
+  headline: "From Idea to Implementation",
   description: "Our proven methodology transforms your vision into reality through strategic planning, expert execution, and measurable results.",
   steps: [
     {
-      title: "Strategic Discovery",
-      description: "Deep dive into your business goals, target audience, and competitive landscape to create a tailored content strategy.",
-      duration: "Week 1-2"
+      title: "Becoming an extension of you",
+      description: "Schedule the kick-off call to get access to your client portal and a communication portal with us.",
+      duration: "Kickoff"
     },
     {
-      title: "Content Architecture",
-      description: "Design your content ecosystem, define messaging pillars, and establish your unique voice and positioning.",
-      duration: "Week 3-4"
+      title: "Enter The MarketFit Spinner™",
+      description: "We optimize the omnichannel presence to showcase a compelling offer your audience feels dumb to say no to.",
+      duration: "Strategy"
     },
     {
-      title: "Production Launch",
-      description: "Begin systematic content creation with our proven frameworks, tools, and optimization processes.",
-      duration: "Week 5+"
+      title: "Begin A Scroll-Stopping Engine™",
+      description: "We begin sharing your thought leadership in an insightful and entertaining way that makes your audience want to binge-watch.",
+      duration: "Content"
     },
     {
-      title: "Scale & Optimize",
-      description: "Analyze performance, refine strategies, and scale successful content formats across all channels.",
-      duration: "Ongoing"
+      title: "Begin Our Social Selling Strategy",
+      description: "We increase response rates for your sales efforts by starting conversations with people in your realm of influence.",
+      duration: "Results"
+    },
+    {
+      title: "Watch your DMs start to blow up",
+      description: "You start to notice your DMs with more active conversations from qualified pipeline.",
+      duration: "Growth"
     }
   ]
 };

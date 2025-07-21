@@ -1,4 +1,4 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Users, TrendingUp, Search, Zap, Building, Trophy } from "lucide-react";
 import { whoIsThisForSection } from "@/content/homepage";
 
 const WhoIsThisForSection = () => {
@@ -30,7 +30,10 @@ const WhoIsThisForSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {whoIsThisForSection.companies.map((company, index) => (
+          {whoIsThisForSection.companies.map((company, index) => {
+            const icons = [Users, TrendingUp, Search, Zap, Building, Trophy];
+            const IconComponent = icons[index] || CheckCircle;
+            return (
             <div 
               key={index}
               className="group relative p-8 rounded-3xl border bg-white/50 backdrop-blur-sm border-border/30 hover:border-primary/30 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer"
@@ -40,7 +43,7 @@ const WhoIsThisForSection = () => {
               
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:shadow-lg transition-all duration-300">
-                  <CheckCircle className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                  <IconComponent className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                 </div>
                 
                 <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
@@ -55,7 +58,8 @@ const WhoIsThisForSection = () => {
               {/* Hover Effect Border */}
               <div className="absolute inset-0 rounded-3xl border-2 border-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
