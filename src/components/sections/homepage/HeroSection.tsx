@@ -61,7 +61,7 @@ const HeroSection = () => {
           </div>
 
           {/* Enhanced Main Headline - Optimized for SEO */}
-          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-12 tracking-tight max-w-7xl mx-auto">
+          <h1 className="text-6xl lg:text-8xl xl:text-9xl font-bold leading-[1.05] mb-12 tracking-tight max-w-none mx-auto">
             Our{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
