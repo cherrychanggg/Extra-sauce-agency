@@ -31,7 +31,8 @@ const companies = [
   },
 ];
 
-const allCompanies = [...companies, ...companies]; // duplicate for seamless scroll
+// Triple the logos for seamless infinite scroll
+const allCompanies = [...companies, ...companies, ...companies];
 
 const TrustedBySection = () => {
   return (
@@ -107,10 +108,10 @@ const TrustedBySection = () => {
         }
         @keyframes scroll {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-33.333%); }
         }
         .animate-scroll {
-          animation: scroll 25s linear infinite;
+          animation: scroll 30s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
@@ -129,7 +130,7 @@ const TrustedBySection = () => {
             gap: 2rem;
           }
           .animate-scroll {
-            animation-duration: 20s;
+            animation-duration: 25s;
           }
         }
       `}</style>
