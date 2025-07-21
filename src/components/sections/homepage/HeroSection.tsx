@@ -51,7 +51,7 @@ const HeroSection = () => {
       </div>
       
       <div className="w-full text-center relative z-10 pt-16 mx-auto px-4 lg:px-6">
-        <div className={`max-w-5xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-8xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Enhanced Badge with Glassmorphism */}
           <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl border border-primary/30 rounded-full mb-8 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-primary/25">
             <Sparkles className="w-4 h-4 text-primary mr-2 animate-pulse" />
@@ -78,7 +78,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Enhanced Subheadline */}
-          <p className="text-lg lg:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg lg:text-xl text-muted-foreground mb-10 max-w-5xl mx-auto leading-relaxed">
             Build a realm of influence with the modern B2B buyer by sharing your CEO's expertise 
             into <span className="text-primary font-semibold">binge-worthy social content</span> that cultivates awareness, trust, and credibility.
           </p>
