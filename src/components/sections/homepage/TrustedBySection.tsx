@@ -35,15 +35,15 @@ const allCompanies = [...companies, ...companies]; // duplicate for seamless scr
 
 const TrustedBySection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden w-full">
       {/* Enhanced Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
       
-      <div className="w-full relative z-10">
-        <div className="text-center mb-12">
+      <div className="w-full relative z-10 px-0">
+        <div className="text-center mb-12 px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {trustedBySection.title}
           </h2>
@@ -54,7 +54,7 @@ const TrustedBySection = () => {
         </div>
         
         {/* Enhanced Logo Container */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-white/40 via-white/60 to-white/40 backdrop-blur-xl border border-white/30 shadow-2xl p-12 mx-auto max-w-7xl">
+        <div className="relative overflow-hidden bg-gradient-to-r from-white/40 via-white/60 to-white/40 backdrop-blur-xl border-y border-white/30 shadow-2xl p-12 w-full">
           {/* Fade edges for seamless scroll */}
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white/80 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/80 to-transparent z-10 pointer-events-none"></div>
