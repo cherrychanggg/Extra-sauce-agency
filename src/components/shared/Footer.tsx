@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container-premium py-16">
-        <div className="grid lg:grid-cols-6 gap-12">
+        <div className="grid lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
@@ -81,27 +81,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Location */}
+          {/* Location & Contact */}
           <div>
             <h4 className="font-semibold mb-6 text-sm uppercase tracking-wider text-foreground">
               {location.title}
             </h4>
-            <p className="text-muted-foreground">{location.address}</p>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <div className="mb-6">
-              <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-foreground">
-                {email.title}
-              </h4>
-              <a 
-                href={`mailto:${email.address}`}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
-              >
-                {email.address}
-              </a>
-            </div>
+            <p className="text-muted-foreground mb-6">{location.address}</p>
+            
+            <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-foreground">
+              {email.title}
+            </h4>
+            <a 
+              href={`mailto:${email.address}`}
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              {email.address}
+            </a>
           </div>
         </div>
 
