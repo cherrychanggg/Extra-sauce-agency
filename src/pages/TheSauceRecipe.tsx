@@ -1,13 +1,12 @@
-
 import Navigation from "@/components/shared/Navigation";
-import SauceRecipeSection from "@/components/sections/sauce-recipe/SauceRecipeSection";
+import SauceRecipe from "@/components/SauceRecipe";
 import Footer from "@/components/shared/Footer";
 
 const TheSauceRecipe = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <SauceRecipeSection />
+      <SauceRecipe />
       <Footer />
     </div>
   );

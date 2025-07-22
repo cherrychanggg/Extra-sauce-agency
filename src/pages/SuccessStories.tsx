@@ -2,98 +2,119 @@ import React, { useState } from "react";
 import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
+import { successStories, SuccessStory } from "@/content/success-stories";
+import { ChevronLeft, ChevronRight, ArrowDown } from "lucide-react";
 
 const SuccessStories: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  
-  // Mock data for now - this should come from JSON content
-  const successStories = [
-    {
-      id: 1,
-      title: "B2B SaaS Company Increases Lead Generation by 300%",
-      summary: "How one startup transformed their content strategy to generate qualified leads.",
-      image: "/study1.png",
-      author: "John Smith",
-      authorRole: "CEO",
-      detailed: "This B2B SaaS company implemented our founder-led marketing strategy and saw incredible results within 90 days."
-    },
-    {
-      id: 2,
-      title: "Enterprise Client Builds Thought Leadership Pipeline",
-      summary: "Strategic content positioning leads to $2M in new business opportunities.",
-      image: "/study2.png", 
-      author: "Sarah Johnson",
-      authorRole: "CMO",
-      detailed: "Through strategic content positioning and thought leadership, this enterprise client built a robust pipeline."
-    },
-    {
-      id: 3,
-      title: "Tech Startup Achieves 8x ROI on Content Investment",
-      summary: "Founder-led content strategy delivers exceptional return on marketing investment.",
-      image: "/study3.png",
-      author: "Mike Chen",
-      authorRole: "Founder",
-      detailed: "This tech startup achieved an 8x return on their content marketing investment using our proven methodology."
-    }
-  ];
 
   const openModal = (idx: number) => setOpenIndex(idx);
   const closeModal = () => setOpenIndex(null);
   const nextStory = () => setOpenIndex((prev) => (prev !== null ? (prev + 1) % successStories.length : null));
   const prevStory = () => setOpenIndex((prev) => (prev !== null ? (prev - 1 + successStories.length) % successStories.length : null));
 
+  const scrollToExplore = () => {
+    const exploreSection = document.getElementById('explore-section');
+    if (exploreSection) {
+      exploreSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Combined Hero and Content Section */}
-      <section className="section-padding pt-32 bg-gradient-subtle relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted/30 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(234,88,12,0.15),rgba(255,255,255,0))]"></div>
+        
+        <div className="container-premium text-center relative z-10">
+          <h1 className="text-5xl lg:text-8xl font-bold leading-tight mb-8 bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent">
+            What Happens<br />
+            When You Find<br />
+            Your Sauce
+          </h1>
+          
+          <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            Extra Sauce is trusted by more than 50+ of the world's leading B2B brands. 
+            Read their stories to discover how teams like yours are revolutionizing 
+            how they build demand for the web.
+          </p>
+          
+          <Button 
+            onClick={scrollToExplore}
+            size="lg" 
+            className="rounded-full px-8 py-6 text-lg font-semibold hover:scale-105 transition-all duration-300"
+          >
+            View all stories
+            <ArrowDown className="ml-2 w-5 h-5" />
+          </Button>
+        </div>
+
+        {/* Floating success metrics */}
+        <div className="absolute top-1/4 left-8 lg:left-16 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg">
+          <div className="text-3xl font-bold text-primary">16M+</div>
+          <div className="text-sm text-muted-foreground">Total Views Generated</div>
         </div>
         
-        <div className="container-premium relative z-10">
-          {/* Hero Content */}
-          <div className="text-center max-w-5xl mx-auto mb-32">
-            <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-              What Happens When You Find{" "}
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Your Sauce
-              </span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Extra Sauce is trusted by more than 50+ of the world's leading B2B brands. 
-              Read their stories to discover how teams like yours are revolutionizing how they build demand for the web.
-            </p>
-            
-            <Button className="group relative overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-6 text-lg font-semibold rounded-2xl shadow-elegant hover:scale-105 transition-all duration-300">
-              <span className="relative z-10 flex items-center">
-                View All Stories
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
-            </Button>
-          </div>
+        <div className="absolute top-1/3 right-8 lg:right-16 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '300ms' }}>
+          <div className="text-3xl font-bold text-primary">$428K</div>
+          <div className="text-sm text-muted-foreground">ARR Added</div>
+        </div>
+        
+        <div className="absolute bottom-1/4 left-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '600ms' }}>
+          <div className="text-3xl font-bold text-primary">500K+</div>
+          <div className="text-sm text-muted-foreground">Followers Gained</div>
+        </div>
 
-          {/* Success Stories Grid */}
+        {/* Additional floating stats */}
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '900ms' }}>
+          <div className="text-3xl font-bold text-primary">50+</div>
+          <div className="text-sm text-muted-foreground">B2B Brands Served</div>
+        </div>
+
+        <div className="absolute bottom-1/3 right-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1200ms' }}>
+          <div className="text-3xl font-bold text-primary">16+</div>
+          <div className="text-sm text-muted-foreground">Qualified Meetings/Month</div>
+        </div>
+
+        <div className="absolute top-1/2 left-4 lg:left-8 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1500ms' }}>
+          <div className="text-3xl font-bold text-primary">8X</div>
+          <div className="text-sm text-muted-foreground">ROI Improvement</div>
+        </div>
+
+        <div className="absolute bottom-16 right-8 lg:right-20 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1800ms' }}>
+          <div className="text-3xl font-bold text-primary">90%</div>
+          <div className="text-sm text-muted-foreground">Time Saved on Content</div>
+        </div>
+
+        <div className="absolute top-2/3 left-1/3 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '2100ms' }}>
+          <div className="text-3xl font-bold text-primary">$2B+</div>
+          <div className="text-sm text-muted-foreground">Enterprise Client Value</div>
+        </div>
+      </section>
+
+      {/* Explore Success Stories Section */}
+      <section id="explore-section" className="section-padding bg-background">
+        <div className="container-premium">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              Explore Success Stories
+              Explore<br />
+              success stories
             </h2>
+            
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Learn how businesses are using Extra Sauce to build high-quality client work, faster.
+              Learn how businesses are using Extra Sauce to build high-quality client 
+              work, faster — without growing their budget.
             </p>
           </div>
 
           {/* Success Stories Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, idx) => (
-              <Card
+              <div
                 key={story.id}
-                className="group bg-card rounded-3xl border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden hover:shadow-elegant hover:-translate-y-2 cursor-pointer"
-                onClick={() => openModal(idx)}
+                className="group bg-card rounded-3xl border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-2"
               >
                 <div className="aspect-[16/10] overflow-hidden relative bg-muted">
                   <img
@@ -104,63 +125,63 @@ const SuccessStories: React.FC = () => {
                 </div>
                 
                 <div className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-primary">ES</span>
+                    </div>
+                    <span className="text-sm font-medium text-muted-foreground">Read story</span>
+                    <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
+                  
                   <h3 className="text-xl font-bold mb-4 leading-tight group-hover:text-primary transition-colors">
                     {story.title}
                   </h3>
                   
-                  <p className="text-muted-foreground mb-6 line-clamp-3">
-                    {story.summary}
+                  <p className="text-muted-foreground mb-6" style={{ 
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
+                  }}>
+                    {story.detailed.slice(0, 150)}...
                   </p>
                   
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex flex-col">
                       <span className="font-semibold text-foreground">{story.author}</span>
-                      {story.authorRole && (
-                        <span className="text-muted-foreground">{story.authorRole}</span>
-                      )}
+                      <span className="text-muted-foreground">{story.authorRole}</span>
                     </div>
                     <Button 
                       variant="outline" 
                       size="sm"
+                      onClick={() => openModal(idx)}
                       className="hover:bg-primary hover:text-primary-foreground transition-colors"
                     >
-                      Read Story
+                      Read story
                     </Button>
                   </div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Modal/Lightbox */}
       {openIndex !== null && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 animate-fade-in">
-          <div className="relative bg-background rounded-2xl shadow-2xl max-w-4xl w-full mx-4 flex flex-col md:flex-row overflow-hidden max-h-[90vh]">
-            {/* Close button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={closeModal}
-              className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background"
-            >
-              <X className="h-4 w-4" />
-            </Button>
-
+          <div className="relative bg-background rounded-2xl shadow-2xl max-w-4xl w-full flex flex-col md:flex-row overflow-hidden">
             {/* Image */}
-            <div className="md:w-1/2 bg-muted flex items-center justify-center p-6">
-              <div className="w-full aspect-[16/9] md:h-[32rem] h-56 max-w-full flex items-center justify-center overflow-hidden rounded-xl">
+            <div className="md:w-1/2 bg-black flex items-center justify-center p-6">
+              <div className="w-full aspect-[16/9] md:h-[32rem] h-56 max-w-full flex items-center justify-center overflow-hidden rounded-xl bg-black">
                 <img
                   src={successStories[openIndex].image}
                   alt={successStories[openIndex].title}
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full object-contain rounded-xl"
                 />
               </div>
             </div>
-
             {/* Details */}
-            <div className="md:w-1/2 p-8 flex flex-col justify-between overflow-y-auto">
+            <div className="md:w-1/2 p-8 flex flex-col justify-between">
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-foreground">
                   {successStories[openIndex].title}
@@ -171,32 +192,22 @@ const SuccessStories: React.FC = () => {
                     <span className="ml-2 text-sm">({successStories[openIndex].authorRole})</span>
                   )}
                 </div>
-                <p className="text-lg text-foreground mb-6 whitespace-pre-line leading-relaxed">
+                <p className="text-lg text-foreground mb-6 whitespace-pre-line">
                   {successStories[openIndex].detailed}
                 </p>
               </div>
-              
-              <div className="flex items-center justify-between mt-4 pt-4 border-t border-border">
-                <Button variant="ghost" onClick={prevStory} className="flex items-center">
-                  <ChevronLeft className="w-4 h-4 mr-1" />
-                  Previous
-                </Button>
-                <span className="text-sm text-muted-foreground">
-                  {openIndex + 1} of {successStories.length}
-                </span>
-                <Button variant="ghost" onClick={nextStory} className="flex items-center">
-                  Next
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </Button>
+              <div className="flex items-center justify-between mt-4">
+                <Button variant="ghost" onClick={prevStory}>&larr; Prev</Button>
+                <Button variant="outline" onClick={closeModal}>Close</Button>
+                <Button variant="ghost" onClick={nextStory}>Next &rarr;</Button>
               </div>
             </div>
           </div>
         </div>
       )}
-
       <Footer />
     </div>
   );
 };
 
-export default SuccessStories;
+export default SuccessStories; 

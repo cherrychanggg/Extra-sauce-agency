@@ -1,11 +1,7 @@
 import { ArrowRight } from "lucide-react";
-import { useContentLoader } from "@/hooks/useContentLoader";
+import { processSection } from "@/content/homepage";
 
 const ProcessSection = () => {
-  const { content: homepage } = useContentLoader('/content/pages/homepage-content.json');
-
-  if (!homepage?.processSection) return null;
-
   return (
     <section className="section-padding bg-background relative overflow-hidden">
       {/* Enhanced Background */}
@@ -28,13 +24,13 @@ const ProcessSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
-          {homepage.processSection.steps.map((step, index) => (
+          {processSection.steps.map((step, index) => (
             <div 
               key={index}
               className="relative text-center group"
             >
               {/* Connection Line */}
-              {index < homepage.processSection.steps.length - 1 && (
+              {index < processSection.steps.length - 1 && (
                 <div className="hidden lg:block absolute top-10 -right-4 z-10">
                   <ArrowRight className="w-6 h-6 text-primary/30 group-hover:text-primary transition-colors duration-300" />
                 </div>
@@ -72,4 +68,4 @@ const ProcessSection = () => {
   );
 };
 
-export default ProcessSection;
+export default ProcessSection; 

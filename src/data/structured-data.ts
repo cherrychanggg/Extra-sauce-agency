@@ -1,4 +1,5 @@
 // Structured Data for SEO
+import { siteConfig } from "@/content/global/site-config";
 
 export const organizationSchema = {
   "@context": "https://schema.org",

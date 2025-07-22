@@ -1,8 +1,7 @@
 import { CheckCircle, Users, TrendingUp, Search, Zap, Building, Trophy } from "lucide-react";
-import { useContentLoader } from "@/hooks/useContentLoader";
+import { whoIsThisForSection } from "@/content/homepage";
 
 const WhoIsThisForSection = () => {
-  const { content: homepage } = useContentLoader('/content/pages/homepage-content.json');
   return (
     <section className="section-padding bg-gradient-subtle relative overflow-hidden">
       {/* Enhanced Background */}
@@ -31,7 +30,7 @@ const WhoIsThisForSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {homepage?.whoIsThisForSection?.targetAudiences?.map((audience, index) => {
+          {whoIsThisForSection.companies.map((company, index) => {
             const icons = [Users, TrendingUp, Search, Zap, Building, Trophy];
             const IconComponent = icons[index] || CheckCircle;
             return (
@@ -48,11 +47,11 @@ const WhoIsThisForSection = () => {
                 </div>
                 
                 <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                  {audience.title}
+                  {company.title}
                 </h3>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  {audience.description}
+                  {company.description}
                 </p>
               </div>
 

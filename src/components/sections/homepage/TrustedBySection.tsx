@@ -1,4 +1,4 @@
-import { useContentLoader } from "@/hooks/useContentLoader";
+import { trustedBySection } from "@/content/homepage";
 
 const companies = [
   {
@@ -35,7 +35,6 @@ const companies = [
 const allCompanies = [...companies, ...companies, ...companies];
 
 const TrustedBySection = () => {
-  const { content: homepage } = useContentLoader('/content/pages/homepage-content.json');
   return (
     <section className="py-16 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden w-full">
       {/* Enhanced Background */}
@@ -47,7 +46,7 @@ const TrustedBySection = () => {
       <div className="w-full relative z-10 px-0">
         <div className="text-center mb-12 px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            {homepage?.trustedBySection?.headline || 'Trusted by 50+ B2B Brands'}
+            {trustedBySection.title}
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-primary via-secondary to-accent rounded-full mx-auto shadow-lg"></div>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -76,7 +75,7 @@ const TrustedBySection = () => {
                       draggable="false"
                       onError={(e) => {
                         console.log(`Failed to load image for ${company.name}:`, company.logo);
-                        e.currentTarget.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMTIwIDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDgiIGZpbGw9IiNmM2Y0ZjYiLz48dGV4dCB4PSI2MCIgeT0iMjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2Yjc2ODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiI+TG9nbzwvdGV4dD48L3N2Zz4=";
+                        e.currentTarget.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMTIwIDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDgiIGZpbGw9IiNmM2Y0ZjYiLz48dGV4dCB4PSI2MCIgeT0iMjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2Yjc2ODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiI+TG9nbzwvdGV4dD48L3N2Zz4=";
                       }}
                     />
                     {/* Enhanced glow effect */}

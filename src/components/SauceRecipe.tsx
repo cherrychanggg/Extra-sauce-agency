@@ -3,7 +3,7 @@ import { Play, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, B
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-const SauceRecipeSection = () => {
+const SauceRecipe = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [activeDepartment, setActiveDepartment] = useState("C-SUITE");
   const [selectedJourneyCard, setSelectedJourneyCard] = useState<number | null>(null);
@@ -489,4 +489,4 @@ const SauceRecipeSection = () => {
   );
 };
 
-export default SauceRecipeSection;
+export default SauceRecipe;
