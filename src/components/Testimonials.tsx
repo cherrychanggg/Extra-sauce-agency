@@ -102,15 +102,58 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Featured Testimonial Carousel */}
-        <div className="max-w-6xl mx-auto mb-20">
-          <div className="relative">
-            <div className="bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/20 shadow-2xl">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                {/* Left: Quote & Author */}
-                <div>
-                  {/* Verification Badge */}
-                  <div className="flex items-center gap-2 mb-6">
+        {/* Main Testimonials Layout */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            
+            {/* Left: Testimonials List */}
+            <div className="space-y-6">
+              {testimonials.map((testimonial, index) => (
+                <Card 
+                  key={index}
+                  className={`cursor-pointer transition-all duration-300 ${
+                    index === currentTestimonial
+                      ? 'border-primary/30 shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5'
+                      : 'border-border hover:border-primary/20 hover:shadow-md'
+                  }`}
+                  onClick={() => setCurrentTestimonial(index)}
+                >
+                  <CardContent className="p-6">
+                    {/* Author */}
+                    <div className="flex items-center mb-4">
+                      {testimonial.avatar ? (
+                        <img
+                          src={testimonial.avatar}
+                          alt={testimonial.author}
+                          className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary"
+                        />
+                      ) : (
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold mr-4">
+                          {testimonial.author.split(' ').map(n => n[0]).join('')}
+                        </div>
+                      )}
+                      <div>
+                        <div className="font-bold text-foreground">{testimonial.author}</div>
+                        <div className="text-sm text-muted-foreground">
+                          {testimonial.title} • {testimonial.company}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Quote */}
+                    <blockquote className="text-foreground leading-relaxed">
+                      "{testimonial.quote}"
+                    </blockquote>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Right: Featured Testimonial */}
+            <div className="lg:sticky lg:top-8">
+              <Card className="border-primary/20 shadow-xl bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
                       <CheckCircle className="w-3 h-3 mr-1" />
                       Verified Client
@@ -120,8 +163,13 @@ const Testimonials = () => {
                     </Button>
                   </div>
 
-                  {/* Quote */}
-                  <blockquote className="text-xl lg:text-2xl font-medium text-foreground mb-8 leading-relaxed">
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Results Achieved</h3>
+                    <p className="text-muted-foreground">Measurable impact in real numbers</p>
+                  </div>
+
+                  {/* Featured Quote */}
+                  <blockquote className="text-xl font-medium text-foreground mb-6 leading-relaxed">
                     "{testimonials[currentTestimonial].quote}"
                   </blockquote>
 
@@ -148,160 +196,43 @@ const Testimonials = () => {
                     </div>
                   </div>
 
-                  {/* CTA */}
-                  <Button variant="outline" className="group">
+                  <Button variant="outline" className="group mb-6">
                     View Full Case Study
                     <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                </div>
+                </CardHeader>
 
-                {/* Right: Metrics & Results */}
-                <div className="space-y-6">
-                  <div className="text-center lg:text-left">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Results Achieved</h3>
-                    <p className="text-muted-foreground">Measurable impact in real numbers</p>
-                  </div>
-
+                <CardContent className="pt-0">
                   {/* Metrics Grid */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
                     {testimonials[currentTestimonial].metrics.map((metric, index) => {
                       const Icon = metric.icon;
                       return (
-                        <Card key={index} className="text-center p-6 border-primary/10 bg-gradient-to-br from-primary/5 to-secondary/5">
-                          <CardContent className="p-0">
-                            <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-3">
-                              <Icon className="w-6 h-6 text-white" />
-                            </div>
-                            <div className="text-2xl font-bold text-foreground mb-1">{metric.value}</div>
-                            <div className="text-sm text-muted-foreground">{metric.label}</div>
-                          </CardContent>
-                        </Card>
+                        <div key={index} className="text-center p-4 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg border border-primary/10">
+                          <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+                            <Icon className="w-5 h-5 text-white" />
+                          </div>
+                          <div className="text-2xl font-bold text-foreground mb-1">{metric.value}</div>
+                          <div className="text-sm text-muted-foreground">{metric.label}</div>
+                        </div>
                       );
                     })}
                   </div>
 
                   {/* Impact Badge */}
-                  <div className="text-center lg:text-left">
-                    <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20">
-                      <TrendingUp className="w-4 h-4 mr-2 text-primary" />
-                      <span className="text-sm font-semibold text-primary">
-                        {testimonials[currentTestimonial].impact}
-                      </span>
-                    </div>
+                  <div className="text-center">
+                    <Badge variant="outline" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
+                      <TrendingUp className="w-4 h-4 mr-2" />
+                      {testimonials[currentTestimonial].impact}
+                    </Badge>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </div>
-
-            {/* Navigation Buttons */}
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm border-white/20 hover:bg-white hover:scale-110 transition-all duration-300"
-              onClick={prevTestimonial}
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm border-white/20 hover:bg-white hover:scale-110 transition-all duration-300"
-              onClick={nextTestimonial}
-            >
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-          </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-3">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentTestimonial 
-                    ? 'bg-primary scale-125' 
-                    : 'bg-primary/30 hover:bg-primary/50'
-                }`}
-                onClick={() => setCurrentTestimonial(index)}
-              />
-            ))}
           </div>
         </div>
 
 
-        {/* Quick Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index}
-              className={`group cursor-pointer transition-all duration-500 overflow-hidden ${
-                index === currentTestimonial
-                  ? 'border-primary/30 shadow-xl scale-105 bg-gradient-to-br from-primary/5 to-secondary/5'
-                  : 'border-primary/10 hover:border-primary/20 hover:shadow-lg hover:-translate-y-1'
-              }`}
-              onClick={() => setCurrentTestimonial(index)}
-            >
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
-                    <CheckCircle className="w-3 h-3 mr-1" />
-                    Verified
-                  </Badge>
-                  <Button variant="ghost" size="sm" className="h-8 px-2">
-                    <Linkedin className="w-4 h-4" />
-                  </Button>
-                </div>
-
-                {/* Author */}
-                <div className="flex items-center">
-                  {testimonial.avatar ? (
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.author}
-                      className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary group-hover:scale-110 transition-transform duration-300"
-                    />
-                  ) : (
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
-                      {testimonial.author.split(' ').map(n => n[0]).join('')}
-                    </div>
-                  )}
-                  <div>
-                    <div className="font-bold text-foreground">{testimonial.author}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {testimonial.title} • {testimonial.company}
-                    </div>
-                  </div>
-                </div>
-              </CardHeader>
-
-              <CardContent className="pt-0">
-                {/* Quote */}
-                <blockquote className="text-foreground font-medium mb-6 leading-relaxed">
-                  "{testimonial.quote}"
-                </blockquote>
-
-                {/* Mini Metrics */}
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  {testimonial.metrics.slice(0, 2).map((metric, metricIndex) => {
-                    const Icon = metric.icon;
-                    return (
-                      <div key={metricIndex} className="text-center p-3 bg-primary/5 rounded-lg border border-primary/10">
-                        <Icon className="w-5 h-5 text-primary mx-auto mb-1" />
-                        <div className="text-sm font-bold text-foreground">{metric.value}</div>
-                        <div className="text-xs text-muted-foreground">{metric.label}</div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <Button variant="outline" size="sm" className="w-full group/btn">
-                  View Details
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
       </div>
     </section>
   );
