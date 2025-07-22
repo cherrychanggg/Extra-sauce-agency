@@ -5,7 +5,6 @@ import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { successStories, SuccessStory } from "@/content/success-stories";
 import { ChevronLeft, ChevronRight, ArrowDown } from "lucide-react";
-import SEOHead from "@/components/SEO/SEOHead";
 
 interface SuccessStoriesContent {
   heroSection: {
@@ -112,19 +111,7 @@ const SuccessStories: React.FC = () => {
   }
 
   return (
-    <>
-      {seoContent && (
-        <SEOHead
-          title={seoContent.pageTitle}
-          description={seoContent.metaDescription}
-          keywords={seoContent.keywords}
-          ogImage={seoContent.openGraph.image}
-          canonicalUrl="https://www.extrasauceagency.com/success-stories"
-          type="website"
-        />
-      )}
-      
-      <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
         <Navigation />
         
         {/* Hero Section */}
@@ -276,7 +263,6 @@ const SuccessStories: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 
