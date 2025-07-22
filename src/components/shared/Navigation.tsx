@@ -31,8 +31,22 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src={siteConfig?.brandAssets?.logo?.chili} alt={siteConfig?.brandAssets?.logo?.altText} className="w-16 h-16 hover:scale-110 transition-transform duration-300" />
-            <img src={siteConfig?.brandAssets?.logo?.sauce} alt={siteConfig?.brandAssets?.logo?.altText} className="w-48 h-48 hover:scale-105 transition-transform duration-300" />
+            <img 
+              src={siteConfig?.brandAssets?.logo?.chili || '/chili.png'} 
+              alt={siteConfig?.brandAssets?.logo?.altText || 'Extra Sauce Agency'} 
+              className="w-8 h-8 hover:scale-110 transition-transform duration-300"
+              onError={(e) => {
+                e.currentTarget.src = '/chili.png';
+              }}
+            />
+            <img 
+              src={siteConfig?.brandAssets?.logo?.sauce || '/sauce.png'} 
+              alt={siteConfig?.brandAssets?.logo?.altText || 'Extra Sauce Agency'} 
+              className="w-32 h-8 object-contain hover:scale-105 transition-transform duration-300"
+              onError={(e) => {
+                e.currentTarget.src = '/sauce.png';
+              }}
+            />
           </Link>
 
           {/* Desktop Navigation */}

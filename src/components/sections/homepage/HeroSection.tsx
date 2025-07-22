@@ -57,7 +57,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl border border-primary/30 rounded-full mb-8 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-primary/25">
             <Sparkles className="w-4 h-4 text-primary mr-2 animate-pulse" />
             <span className="text-sm font-semibold text-primary group-hover:text-primary/80 transition-colors">
-              🌶️ Transform your founder into a content powerhouse
+              Trusted by 20+ High-Growth B2B & DTC Companies
             </span>
           </div>
 
