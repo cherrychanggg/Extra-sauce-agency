@@ -31,9 +31,9 @@ const SuccessStories: React.FC = () => {
         
         <div className="container-premium text-center relative z-10">
           <h1 className="text-5xl lg:text-8xl font-bold leading-tight mb-8 bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent">
-            You're<br />
-            in great<br />
-            company
+            What Happens<br />
+            When You Find<br />
+            Your Sauce
           </h1>
           
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -66,6 +66,32 @@ const SuccessStories: React.FC = () => {
         <div className="absolute bottom-1/4 left-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '600ms' }}>
           <div className="text-3xl font-bold text-primary">500K+</div>
           <div className="text-sm text-muted-foreground">Followers Gained</div>
+        </div>
+
+        {/* Additional floating stats */}
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '900ms' }}>
+          <div className="text-3xl font-bold text-primary">50+</div>
+          <div className="text-sm text-muted-foreground">B2B Brands Served</div>
+        </div>
+
+        <div className="absolute bottom-1/3 right-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1200ms' }}>
+          <div className="text-3xl font-bold text-primary">16+</div>
+          <div className="text-sm text-muted-foreground">Qualified Meetings/Month</div>
+        </div>
+
+        <div className="absolute top-1/2 left-4 lg:left-8 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1500ms' }}>
+          <div className="text-3xl font-bold text-primary">8X</div>
+          <div className="text-sm text-muted-foreground">ROI Improvement</div>
+        </div>
+
+        <div className="absolute bottom-16 right-8 lg:right-20 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1800ms' }}>
+          <div className="text-3xl font-bold text-primary">90%</div>
+          <div className="text-sm text-muted-foreground">Time Saved on Content</div>
+        </div>
+
+        <div className="absolute top-2/3 left-1/3 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '2100ms' }}>
+          <div className="text-3xl font-bold text-primary">$2B+</div>
+          <div className="text-sm text-muted-foreground">Enterprise Client Value</div>
         </div>
       </section>
 
