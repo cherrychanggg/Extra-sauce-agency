@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Linkedin, Mic, Instagram, Facebook, Hash } from "lucide-react";
+import { Linkedin, Mic, Instagram, Facebook, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import { companyInfo, companyLinks, servicesLinks, quickLinks, location, email, socialMedia } from "@/content/footer";
 
@@ -110,35 +110,35 @@ const Footer = () => {
             <div className="flex space-x-6">
               <a 
                 href={socialMedia.linkedin}
-                className="text-primary hover:text-primary/80 transition-colors duration-300"
+                className="text-[#0077b5] hover:text-[#005885] transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.tiktok}
-                className="text-primary hover:text-primary/80 transition-colors duration-300"
+                className="text-[#000000] hover:text-[#333333] transition-colors duration-300"
                 aria-label="TikTok"
               >
-                <Hash className="w-5 h-5" />
+                <Video className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.instagram}
-                className="text-primary hover:text-primary/80 transition-colors duration-300"
+                className="text-[#E4405F] hover:text-[#C13584] transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.facebook}
-                className="text-primary hover:text-primary/80 transition-colors duration-300"
+                className="text-[#1877F2] hover:text-[#166FE5] transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.spotify}
-                className="text-primary hover:text-primary/80 transition-colors duration-300"
+                className="text-[#1DB954] hover:text-[#1ed760] transition-colors duration-300"
                 aria-label="Podcast"
               >
                 <Mic className="w-5 h-5" />
