@@ -70,29 +70,6 @@ const Testimonials = () => {
     }
   ];
 
-  const successStories = [
-    {
-      title: "16M Views & $124K Revenue",
-      subtitle: "Global Media Brand",
-      metrics: "16M+ views, 400K+ followers",
-      image: "/study3.png",
-      link: "/success-stories"
-    },
-    {
-      title: "$428K ARR Added",
-      subtitle: "B2B SaaS Company", 
-      metrics: "$2B+ enterprise client landed",
-      image: "/study2.png",
-      link: "/success-stories"
-    },
-    {
-      title: "Pipeline Transformation",
-      subtitle: "Complete Rebrand",
-      metrics: "5x better conversion rates",
-      image: "/study1.png", 
-      link: "/success-stories"
-    }
-  ];
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -251,45 +228,6 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Success Stories Preview */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl lg:text-4xl font-bold mb-4">More Success Stories</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore detailed case studies showing how we've transformed businesses across industries.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {successStories.map((story, index) => (
-              <Card key={index} className="group cursor-pointer overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={story.image} 
-                    alt={story.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">{story.title}</h4>
-                  <p className="text-muted-foreground text-sm mb-3">{story.subtitle}</p>
-                  <Badge variant="outline" className="mb-4">{story.metrics}</Badge>
-                  <Button variant="ghost" size="sm" className="w-full group/btn">
-                    Read Full Story
-                    <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button size="lg" className="group">
-              View All Case Studies
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-        </div>
 
         {/* Quick Testimonials Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
