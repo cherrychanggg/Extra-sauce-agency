@@ -197,12 +197,28 @@ const SauceRecipe = () => {
         <div className="flex justify-center mb-20" ref={storyRef}>
           <div className="relative max-w-4xl">
             {/* Story Label */}
-            <div className={`absolute -top-4 left-8 bg-accent text-accent-foreground px-6 py-2 rounded-lg text-sm font-semibold shadow-lg transform -rotate-3 z-10 transition-all duration-700 ${
+            <div className={`absolute -top-4 left-8 group cursor-pointer z-10 transition-all duration-700 ${
               isStoryVisible 
                 ? 'animate-fade-in opacity-100 scale-100' 
                 : 'opacity-0 scale-75 translate-y-4'
             }`}>
-              THE STORY
+              <div className="relative">
+                {/* Animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary rounded-lg blur-md opacity-70 group-hover:opacity-100 animate-pulse scale-110"></div>
+                
+                {/* Main button */}
+                <div className="relative bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-3 rounded-lg text-sm font-bold shadow-xl transform -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-500 border-2 border-primary-foreground/20">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary-foreground rounded-full animate-pulse"></div>
+                    THE STORY
+                    <div className="w-2 h-2 bg-primary-foreground rounded-full animate-pulse animation-delay-300"></div>
+                  </div>
+                  
+                  {/* Sparkle effects */}
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary-foreground rounded-full animate-ping opacity-60"></div>
+                  <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-secondary-foreground rounded-full animate-bounce opacity-40"></div>
+                </div>
+              </div>
             </div>
             
             {/* Main Story Card */}
