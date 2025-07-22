@@ -25,8 +25,15 @@ export const servicesLinks = {
   links: [
     { name: "Executive Ghostwriting", href: "/services/executive-ghostwriting" },
     { name: "Video Content Engine", href: "/services/video-content-engine" },
-    { name: "Content-led GTM Coaching", href: "/services/content-led-gtm-coaching" },
-    { name: "Book a Call", href: "/book-strategy-call" }
+    { name: "Content-led GTM Coaching", href: "/services/content-led-gtm-coaching" }
+  ]
+};
+
+export const quickLinks = {
+  title: "QUICK LINKS",
+  links: [
+    { name: "Terms & Conditions", href: "/terms-of-service" },
+    { name: "Privacy Policy", href: "/privacy-policy" }
   ]
 };
 

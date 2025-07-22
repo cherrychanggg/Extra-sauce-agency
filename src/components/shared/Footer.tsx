@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mic, Instagram, Facebook, Hash } from "lucide-react";
 import { Link } from "react-router-dom";
-import { companyInfo, companyLinks, servicesLinks, location, email, socialMedia } from "@/content/footer";
+import { companyInfo, companyLinks, servicesLinks, quickLinks, location, email, socialMedia } from "@/content/footer";
 
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container-premium py-16">
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-6 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
@@ -68,6 +68,25 @@ const Footer = () => {
               {location.title}
             </h4>
             <p className="text-muted-foreground">{location.address}</p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold mb-6 text-sm uppercase tracking-wider text-foreground">
+              {quickLinks.title}
+            </h4>
+            <ul className="space-y-3">
+              {quickLinks.links.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.href} 
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact */}
