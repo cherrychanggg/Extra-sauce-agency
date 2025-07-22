@@ -1,5 +1,5 @@
 import Navigation from "@/components/shared/Navigation";
-import SauceRecipe from "@/components/SauceRecipe";
+import SauceRecipe from "@/components/sections/saucerecipe/SauceRecipe";
 import Footer from "@/components/shared/Footer";
 
 const TheSauceRecipe = () => {

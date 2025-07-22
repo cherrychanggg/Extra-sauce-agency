@@ -48,8 +48,6 @@ export const siteConfig = {
   // Analytics & Tracking
   analytics: {
     googleAnalyticsId: "G-XXXXXXXXXX", // Replace with your GA4 ID
-    facebookPixelId: "", // Add if using Facebook Pixel
-    linkedInInsightTag: "" // Add if using LinkedIn Insight Tag
   },
   
   // Feature Flags
@@ -65,7 +63,7 @@ export const siteConfig = {
     foundedYear: 2020,
     industry: "Digital Marketing",
     specialization: "B2B SaaS Content Marketing",
-    teamSize: "10-50 employees",
+    teamSize: "5-10 employees",
     headquarters: "Toronto, Canada"
   }
 };

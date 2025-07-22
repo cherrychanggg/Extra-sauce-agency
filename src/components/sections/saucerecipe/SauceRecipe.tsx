@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Play, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, BarChart3, Handshake, Zap, Eye, FileText, Lightbulb, PieChart, Coins, MousePointerClick, ChevronDown, ChevronUp, Sparkles } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { sauceRecipeContent } from "@/content/pages/saucerecipe";
 
 const SauceRecipe = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -187,9 +188,7 @@ const SauceRecipe = () => {
         {/* Mission Statement */}
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-8 max-w-4xl mx-auto leading-tight">
-            OUR MISSION IS TO HELP B2B COMPANIES{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">™GROW PROFITABLY</span>{" "}
-            WITH EXECUTIVE CONTENT
+            {sauceRecipeContent.missionHeadline}
           </h2>
         </div>
 
@@ -210,7 +209,7 @@ const SauceRecipe = () => {
                 <div className="relative bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-3 rounded-lg text-sm font-bold shadow-xl transform -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-500 border-2 border-primary-foreground/20">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-primary-foreground rounded-full animate-pulse"></div>
-                    THE STORY
+                    {sauceRecipeContent.storyTitle}
                     <div className="w-2 h-2 bg-primary-foreground rounded-full animate-pulse animation-delay-300"></div>
                   </div>
                   
@@ -226,16 +225,11 @@ const SauceRecipe = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                    BEHIND EXTRA SAUCE
+                    {sauceRecipeContent.storyTitle}
                   </h3>
                 </div>
                 <div className="space-y-4 text-muted-foreground">
-                  <p>We didn't start in B2B marketing.</p>
-                  <p>Our founder built a luxury streetwear brand from scratch. Grew it in public for over 5 years.</p>
-                  <p>And that's where he discovered the secret sauce: executive content builds trust faster than sales calls ever could.</p>
-                  <p>By showing up consistently, telling his story, and owning the narrative — he created real demand.</p>
-                  <p>Today, he helps B2B founders do the same.</p>
-                  <p>Extra Sauce turns founder experience into executive content that grows revenue and reach.</p>
+                  {sauceRecipeContent.storyParagraphs.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
               </div>
               
@@ -245,12 +239,12 @@ const SauceRecipe = () => {
                   <Play className="w-4 h-4" />
                 </Button>
                 <div className="flex-1">
-                  <div className="text-sm font-medium text-foreground">How Extra Sauce Started...</div>
+                  <div className="text-sm font-medium text-foreground">{sauceRecipeContent.audioLabel}</div>
                   <div className="w-full bg-muted h-2 rounded-full mt-2">
                     <div className="bg-accent h-2 rounded-full w-1/3"></div>
                   </div>
                 </div>
-                <div className="text-sm text-muted-foreground">06:30 / 13:25</div>
+                <div className="text-sm text-muted-foreground">{sauceRecipeContent.audioDuration}</div>
               </div>
             </div>
           </div>
@@ -260,7 +254,7 @@ const SauceRecipe = () => {
         <div className="text-center mb-16">
           <div className="inline-block border-b-2 border-primary pb-2 mb-12">
             <h3 className="text-lg font-semibold text-foreground">
-              WALK THROUGH <span className="text-primary">THE SAUCE® RECIPE</span>
+              {sauceRecipeContent.walkThroughTitle}
             </h3>
           </div>
           
@@ -286,7 +280,7 @@ const SauceRecipe = () => {
           <div className="text-center mb-12">
             <div className="inline-block border-b-2 border-primary pb-2">
               <h3 className="text-lg font-semibold text-foreground">
-                WHERE ARE YOU IN YOUR <span className="text-primary">CONTENT JOURNEY?</span>
+                {sauceRecipeContent.walkThroughSubtitle}
               </h3>
             </div>
             <div className="flex justify-center mt-4" ref={clickToLearnRef}>
@@ -296,7 +290,7 @@ const SauceRecipe = () => {
                   : 'opacity-0 scale-75 translate-y-4'
               } hover:scale-105 hover:shadow-xl hover:border-primary/50`}>
                 <MousePointerClick className="w-6 h-6 text-primary animate-pulse" />
-                CLICK ANY CARD BELOW TO LEARN MORE
+                {sauceRecipeContent.clickToLearn}
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
               </div>
             </div>
