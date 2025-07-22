@@ -7,7 +7,6 @@ import { ChevronLeft, ChevronRight, ArrowDown } from "lucide-react";
 
 const SuccessStories: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<"B2B" | "B2C">("B2B");
 
   const openModal = (idx: number) => setOpenIndex(idx);
   const closeModal = () => setOpenIndex(null);
@@ -104,34 +103,8 @@ const SuccessStories: React.FC = () => {
               success stories
             </h2>
             
-            {/* Tab Navigation */}
-            <div className="flex justify-center mb-12">
-              <div className="flex bg-muted rounded-full p-1">
-                <button
-                  onClick={() => setActiveTab("B2B")}
-                  className={`px-8 py-3 rounded-full font-medium transition-all duration-300 ${
-                    activeTab === "B2B" 
-                      ? "bg-primary text-primary-foreground shadow-md" 
-                      : "text-muted-foreground hover:text-primary"
-                  }`}
-                >
-                  B2B
-                </button>
-                <button
-                  onClick={() => setActiveTab("B2C")}
-                  className={`px-8 py-3 rounded-full font-medium transition-all duration-300 ${
-                    activeTab === "B2C" 
-                      ? "bg-primary text-primary-foreground shadow-md" 
-                      : "text-muted-foreground hover:text-primary"
-                  }`}
-                >
-                  B2C
-                </button>
-              </div>
-            </div>
-            
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Learn how {activeTab === "B2B" ? "businesses" : "brands"} are using Extra Sauce to build high-quality client 
+              Learn how businesses are using Extra Sauce to build high-quality client 
               work, faster — without growing their budget.
             </p>
           </div>
