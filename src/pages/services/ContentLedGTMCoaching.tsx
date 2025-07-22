@@ -58,7 +58,20 @@ const ContentLedGTMCoaching = () => {
       
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-gradient-subtle pt-20">
-        <div className="container-premium text-center">
+        {/* Animated floating element */}
+        <div className="absolute left-8 lg:left-16 bottom-1/4 animate-fade-in animation-delay-2000 hidden lg:block">
+          <div className="relative">
+            <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-6 rounded-lg shadow-xl max-w-xs transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
+              <div className="text-sm font-bold text-emerald-200 mb-2">"Incredible clarity to our marketing and messaging."</div>
+              <div className="text-xs text-emerald-100">
+                Systemized process showing real progress with every single session. Game-changer for business growth.
+              </div>
+            </div>
+            <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-emerald-300 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+
+        <div className="container-premium text-center relative z-10">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
               Content Led <span className="text-primary">GTM Coaching</span>

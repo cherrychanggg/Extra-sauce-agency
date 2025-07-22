@@ -58,7 +58,20 @@ const ExecutiveGhostwriting = () => {
       
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-gradient-subtle pt-20">
-        <div className="container-premium text-center">
+        {/* Animated floating element */}
+        <div className="absolute left-8 lg:left-16 top-1/2 transform -translate-y-1/2 animate-fade-in animation-delay-1000 hidden lg:block">
+          <div className="relative">
+            <div className="bg-slate-800 text-white p-6 rounded-lg shadow-xl max-w-xs transform rotate-[-5deg] hover:rotate-0 transition-transform duration-300">
+              <div className="text-sm font-bold text-green-400 mb-2">"Scroll-stopping content you can't find on page one of Google."</div>
+              <div className="text-xs text-slate-300">
+                Recently, we helped a B2B services firm generate 1.3M+ LinkedIn impressions and a full pipeline in just 45 days.
+              </div>
+            </div>
+            <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+
+        <div className="container-premium text-center relative z-10">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
               Executive <span className="text-primary">Ghostwriting</span>

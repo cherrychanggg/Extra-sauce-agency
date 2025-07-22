@@ -58,7 +58,20 @@ const VideoContentEngine = () => {
       
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-gradient-subtle pt-20">
-        <div className="container-premium text-center">
+        {/* Animated floating element */}
+        <div className="absolute right-8 lg:right-16 top-1/3 animate-fade-in animation-delay-1500 hidden lg:block">
+          <div className="relative">
+            <div className="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-6 rounded-lg shadow-xl max-w-xs transform rotate-[3deg] hover:rotate-0 transition-transform duration-300">
+              <div className="text-sm font-bold text-yellow-300 mb-2">"We've had old prospects come back thinking we were a different company."</div>
+              <div className="text-xs text-blue-100">
+                300% increase in demo bookings within 6 months of launching video content engine.
+              </div>
+            </div>
+            <div className="absolute -top-1 -left-1 w-3 h-3 bg-yellow-300 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+
+        <div className="container-premium text-center relative z-10">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
               Video Content <span className="text-primary">Engine</span>
