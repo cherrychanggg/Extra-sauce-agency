@@ -1,0 +1,114 @@
+
+{
+  "meta": {
+    "lastUpdated": "2025-01-22",
+    "editedBy": "Content Editor",
+    "pageDescription": "Main homepage content - hero section, services, testimonials, FAQ"
+  },
+  "heroSection": {
+    "headline": "Unleash Growth with Founder-Led Marketing for B2B SaaS",
+    "subheadline": "Drive your B2B SaaS startup's growth with Extra Sauce Agency's unique Founder-Led Marketing strategy. Build authentic connections, enhance your brand's credibility, and generate demand by leveraging your founder's insights.",
+    "primaryButton": {
+      "text": "Book A Strategy Call",
+      "link": "/book-strategy-call"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/the-sauce-recipe"
+    }
+  },
+  "trustedBySection": {
+    "headline": "Trusted by 50+ B2B Brands",
+    "subtitle": "From startups to enterprises, companies trust Extra Sauce to amplify their founder's voice"
+  },
+  "whoIsThisForSection": {
+    "headline": "Who Is The Sauce For?",
+    "subtitle": "Perfect for B2B SaaS founders ready to scale through authentic content marketing",
+    "targetAudiences": [
+      {
+        "title": "B2B SaaS Founders",
+        "description": "Scale your startup with authentic founder-led content that builds trust and drives demand"
+      },
+      {
+        "title": "Marketing Leaders",
+        "description": "Amplify your brand's message through strategic thought leadership and content marketing"
+      },
+      {
+        "title": "Growth Teams",
+        "description": "Generate qualified leads through content that resonates with your target audience"
+      }
+    ]
+  },
+  "processSection": {
+    "headline": "The Sauce Recipe",
+    "subtitle": "Our proven 4-step process to transform your founder into a content marketing powerhouse",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Discover",
+        "description": "We analyze your market, audience, and unique value proposition"
+      },
+      {
+        "number": 2,
+        "title": "Strategize", 
+        "description": "Create a custom content strategy aligned with your business goals"
+      },
+      {
+        "number": 3,
+        "title": "Create",
+        "description": "Produce high-quality content that showcases your expertise"
+      },
+      {
+        "number": 4,
+        "title": "Amplify",
+        "description": "Distribute and optimize content across multiple channels"
+      }
+    ]
+  },
+  "servicesOverview": {
+    "headline": "Our Services",
+    "subtitle": "Comprehensive founder-led marketing solutions",
+    "services": [
+      {
+        "title": "Executive Ghostwriting",
+        "description": "Transform your insights into compelling thought leadership content",
+        "link": "/services/executive-ghostwriting"
+      },
+      {
+        "title": "Video Content Engine",
+        "description": "Scale your video presence with our proven content creation system",
+        "link": "/services/video-content-engine"
+      },
+      {
+        "title": "Content-Led GTM Coaching",
+        "description": "Strategic guidance to align content with your go-to-market strategy",
+        "link": "/services/content-led-gtm-coaching"
+      }
+    ]
+  },
+  "faqSection": {
+    "headline": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How quickly can we see results?",
+        "answer": "Most clients see initial engagement within 30 days, with significant lead generation typically occurring within 90 days of consistent content creation and distribution."
+      },
+      {
+        "question": "Do you work with companies outside of B2B SaaS?",
+        "answer": "While our specialty is B2B SaaS, we work with any B2B company looking to leverage founder-led marketing for growth."
+      },
+      {
+        "question": "What's included in the strategy call?",
+        "answer": "Our strategy call includes a comprehensive audit of your current content, identification of opportunities, and a custom roadmap for implementing founder-led marketing."
+      }
+    ]
+  },
+  "ctaSection": {
+    "headline": "Ready to Find Your Sauce?",
+    "subtitle": "Book a strategy call to discover how founder-led marketing can transform your B2B growth",
+    "button": {
+      "text": "Book Strategy Call",
+      "link": "/book-strategy-call"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+
+{
+  "meta": {
+    "description": "Main site settings - contact info, social media, branding",
+    "lastUpdated": "2025-01-22",
+    "editInstructions": "Update contact information, social media links, and site-wide settings here"
+  },
+  "siteInfo": {
+    "name": "Extra Sauce Agency",
+    "tagline": "Building the future of B2B content marketing through strategic founder-led initiatives.",
+    "url": "https://www.extrasauceagency.com",
+    "founded": 2020,
+    "industry": "Digital Marketing",
+    "specialization": "B2B SaaS Content Marketing"
+  },
+  "contactInformation": {
+    "phone": "+1 (647) 957 9757",
+    "email": "manny@getextrasauce.com",
+    "address": "Headquarters based in Toronto, Canada",
+    "timezone": "EST (Eastern Standard Time)"
+  },
+  "socialMediaLinks": {
+    "linkedin": "https://www.linkedin.com/company/extra-sauce-agency/",
+    "tiktok": "https://www.tiktok.com/@findyoursauce",
+    "instagram": "https://www.instagram.com/extrasauceagency/",
+    "facebook": "https://www.facebook.com/ExtraSauceAgency",
+    "spotify": "https://open.spotify.com/show/6b4SuGSg3MBwyCGhKU6Jv1?si=20f8ee0db1b4437c&nd=1&dlsi=3879f31603da40ae"
+  },
+  "brandAssets": {
+    "logo": {
+      "chili": "/chili.png",
+      "sauce": "/sauce.png",
+      "altText": "Extra Sauce Logo"
+    },
+    "colors": {
+      "primary": "hsl(14, 85%, 55%)",
+      "secondary": "hsl(25, 95%, 60%)",
+      "accent": "hsl(8, 75%, 45%)"
+    }
+  },
+  "features": {
+    "enableBlog": true,
+    "enableNewsletter": true,
+    "enableLiveChat": false,
+    "enableDarkMode": false
+  }
+}

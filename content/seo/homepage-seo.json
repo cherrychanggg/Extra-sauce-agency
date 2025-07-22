@@ -1,0 +1,59 @@
+
+{
+  "meta": {
+    "description": "SEO settings for homepage - edit titles, descriptions, keywords here",
+    "lastUpdated": "2025-01-22",
+    "instructions": "Keep meta descriptions under 160 characters. Use 5-10 keywords max."
+  },
+  "pageTitle": "Extra Sauce Agency | Unleash Growth with Founder-Led Marketing for B2B SaaS",
+  "metaDescription": "Drive your B2B SaaS startup's growth with Extra Sauce Agency's unique Founder-Led Marketing strategy. Build authentic connections, enhance your brand's credibility, and generate demand by leveraging your founder's insights.",
+  "keywords": [
+    "B2B marketing",
+    "founder-led marketing", 
+    "content marketing",
+    "SaaS growth",
+    "thought leadership",
+    "executive ghostwriting",
+    "video content engine",
+    "GTM coaching",
+    "B2B SaaS marketing",
+    "content strategy",
+    "personal branding for executives",
+    "demand generation"
+  ],
+  "openGraph": {
+    "title": "Extra Sauce Agency | Founder-Led Marketing for B2B SaaS",
+    "description": "Transform your founder into a content marketing powerhouse. Drive growth through authentic thought leadership and strategic content creation.",
+    "image": "https://www.extrasauceagency.com/og-image.png",
+    "type": "website"
+  },
+  "twitterCard": {
+    "title": "Extra Sauce Agency | Founder-Led Marketing",
+    "description": "Drive B2B SaaS growth through authentic founder-led content marketing strategies.",
+    "image": "https://www.extrasauceagency.com/og-image.png"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Extra Sauce Agency",
+    "description": "B2B content marketing agency specializing in founder-led marketing strategies",
+    "url": "https://www.extrasauceagency.com",
+    "logo": "https://www.extrasauceagency.com/sauce.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-647-957-9757",
+      "contactType": "customer service",
+      "email": "manny@getextrasauce.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Toronto",
+      "addressCountry": "Canada"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/extra-sauce-agency/",
+      "https://www.instagram.com/extrasauceagency/",
+      "https://www.tiktok.com/@findyoursauce"
+    ]
+  }
+}

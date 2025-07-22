@@ -1,0 +1,62 @@
+
+{
+  "meta": {
+    "description": "Success stories page content - hero section and case studies",
+    "lastUpdated": "2025-01-22",
+    "editInstructions": "Add new success stories to the 'stories' array. Keep titles under 80 characters."
+  },
+  "heroSection": {
+    "headline": "What Happens When You Find Your Sauce",
+    "subtitle": "Extra Sauce is trusted by more than 50+ of the world's leading B2B brands. Read their stories to discover how teams like yours are revolutionizing how they build demand for the web.",
+    "primaryButton": {
+      "text": "View all stories",
+      "action": "scrollToStories"
+    }
+  },
+  "exploreSection": {
+    "headline": "Explore success stories",
+    "subtitle": "Learn how businesses are using Extra Sauce to build high-quality client work, faster — without growing their budget."
+  },
+  "floatingStats": [
+    {
+      "value": "16M+",
+      "label": "Total Views Generated",
+      "position": "top-1/4 left-1/4 lg:left-1/3"
+    },
+    {
+      "value": "$428K",
+      "label": "ARR Added", 
+      "position": "top-1/3 right-1/4 lg:right-1/3"
+    },
+    {
+      "value": "500K+",
+      "label": "Followers Gained",
+      "position": "bottom-1/3 left-1/3 lg:left-2/5"
+    },
+    {
+      "value": "50+",
+      "label": "B2B Brands Served",
+      "position": "top-20 left-1/2 transform -translate-x-1/2"
+    },
+    {
+      "value": "16+",
+      "label": "Qualified Meetings/Month",
+      "position": "bottom-1/4 right-1/3 lg:right-2/5"
+    },
+    {
+      "value": "8X",
+      "label": "ROI Improvement",
+      "position": "top-1/2 left-1/5 lg:left-1/4"
+    },
+    {
+      "value": "90%",
+      "label": "Time Saved on Content",
+      "position": "bottom-20 right-1/2 transform translate-x-1/2"
+    },
+    {
+      "value": "$2B+",
+      "label": "Enterprise Client Value",
+      "position": "top-2/3 right-1/5 lg:right-1/4"
+    }
+  ]
+}

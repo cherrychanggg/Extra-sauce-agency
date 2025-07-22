@@ -1,0 +1,30 @@
+
+{
+  "meta": {
+    "description": "SEO settings for success stories page",
+    "lastUpdated": "2025-01-22"
+  },
+  "pageTitle": "Success Stories | Extra Sauce Agency Client Results & Case Studies",
+  "metaDescription": "Discover how Extra Sauce Agency helped B2B brands generate 16M+ views, $428K ARR, and 500K+ followers through founder-led marketing strategies.",
+  "keywords": [
+    "success stories",
+    "case studies",
+    "client results",
+    "B2B marketing results",
+    "founder-led marketing success",
+    "content marketing ROI",
+    "SaaS growth results",
+    "marketing agency testimonials"
+  ],
+  "openGraph": {
+    "title": "Client Success Stories | Extra Sauce Agency Results",
+    "description": "See how our founder-led marketing strategies generated millions of views and substantial revenue growth for B2B brands.",
+    "image": "https://www.extrasauceagency.com/success-stories-og.png",
+    "type": "website"
+  },
+  "twitterCard": {
+    "title": "Success Stories | Extra Sauce Agency",
+    "description": "16M+ views, $428K ARR, 500K+ followers - see our client results.",
+    "image": "https://www.extrasauceagency.com/success-stories-og.png"
+  }
+}

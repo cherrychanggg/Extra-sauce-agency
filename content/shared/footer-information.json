@@ -1,0 +1,51 @@
+
+{
+  "meta": {
+    "description": "Website footer content - company info, links, contact details",
+    "lastUpdated": "2025-01-22"
+  },
+  "companySection": {
+    "name": "Extra Sauce",
+    "description": "Building the future of B2B content marketing through strategic founder-led initiatives.",
+    "callToAction": {
+      "text": "Book A Strategy Call",
+      "link": "/book-strategy-call"
+    }
+  },
+  "linkSections": [
+    {
+      "title": "COMPANY",
+      "links": [
+        {"name": "The Sauce Recipe", "link": "/the-sauce-recipe"},
+        {"name": "Company News", "link": "/resources/company-news"},
+        {"name": "Success Stories", "link": "/success-stories"},
+        {"name": "Blog", "link": "/resources/blogs"}
+      ]
+    },
+    {
+      "title": "SERVICES", 
+      "links": [
+        {"name": "Executive Ghostwriting", "link": "/services/executive-ghostwriting"},
+        {"name": "Video Content Engine", "link": "/services/video-content-engine"},
+        {"name": "Content-led GTM Coaching", "link": "/services/content-led-gtm-coaching"}
+      ]
+    },
+    {
+      "title": "QUICK LINKS",
+      "links": [
+        {"name": "Terms & Conditions", "link": "/terms-of-service"},
+        {"name": "Privacy Policy", "link": "/privacy-policy"}
+      ]
+    }
+  ],
+  "contactSections": [
+    {
+      "title": "HEADQUARTERS",
+      "content": "Toronto, Canada"
+    },
+    {
+      "title": "EMAIL", 
+      "content": "manny@getextrasauce.com"
+    }
+  ]
+}
