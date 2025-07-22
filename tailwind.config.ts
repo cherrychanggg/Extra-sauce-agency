@@ -137,6 +137,17 @@ export default {
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
 				'shimmer': 'shimmer 2s linear infinite',
 				'spin-slow': 'spin 8s linear infinite'
+			},
+			animationDelay: {
+				'75': '75ms',
+				'100': '100ms',
+				'150': '150ms',
+				'200': '200ms',
+				'300': '300ms',
+				'500': '500ms',
+				'600': '600ms',
+				'700': '700ms',
+				'1000': '1000ms'
 			}
 		}
 	},
