@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, BarChart3, Handshake, Zap, Eye, FileText, Lightbulb, PieChart, Coins, MousePointerClick } from "lucide-react";
+import { Play, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, BarChart3, Handshake, Zap, Eye, FileText, Lightbulb, PieChart, Coins, MousePointerClick, ChevronDown, ChevronUp, Sparkles } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -292,41 +292,54 @@ const SauceRecipe = () => {
                 className="group cursor-pointer"
                 onClick={() => setSelectedJourneyCard(selectedJourneyCard === index ? null : index)}
               >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 text-center hover:scale-105 transition-all duration-300 border border-slate-700/50 hover:border-primary/30 shadow-xl hover:shadow-2xl min-h-[300px] flex flex-col justify-between">
-                  {/* Icon - Circle initially, Pie Chart when selected */}
-                  <div className="flex justify-center mb-8">
-                    {selectedJourneyCard === index ? (
-                      <div className="w-20 h-20 relative">
-                        {/* Red pie chart */}
-                        <div className="w-20 h-20 rounded-full bg-slate-700 relative overflow-hidden">
-                          <div className="absolute inset-0 rounded-full" style={{
-                            background: `conic-gradient(from 0deg, #ff6b6b 0deg 270deg, #4a5568 270deg 360deg)`
-                          }}></div>
+                <div className={`bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 text-center transition-all duration-500 border border-slate-700/50 hover:border-primary/30 shadow-xl hover:shadow-2xl min-h-[300px] flex flex-col justify-between overflow-hidden ${
+                  selectedJourneyCard === index 
+                    ? 'scale-105 border-primary/50 shadow-primary/20' 
+                    : 'hover:scale-105'
+                }`}>
+                  {/* Icon - Shows opening/revealing state */}
+                  <div className="flex justify-center mb-8 relative">
+                    <div className={`w-20 h-20 rounded-full border-4 border-primary/30 flex items-center justify-center transition-all duration-500 ${
+                      selectedJourneyCard === index 
+                        ? 'bg-primary/20 border-primary scale-110 shadow-lg shadow-primary/30' 
+                        : 'bg-slate-700 group-hover:bg-slate-600'
+                    }`}>
+                      {selectedJourneyCard === index ? (
+                        <div className="flex flex-col items-center animate-fade-in">
+                          <Sparkles className="w-8 h-8 text-primary animate-pulse" />
+                          <ChevronUp className="w-4 h-4 text-primary/80 -mt-1" />
                         </div>
-                      </div>
-                    ) : (
-                      <div className="w-20 h-20 bg-primary rounded-full shadow-lg group-hover:bg-primary/90 transition-colors duration-300"></div>
-                    )}
+                      ) : (
+                        <div className="flex flex-col items-center">
+                          <div className="w-6 h-6 bg-primary rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <ChevronDown className="w-4 h-4 text-primary/60 group-hover:text-primary/80 transition-colors duration-300 mt-1" />
+                        </div>
+                      )}
+                    </div>
                   </div>
                   
                   <div className="flex-1 flex flex-col justify-center">
-                    <h4 className="text-xl font-bold text-white mb-6 leading-tight">
+                    <h4 className={`text-xl font-bold text-white mb-6 leading-tight transition-all duration-500 ${
+                      selectedJourneyCard === index ? 'text-primary/90' : ''
+                    }`}>
                       {selectedJourneyCard === index ? stage.expandedTitle : stage.initialTitle}
                     </h4>
                   
                     {selectedJourneyCard === index && (
-                      <p className="text-white/80 text-sm leading-relaxed mb-4">
-                        {stage.expandedDescription}
-                      </p>
+                      <div className="animate-fade-in">
+                        <p className="text-white/80 text-sm leading-relaxed mb-4 transform transition-all duration-500 ease-out">
+                          {stage.expandedDescription}
+                        </p>
+                      </div>
                     )}
                   </div>
                   
                   {/* Action button when expanded */}
                   {selectedJourneyCard === index && (
-                    <div className="mt-6">
+                    <div className="mt-6 animate-fade-in">
                       <Link to={stage.link}>
-                        <button className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors duration-300">
-                          CLICK TO LEARN ✨
+                        <button className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                          EXPLORE SERVICE ✨
                         </button>
                       </Link>
                     </div>
