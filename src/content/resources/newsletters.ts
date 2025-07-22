@@ -41,7 +41,6 @@ export interface NewsletterContent {
       };
     };
     submitButton: string;
-    webflowNote: string;
   };
 }
 
@@ -97,6 +96,5 @@ export const newsletterPageContent: NewsletterContent = {
       }
     },
     submitButton: "SUBSCRIBE",
-    webflowNote: "[Webflow Form Placeholder - Replace with actual Webflow embed code]"
   }
 };

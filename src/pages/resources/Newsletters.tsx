@@ -18,7 +18,7 @@ const Newsletters = () => {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left Content */}
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                <h1 className="text-4xl md:text-6xl font-bold mb-5">
                   {hero.title.split('CONTENT-LED')[0]}
                   <span className="text-primary">CONTENT-LED<br />
                   GTM REPORT.</span>
@@ -107,13 +107,6 @@ const Newsletters = () => {
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg font-semibold">
                     {form.submitButton}
                   </Button>
-                </div>
-                
-                {/* Placeholder for Webflow form */}
-                <div className="mt-6 p-4 bg-muted/30 rounded-lg border-2 border-dashed border-muted-foreground/30">
-                  <p className="text-center text-muted-foreground text-sm">
-                    {form.webflowNote}
-                  </p>
                 </div>
               </div>
             </div>
