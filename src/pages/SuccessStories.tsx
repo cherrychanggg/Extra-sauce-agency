@@ -26,45 +26,20 @@ interface SuccessStoriesContent {
   }>;
 }
 
-interface SEOContent {
-  pageTitle: string;
-  metaDescription: string;
-  keywords: string[];
-  openGraph: {
-    title: string;
-    description: string;
-    image: string;
-    type: string;
-  };
-  twitterCard: {
-    title: string;
-    description: string;
-    image: string;
-  };
-}
 
 const SuccessStories: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [content, setContent] = useState<SuccessStoriesContent | null>(null);
-  const [seoContent, setSeoContent] = useState<SEOContent | null>(null);
 
   useEffect(() => {
     // Load content from JSON files
     const loadContent = async () => {
       try {
-        const [contentResponse, seoResponse] = await Promise.all([
-          fetch('/content/pages/success-stories-content.json'),
-          fetch('/content/seo/success-stories-seo.json')
-        ]);
+        const contentResponse = await fetch('/content/pages/success-stories-content.json');
 
         if (contentResponse.ok) {
           const contentData = await contentResponse.json();
           setContent(contentData);
-        }
-
-        if (seoResponse.ok) {
-          const seoData = await seoResponse.json();
-          setSeoContent(seoData);
         }
       } catch (error) {
         console.error('Error loading content:', error);
