@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     date: "2024-10-15",
     category: "Strategy",
     tags: ["content marketing", "growth", "B2B"],
-    image: "/study1.png",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
     slug: "future-of-content-led-growth",
     featured: true
   },
@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
     date: "2024-10-10",
     category: "Leadership",
     tags: ["executive", "thought leadership", "content"],
-    image: "/study2.png",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop",
     slug: "building-executive-thought-leadership"
   },
   {
@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
     date: "2024-10-05",
     category: "Video Marketing",
     tags: ["video", "conversion", "marketing"],
-    image: "/study3.png",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
     slug: "video-content-that-converts"
   }
 ];
