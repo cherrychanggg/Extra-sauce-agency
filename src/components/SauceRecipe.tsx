@@ -274,13 +274,14 @@ const SauceRecipe = () => {
               </h3>
             </div>
             <div className="flex justify-center mt-4" ref={clickToLearnRef}>
-              <div className={`inline-flex items-center gap-2 bg-background/60 backdrop-blur-sm border-2 border-dashed border-primary/40 px-4 py-2 rounded-xl text-sm font-medium text-muted-foreground shadow-sm transition-all duration-700 ${
+              <div className={`inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm border-2 border-primary/30 px-8 py-4 rounded-2xl text-base font-semibold text-primary shadow-lg transition-all duration-700 ${
                 isClickToLearnVisible 
                   ? 'animate-fade-in opacity-100 scale-100' 
                   : 'opacity-0 scale-75 translate-y-4'
-              }`}>
-                <MousePointerClick className="w-4 h-4 text-primary" />
-                CLICK TO LEARN
+              } hover:scale-105 hover:shadow-xl hover:border-primary/50`}>
+                <MousePointerClick className="w-6 h-6 text-primary animate-pulse" />
+                CLICK ANY CARD BELOW TO LEARN MORE
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
               </div>
             </div>
           </div>
@@ -299,19 +300,24 @@ const SauceRecipe = () => {
                 }`}>
                   {/* Icon - Shows opening/revealing state */}
                   <div className="flex justify-center mb-8 relative">
-                    <div className={`w-20 h-20 rounded-full border-4 border-primary/30 flex items-center justify-center transition-all duration-500 ${
+                    <div className={`w-20 h-20 rounded-full border-4 flex items-center justify-center transition-all duration-500 relative ${
                       selectedJourneyCard === index 
                         ? 'bg-primary/20 border-primary scale-110 shadow-lg shadow-primary/30' 
-                        : 'bg-slate-700 group-hover:bg-slate-600'
+                        : 'bg-slate-700 border-primary/30 group-hover:bg-slate-600 group-hover:border-primary/50'
                     }`}>
+                      {/* Pulsing ring effect for unselected cards */}
+                      {selectedJourneyCard !== index && (
+                        <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse scale-110"></div>
+                      )}
+                      
                       {selectedJourneyCard === index ? (
                         <div className="flex flex-col items-center animate-fade-in">
                           <Sparkles className="w-8 h-8 text-primary animate-pulse" />
                           <ChevronUp className="w-4 h-4 text-primary/80 -mt-1" />
                         </div>
                       ) : (
-                        <div className="flex flex-col items-center">
-                          <div className="w-6 h-6 bg-primary rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="flex flex-col items-center group-hover:animate-pulse">
+                          <MousePointerClick className="w-6 h-6 text-primary/80 group-hover:text-primary transition-colors duration-300" />
                           <ChevronDown className="w-4 h-4 text-primary/60 group-hover:text-primary/80 transition-colors duration-300 mt-1" />
                         </div>
                       )}
