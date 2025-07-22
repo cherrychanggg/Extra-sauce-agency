@@ -67,13 +67,12 @@ const SuccessStories: React.FC = () => {
           <div className="text-sm text-muted-foreground">Followers Gained</div>
         </div>
 
-        {/* Additional floating stats */}
         <div className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '900ms' }}>
           <div className="text-3xl font-bold text-primary">50+</div>
           <div className="text-sm text-muted-foreground">B2B Brands Served</div>
         </div>
 
-        <div className="absolute bottom-1/3 right-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1200ms' }}>
+        <div className="absolute bottom-1/4 right-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1200ms' }}>
           <div className="text-3xl font-bold text-primary">16+</div>
           <div className="text-sm text-muted-foreground">Qualified Meetings/Month</div>
         </div>

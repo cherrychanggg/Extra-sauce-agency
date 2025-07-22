@@ -3,10 +3,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/shared/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import TheSauceRecipe from "./pages/TheSauceRecipe";
-import Services from "./pages/Services";
 import ExecutiveGhostwriting from "./pages/services/ExecutiveGhostwriting";
 import VideoContentEngine from "./pages/services/VideoContentEngine";
 import ContentLedGTMCoaching from "./pages/services/ContentLedGTMCoaching";
@@ -30,7 +29,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/the-sauce-recipe" element={<TheSauceRecipe />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/services/executive-ghostwriting" element={<ExecutiveGhostwriting />} />
           <Route path="/services/video-content-engine" element={<VideoContentEngine />} />
           <Route path="/services/content-led-gtm-coaching" element={<ContentLedGTMCoaching />} />
