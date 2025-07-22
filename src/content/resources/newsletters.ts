@@ -63,7 +63,7 @@ export const newsletters: Newsletter[] = [
 export const newsletterPageContent: NewsletterContent = {
   hero: {
     title: "SUBSCRIBE TO THE WEEKLY CONTENT-LED GTM REPORT.",
-    subtitle: "First Issue Drops October — Join the List",
+    subtitle: "First Issue Drops",
     description: "Once a week, we'll send you a 5-minute read with proven executive content tactics to help you drive qualified pipeline for your company.",
     launchDate: "October"
   },
@@ -92,7 +92,7 @@ export const newsletterPageContent: NewsletterContent = {
       },
       hearAbout: {
         label: "HOW DID YOU HEAR ABOUT US?",
-        placeholder: "123",
+        placeholder: "Tell us how you found us...",
         required: false
       }
     },
