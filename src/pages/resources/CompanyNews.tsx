@@ -1,7 +1,29 @@
 import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
+import { companyNews, newsCategories } from "@/content/resources/companynews";
+import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
 
 const CompanyNews = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredNews = selectedCategory === "All" 
+    ? companyNews 
+    : companyNews.filter(item => item.category === selectedCategory);
+
+  const getCategoryStyles = (category: string) => {
+    switch (category) {
+      case "Company Update":
+        return "bg-primary/10 text-primary";
+      case "Partnership":
+        return "bg-secondary/10 text-secondary";
+      case "Team Growth":
+        return "bg-accent/10 text-accent-foreground";
+      default:
+        return "bg-muted/10 text-muted-foreground";
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -16,50 +38,49 @@ const CompanyNews = () => {
               Stay updated with the latest announcements, milestones, and company updates
             </p>
           </div>
+
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {newsCategories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedCategory === category
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted hover:bg-muted-foreground/10"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
           
           <div className="max-w-4xl mx-auto space-y-8">
-            {/* News items */}
-            <article className="bg-card rounded-xl p-8 shadow-sm border">
-              <div className="flex items-start justify-between mb-4">
-                <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
-                  Company Update
+            {filteredNews.map((item) => (
+              <article key={item.id} className="bg-card rounded-xl p-8 shadow-sm border hover:shadow-md transition-shadow">
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryStyles(item.category)}`}>
+                    {item.category}
+                  </div>
+                  <span className="text-muted-foreground text-sm">
+                    {new Date(item.date).toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long' 
+                    })}
+                  </span>
                 </div>
-                <span className="text-muted-foreground text-sm">October 2024</span>
-              </div>
-              <h2 className="text-2xl font-semibold mb-4">Company News Coming Soon</h2>
-              <p className="text-muted-foreground">
-                We're preparing exciting updates about our company milestones, partnerships, and growth. 
-                Stay tuned for announcements about our journey in revolutionizing content-led growth.
-              </p>
-            </article>
-            
-            <article className="bg-card rounded-xl p-8 shadow-sm border">
-              <div className="flex items-start justify-between mb-4">
-                <div className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">
-                  Partnership
-                </div>
-                <span className="text-muted-foreground text-sm">Coming Soon</span>
-              </div>
-              <h2 className="text-2xl font-semibold mb-4">Strategic Partnerships</h2>
-              <p className="text-muted-foreground">
-                Learn about our strategic partnerships and collaborations that help us deliver 
-                even better results for our clients in their content-led growth journey.
-              </p>
-            </article>
-            
-            <article className="bg-card rounded-xl p-8 shadow-sm border">
-              <div className="flex items-start justify-between mb-4">
-                <div className="bg-accent/10 text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  Team Growth
-                </div>
-                <span className="text-muted-foreground text-sm">Coming Soon</span>
-              </div>
-              <h2 className="text-2xl font-semibold mb-4">Team Expansion</h2>
-              <p className="text-muted-foreground">
-                Discover how we're growing our team with top talent to better serve our clients 
-                and continue innovating in the content marketing space.
-              </p>
-            </article>
+                <h2 className="text-2xl font-semibold mb-4">{item.title}</h2>
+                <p className="text-muted-foreground mb-4">
+                  {item.excerpt}
+                </p>
+                {item.author && (
+                  <div className="text-sm text-muted-foreground">
+                    By {item.author}
+                  </div>
+                )}
+              </article>
+            ))}
           </div>
         </div>
       </main>
