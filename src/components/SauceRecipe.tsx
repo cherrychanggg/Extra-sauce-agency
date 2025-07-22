@@ -1,12 +1,38 @@
 import { Button } from "@/components/ui/button";
-import { Play, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, BarChart3, Handshake, Zap, Eye, FileText, Lightbulb, PieChart, Coins } from "lucide-react";
-import { useState } from "react";
+import { Play, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, BarChart3, Handshake, Zap, Eye, FileText, Lightbulb, PieChart, Coins, MousePointerClick } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const SauceRecipe = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [activeDepartment, setActiveDepartment] = useState("C-SUITE");
   const [selectedJourneyCard, setSelectedJourneyCard] = useState<number | null>(null);
+  const [isStoryVisible, setIsStoryVisible] = useState(false);
+  const [isClickToLearnVisible, setIsClickToLearnVisible] = useState(false);
+  
+  const storyRef = useRef<HTMLDivElement>(null);
+  const clickToLearnRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === storyRef.current && entry.isIntersecting) {
+            setIsStoryVisible(true);
+          }
+          if (entry.target === clickToLearnRef.current && entry.isIntersecting) {
+            setIsClickToLearnVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (storyRef.current) observer.observe(storyRef.current);
+    if (clickToLearnRef.current) observer.observe(clickToLearnRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   const steps = [
     {
@@ -162,16 +188,20 @@ const SauceRecipe = () => {
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-8 max-w-4xl mx-auto leading-tight">
             OUR MISSION IS TO HELP B2B COMPANIES{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">*GROW PROFITABLY</span>{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">™GROW PROFITABLY</span>{" "}
             WITH EXECUTIVE CONTENT
           </h2>
         </div>
 
         {/* Behind Extra Sauce Story */}
-        <div className="flex justify-center mb-20">
+        <div className="flex justify-center mb-20" ref={storyRef}>
           <div className="relative max-w-4xl">
             {/* Story Label */}
-            <div className="absolute -top-4 left-8 bg-accent text-accent-foreground px-6 py-2 rounded-lg text-sm font-semibold shadow-lg transform -rotate-3 z-10">
+            <div className={`absolute -top-4 left-8 bg-accent text-accent-foreground px-6 py-2 rounded-lg text-sm font-semibold shadow-lg transform -rotate-3 z-10 transition-all duration-700 ${
+              isStoryVisible 
+                ? 'animate-fade-in opacity-100 scale-100' 
+                : 'opacity-0 scale-75 translate-y-4'
+            }`}>
               THE STORY
             </div>
             
@@ -243,10 +273,15 @@ const SauceRecipe = () => {
                 WHERE ARE YOU IN YOUR <span className="text-primary">CONTENT JOURNEY?</span>
               </h3>
             </div>
-            <div className="flex justify-center mt-4">
-              <span className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold">
-                CLICK TO LEARN ✨
-              </span>
+            <div className="flex justify-center mt-4" ref={clickToLearnRef}>
+              <div className={`inline-flex items-center gap-2 bg-background/60 backdrop-blur-sm border-2 border-dashed border-primary/40 px-4 py-2 rounded-xl text-sm font-medium text-muted-foreground shadow-sm transition-all duration-700 ${
+                isClickToLearnVisible 
+                  ? 'animate-fade-in opacity-100 scale-100' 
+                  : 'opacity-0 scale-75 translate-y-4'
+              }`}>
+                <MousePointerClick className="w-4 h-4 text-primary" />
+                CLICK TO LEARN
+              </div>
             </div>
           </div>
           
