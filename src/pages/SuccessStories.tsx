@@ -3,11 +3,41 @@ import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { successStories } from "@/content/success-stories";
 import { ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
 
 const SuccessStories: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  
+  // Mock data for now - this should come from JSON content
+  const successStories = [
+    {
+      id: 1,
+      title: "B2B SaaS Company Increases Lead Generation by 300%",
+      summary: "How one startup transformed their content strategy to generate qualified leads.",
+      image: "/study1.png",
+      author: "John Smith",
+      authorRole: "CEO",
+      detailed: "This B2B SaaS company implemented our founder-led marketing strategy and saw incredible results within 90 days."
+    },
+    {
+      id: 2,
+      title: "Enterprise Client Builds Thought Leadership Pipeline",
+      summary: "Strategic content positioning leads to $2M in new business opportunities.",
+      image: "/study2.png", 
+      author: "Sarah Johnson",
+      authorRole: "CMO",
+      detailed: "Through strategic content positioning and thought leadership, this enterprise client built a robust pipeline."
+    },
+    {
+      id: 3,
+      title: "Tech Startup Achieves 8x ROI on Content Investment",
+      summary: "Founder-led content strategy delivers exceptional return on marketing investment.",
+      image: "/study3.png",
+      author: "Mike Chen",
+      authorRole: "Founder",
+      detailed: "This tech startup achieved an 8x return on their content marketing investment using our proven methodology."
+    }
+  ];
 
   const openModal = (idx: number) => setOpenIndex(idx);
   const closeModal = () => setOpenIndex(null);

@@ -1,4 +1,4 @@
-import { trustedBySection } from "@/content/homepage";
+import { useContentLoader } from "@/hooks/useContentLoader";
 
 const companies = [
   {
@@ -35,6 +35,7 @@ const companies = [
 const allCompanies = [...companies, ...companies, ...companies];
 
 const TrustedBySection = () => {
+  const { content: homepage } = useContentLoader('/content/pages/homepage-content.json');
   return (
     <section className="py-16 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden w-full">
       {/* Enhanced Background */}
@@ -46,7 +47,7 @@ const TrustedBySection = () => {
       <div className="w-full relative z-10 px-0">
         <div className="text-center mb-12 px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            {trustedBySection.title}
+            {homepage?.trustedBySection?.headline || 'Trusted by 50+ B2B Brands'}
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-primary via-secondary to-accent rounded-full mx-auto shadow-lg"></div>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">

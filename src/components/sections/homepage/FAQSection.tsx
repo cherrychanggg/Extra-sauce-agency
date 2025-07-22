@@ -4,9 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqSection } from "@/content/homepage";
+import { useContentLoader } from "@/hooks/useContentLoader";
 
 const FAQSection = () => {
+  const { content: homepage } = useContentLoader('/content/pages/homepage-content.json');
+
+  if (!homepage?.faqSection) return null;
+
   return (
     <section className="section-padding bg-gradient-subtle relative overflow-hidden">
       {/* Enhanced Background */}
@@ -30,7 +34,7 @@ const FAQSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-6">
-            {faqSection.questions.map((faq, index) => (
+            {homepage.faqSection.questions.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`} 

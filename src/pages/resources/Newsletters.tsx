@@ -134,7 +134,7 @@ const Newsletters = () => {
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                      <User className="w-6 h-6 text-primary" />
+                      <Users className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <div className="font-semibold">{newsletter.testimonial.author}</div>

@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { servicesOverviewSection } from "@/content/homepage";
+import { useContentLoader } from "@/hooks/useContentLoader";
 
 const ServicesOverviewSection = () => {
+  const { content: homepage } = useContentLoader('/content/pages/homepage-content.json');
   const serviceColors = [
     { bgColor: "from-primary/10 to-secondary/10", borderColor: "border-primary/20" },
     { bgColor: "from-secondary/10 to-accent/10", borderColor: "border-secondary/20" },
@@ -16,19 +17,15 @@ const ServicesOverviewSection = () => {
       <div className="container-premium">
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            {servicesOverviewSection.headline.split(' - ')[0]}{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {servicesOverviewSection.headline.split(' - ')[1]?.split(' ')[0]} {servicesOverviewSection.headline.split(' - ')[1]?.split(' ')[1]} {servicesOverviewSection.headline.split(' - ')[1]?.split(' ')[2]} {servicesOverviewSection.headline.split(' - ')[1]?.split(' ')[3]}
-            </span>{" "}
-            - {servicesOverviewSection.headline.split(' - ')[2]}
+            {homepage?.servicesOverview?.headline || 'Our Services'}
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            {servicesOverviewSection.subheadline}
+            {homepage?.servicesOverview?.subtitle || 'Comprehensive founder-led marketing solutions'}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
-          {servicesOverviewSection.services.map((service, index) => (
+          {homepage?.servicesOverview?.services?.map((service, index) => (
             <div 
               key={index}
               className={`card-premium p-8 group hover:scale-[1.03] hover:shadow-2xl transition-all duration-500 relative overflow-hidden bg-gradient-to-br ${serviceColors[index].bgColor} border-2 ${serviceColors[index].borderColor} hover:border-primary/40 flex flex-col h-full`}
@@ -50,12 +47,14 @@ const ServicesOverviewSection = () => {
                     AREAS OF FOCUS
                   </h4>
                   <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{feature}</span>
-                      </li>
-                    ))}
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground text-sm">Strategic content creation</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground text-sm">Thought leadership development</span>
+                    </li>
                   </ul>
                 </div>
               </div>

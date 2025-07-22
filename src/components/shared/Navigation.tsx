@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import { navigationItems, servicesDropdown, resourcesDropdown, ctaButton, logo } from "@/content/navigation";
-import { ChevronDown } from "lucide-react";
+import { useContentLoader } from "@/hooks/useContentLoader";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { content: navigation } = useContentLoader('/content/shared/navigation-menu.json');
+  const { content: siteConfig } = useContentLoader('/content/global/site-configuration.json');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,16 +31,16 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logo.chiliImage} alt={logo.altText} className="w-16 h-16 hover:scale-110 transition-transform duration-300" />
-            <img src={logo.sauceImage} alt={logo.altText} className="w-48 h-48 hover:scale-105 transition-transform duration-300" />
+            <img src={siteConfig?.brandAssets?.logo?.chili} alt={siteConfig?.brandAssets?.logo?.altText} className="w-16 h-16 hover:scale-110 transition-transform duration-300" />
+            <img src={siteConfig?.brandAssets?.logo?.sauce} alt={siteConfig?.brandAssets?.logo?.altText} className="w-48 h-48 hover:scale-105 transition-transform duration-300" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigation?.mainNavigation?.map((item) => (
               <Link
                 key={item.name}
-                to={item.href}
+                to={item.link}
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium link-animated"
               >
                 {item.name}
@@ -56,10 +57,10 @@ const Navigation = () => {
               {/* Dropdown Menu */}
               <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="py-2">
-                  {servicesDropdown.map((item) => (
+                  {navigation?.servicesDropdown?.items?.map((item) => (
                     <Link
                       key={item.name}
-                      to={item.href}
+                      to={item.link}
                       className="block px-4 py-2 text-foreground hover:text-primary hover:bg-accent transition-colors duration-200"
                     >
                       {item.name}
@@ -79,10 +80,10 @@ const Navigation = () => {
               {/* Dropdown Menu */}
               <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="py-2">
-                  {resourcesDropdown.map((item) => (
+                  {navigation?.resourcesDropdown?.items?.map((item) => (
                     <Link
                       key={item.name}
-                      to={item.href}
+                      to={item.link}
                       className="block px-4 py-2 text-foreground hover:text-primary hover:bg-accent transition-colors duration-200"
                     >
                       {item.name}
@@ -95,9 +96,9 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Link to={ctaButton.link}>
+            <Link to={navigation?.callToActionButton?.link || '/book-strategy-call'}>
               <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25">
-                {ctaButton.text}
+                {navigation?.callToActionButton?.text}
               </Button>
             </Link>
           </div>
@@ -115,10 +116,10 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-6 border-t border-border/50">
             <div className="flex flex-col space-y-4">
-              {navigationItems.map((item) => (
+              {navigation?.mainNavigation?.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.href}
+                  to={item.link}
                   className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -129,10 +130,10 @@ const Navigation = () => {
               {/* Mobile Services Section */}
               <div className="border-t border-border/30 pt-4">
                 <div className="text-foreground font-medium mb-2">Services</div>
-                {servicesDropdown.map((item) => (
+                {navigation?.servicesDropdown?.items?.map((item) => (
                   <Link
                     key={item.name}
-                    to={item.href}
+                    to={item.link}
                     className="block text-foreground hover:text-primary transition-colors duration-300 py-2 pl-4"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -144,10 +145,10 @@ const Navigation = () => {
               {/* Mobile Resources Section */}
               <div className="border-t border-border/30 pt-4">
                 <div className="text-foreground font-medium mb-2">Resources</div>
-                {resourcesDropdown.map((item) => (
+                {navigation?.resourcesDropdown?.items?.map((item) => (
                   <Link
                     key={item.name}
-                    to={item.href}
+                    to={item.link}
                     className="block text-foreground hover:text-primary transition-colors duration-300 py-2 pl-4"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -156,9 +157,9 @@ const Navigation = () => {
                 ))}
               </div>
               
-              <Link to={ctaButton.link}>
+              <Link to={navigation?.callToActionButton?.link || '/book-strategy-call'}>
                 <Button className="btn-hero mt-4">
-                  {ctaButton.text}
+                  {navigation?.callToActionButton?.text}
                 </Button>
               </Link>
             </div>
