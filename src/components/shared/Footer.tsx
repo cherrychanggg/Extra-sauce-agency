@@ -62,14 +62,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Location */}
-          <div>
-            <h4 className="font-semibold mb-6 text-sm uppercase tracking-wider text-foreground">
-              {location.title}
-            </h4>
-            <p className="text-muted-foreground">{location.address}</p>
-          </div>
-
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-6 text-sm uppercase tracking-wider text-foreground">
@@ -87,6 +79,14 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Location */}
+          <div>
+            <h4 className="font-semibold mb-6 text-sm uppercase tracking-wider text-foreground">
+              {location.title}
+            </h4>
+            <p className="text-muted-foreground">{location.address}</p>
           </div>
 
           {/* Contact */}
