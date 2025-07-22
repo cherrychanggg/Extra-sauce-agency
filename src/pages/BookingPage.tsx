@@ -285,7 +285,7 @@ const BookingPage = () => {
                 {/* Calendly Embed */}
                 <div
                   className="card-premium p-0 overflow-hidden rounded-2xl border-2 border-orange-400 shadow-lg bg-gradient-to-br from-orange-50 via-white to-white"
-                  style={{ height: 520 }}
+                  style={{ height: 680 }}
                 >
                   <InlineWidget url="https://calendly.com/extrasauceagency" />
                 </div>
