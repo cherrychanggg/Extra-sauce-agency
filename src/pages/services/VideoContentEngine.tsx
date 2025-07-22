@@ -66,31 +66,16 @@ const VideoContentEngine = () => {
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Build a systematic video content production process that turns your expertise into binge-worthy content that drives leads and builds trust.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">
                 <Button className="btn-hero">
                   Launch Your Engine
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Secondary Hero Section */}
-      <section className="py-12 lg:py-16 bg-muted/30">
-        <div className="container-premium">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
-              Turn your expertise into a video engine that closes pipeline.
-            </h2>
             
-            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Launch a binge-worthy video series—podcast, masterclass, or webinar—that fuels LinkedIn, YouTube, and your entire content engine while turning dream prospects into pipeline.
-            </p>
-
             {/* Metrics */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">4 Hr/mo</div>
                 <div className="text-sm text-muted-foreground">Minimal time investment</div>
@@ -104,6 +89,21 @@ const VideoContentEngine = () => {
                 <div className="text-sm text-muted-foreground">Expected ROI</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary Hero Section */}
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="container-premium">
+          <div className="max-w-6xl mx-auto text-center animate-fade-in">
+            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
+              Turn your expertise into a video engine that closes pipeline.
+            </h2>
+            
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Launch a binge-worthy video series—podcast, masterclass, or webinar—that fuels LinkedIn, YouTube, and your entire content engine while turning dream prospects into pipeline.
+            </p>
           </div>
         </div>
       </section>

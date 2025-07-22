@@ -66,31 +66,16 @@ const ExecutiveGhostwriting = () => {
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Transform your expertise into thought leadership content that positions you as an industry authority and drives qualified leads to your business.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">
                 <Button className="btn-hero">
                   Get Started Today
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Secondary Hero Section */}
-      <section className="py-12 lg:py-16 bg-muted/30">
-        <div className="container-premium">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
-              Become a <span className="text-primary">thought leader.</span>
-            </h2>
             
-            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Great executive content is the perfect blend of your expertise and personality.
-            </p>
-
             {/* Metrics */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">4 Hr/mo</div>
                 <div className="text-sm text-muted-foreground">Minimal time investment</div>
@@ -104,6 +89,21 @@ const ExecutiveGhostwriting = () => {
                 <div className="text-sm text-muted-foreground">Expected ROI</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary Hero Section */}
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="container-premium">
+          <div className="max-w-6xl mx-auto text-center animate-fade-in">
+            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
+              Become a <span className="text-primary">thought leader.</span>
+            </h2>
+            
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Great executive content is the perfect blend of your expertise and personality.
+            </p>
           </div>
         </div>
       </section>

@@ -66,31 +66,16 @@ const ContentLedGTMCoaching = () => {
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Strategic coaching to integrate content into your entire go-to-market motion, from awareness to conversion, creating a predictable growth engine.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">
                 <Button className="btn-hero">
                   Start Your GTM Journey
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Secondary Hero Section */}
-      <section className="py-12 lg:py-16 bg-muted/30">
-        <div className="container-premium">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
-              Don't waste months trying out content. Use our proven systems.
-            </h2>
             
-            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.
-            </p>
-
             {/* Metrics */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">6 Sessions</div>
                 <div className="text-sm text-muted-foreground">Full GTM Ready Execution</div>
@@ -104,6 +89,21 @@ const ContentLedGTMCoaching = () => {
                 <div className="text-sm text-muted-foreground">Minimum Savings</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary Hero Section */}
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="container-premium">
+          <div className="max-w-6xl mx-auto text-center animate-fade-in">
+            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
+              Don't waste months trying out content. Use our proven systems.
+            </h2>
+            
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.
+            </p>
           </div>
         </div>
       </section>
