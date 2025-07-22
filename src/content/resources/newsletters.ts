@@ -77,17 +77,17 @@ export const newsletterPageContent: NewsletterContent = {
     fields: {
       email: {
         label: "EMAIL *",
-        placeholder: "123@hotmail.com",
+        placeholder: "getstarted@getextrasauce.com",
         required: true
       },
       firstName: {
         label: "FIRST NAME *", 
-        placeholder: "123",
+        placeholder: "John",
         required: true
       },
       lastName: {
         label: "LAST NAME *",
-        placeholder: "",
+        placeholder: "Doe",
         required: true
       },
       hearAbout: {

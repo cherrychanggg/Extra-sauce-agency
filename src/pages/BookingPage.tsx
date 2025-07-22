@@ -1,12 +1,7 @@
 import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Check, Clock, Video, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import emailjs from '@emailjs/browser';
 import { InlineWidget } from "react-calendly";
 
 const BookingPage = () => {
@@ -87,57 +82,7 @@ const BookingPage = () => {
     { name: "TVO Kids", logo: "/tvokids.png" },
   ];
 
-  const allCompanies = [...companies, ...companies]; // duplicate for seamless scroll
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      const templateParams = {
-        to_email: 'manny@extrasauceagency.com',
-        from_name: formData.name,
-        from_email: formData.email,
-        guests: formData.guests || 'None',
-        goals: formData.goals,
-        budget: formData.budget,
-        challenges: formData.challenges,
-        timeline: formData.timeline,
-        hear_about: formData.hearAbout
-      };
-
-      await emailjs.send(
-        'YOUR_SERVICE_ID', // You'll need to replace this with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // You'll need to replace this with your EmailJS template ID
-        templateParams,
-        'YOUR_PUBLIC_KEY' // You'll need to replace this with your EmailJS public key
-      );
-
-      alert('Thank you! Your strategy call request has been sent successfully.');
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        guests: '',
-        goals: '',
-        budget: '',
-        challenges: '',
-        timeline: '',
-        hearAbout: ''
-      });
-    } catch (error) {
-      console.error('Email sending failed:', error);
-      alert('Sorry, there was an error sending your request. Please try again.');
-    }
-  };
+  const allCompanies = [...companies, ...companies]; 
 
   return (
     <div className="min-h-screen bg-background">

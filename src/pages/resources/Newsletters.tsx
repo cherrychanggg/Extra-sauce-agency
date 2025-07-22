@@ -26,7 +26,7 @@ const Newsletters = () => {
                 
                 <div className="mb-8">
                   <p className="text-lg mb-4">
-                    {hero.subtitle.replace('October', `<span className="text-primary">${hero.launchDate}</span>`)}
+                    {hero.subtitle.replace('October', '<span className="text-primary">${hero.launchDate}</span>')}
                     <span className="text-primary">{hero.launchDate}</span> — Join the List
                   </p>
                   
