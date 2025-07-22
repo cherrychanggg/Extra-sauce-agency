@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Quote, Star, ArrowLeft, ArrowRight, ExternalLink, TrendingUp, Users, DollarSign, BarChart3, CheckCircle, Linkedin } from "lucide-react";
+import { Quote, Star, ArrowLeft, ArrowRight, TrendingUp, Users, DollarSign, BarChart3, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -153,14 +153,11 @@ const Testimonials = () => {
             <div className="lg:sticky lg:top-8">
               <Card className="border-primary/20 shadow-xl bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm">
                 <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="mb-4">
                     <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
                       <CheckCircle className="w-3 h-3 mr-1" />
                       Verified Client
                     </Badge>
-                    <Button variant="ghost" size="sm" className="h-8 px-2">
-                      <Linkedin className="w-4 h-4" />
-                    </Button>
                   </div>
 
                   <div className="mb-6">
@@ -196,10 +193,6 @@ const Testimonials = () => {
                     </div>
                   </div>
 
-                  <Button variant="outline" className="group mb-6">
-                    View Full Case Study
-                    <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
                 </CardHeader>
 
                 <CardContent className="pt-0">
