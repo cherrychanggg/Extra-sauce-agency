@@ -27,7 +27,7 @@ const SuccessStories: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted/30 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(234,88,12,0.15),rgba(255,255,255,0))]"></div>
         
         <div className="container-premium text-center relative z-10">
           <h1 className="text-5xl lg:text-8xl font-bold leading-tight mb-8 bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent">
@@ -112,7 +112,7 @@ const SuccessStories: React.FC = () => {
                   className={`px-8 py-3 rounded-full font-medium transition-all duration-300 ${
                     activeTab === "B2B" 
                       ? "bg-primary text-primary-foreground shadow-md" 
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-muted-foreground hover:text-primary"
                   }`}
                 >
                   B2B
@@ -122,7 +122,7 @@ const SuccessStories: React.FC = () => {
                   className={`px-8 py-3 rounded-full font-medium transition-all duration-300 ${
                     activeTab === "B2C" 
                       ? "bg-primary text-primary-foreground shadow-md" 
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-muted-foreground hover:text-primary"
                   }`}
                 >
                   B2C
