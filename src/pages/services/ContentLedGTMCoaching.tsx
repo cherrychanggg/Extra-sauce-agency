@@ -59,7 +59,7 @@ const ContentLedGTMCoaching = () => {
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-gradient-subtle pt-20">
         <div className="container-premium text-center relative z-10">
-          <div className="max-w-4xl mx-auto animate-fade-in">
+          <div className="max-w-4xl mx-auto animate-scale-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
               Content Led <span className="text-primary">GTM Coaching</span>
             </h1>
@@ -77,15 +77,15 @@ const ContentLedGTMCoaching = () => {
             {/* Metrics with floating element */}
             <div className="relative flex flex-col sm:flex-row items-center justify-center gap-8">
               {/* Animated floating element beside stats */}
-              <div className="absolute left-[-300px] lg:left-[-350px] top-1/2 transform -translate-y-1/2 animate-fade-in animation-delay-2000 hidden xl:block">
+              <div className="absolute left-[-300px] lg:left-[-350px] top-1/2 transform -translate-y-1/2 animate-scale-in animation-delay-2000 hidden xl:block">
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-6 rounded-lg shadow-xl max-w-xs transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
-                    <div className="text-sm font-bold text-emerald-200 mb-2">"You know how to ask the right questions to extract the right information from the chaos in my head as a founder."</div>
-                    <div className="text-xs text-emerald-100">
+                  <div className="bg-slate-800 text-white p-6 rounded-lg shadow-xl max-w-xs transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
+                    <div className="text-sm font-bold text-green-400 mb-2">"You know how to ask the right questions to extract the right information from the chaos in my head as a founder."</div>
+                    <div className="text-xs text-slate-300">
                       Over the years, we've built The Sauce Recipe™ that include the top frameworks and methodologies used by the biggest creators in the world.
                     </div>
                   </div>
-                  <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-emerald-300 rounded-full animate-pulse"></div>
+                  <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 </div>
               </div>
 
