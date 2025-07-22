@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Linkedin, Music, Instagram, Facebook, Hash } from "lucide-react";
+import { Linkedin, Mic, Instagram, Facebook, Hash } from "lucide-react";
 import { Link } from "react-router-dom";
-import { companyInfo, quickLinks, location, contact, email, socialMedia } from "@/content/footer";
+import { companyInfo, companyLinks, servicesLinks, location, email, socialMedia } from "@/content/footer";
 
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container-premium py-16">
-        <div className="grid lg:grid-cols-4 gap-12">
+        <div className="grid lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
@@ -24,13 +24,32 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Quick Links */}
+          {/* Company Links */}
           <div>
             <h4 className="font-semibold mb-6 text-sm uppercase tracking-wider text-foreground">
-              {quickLinks.title}
+              {companyLinks.title}
             </h4>
             <ul className="space-y-3">
-              {quickLinks.links.map((link, index) => (
+              {companyLinks.links.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.href} 
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Links */}
+          <div>
+            <h4 className="font-semibold mb-6 text-sm uppercase tracking-wider text-foreground">
+              {servicesLinks.title}
+            </h4>
+            <ul className="space-y-3">
+              {servicesLinks.links.map((link, index) => (
                 <li key={index}>
                   <Link 
                     to={link.href} 
@@ -55,13 +74,6 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-foreground">
-                {contact.title}
-              </h4>
-              <p className="text-muted-foreground">{contact.phone}</p>
-            </div>
-            
-            <div className="mb-6">
-              <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-foreground">
                 {email.title}
               </h4>
               <a 
@@ -84,38 +96,38 @@ const Footer = () => {
             <div className="flex space-x-6">
               <a 
                 href={socialMedia.linkedin}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="text-primary hover:text-primary/80 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.tiktok}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="text-primary hover:text-primary/80 transition-colors duration-300"
                 aria-label="TikTok"
               >
                 <Hash className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.instagram}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="text-primary hover:text-primary/80 transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.facebook}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="text-primary hover:text-primary/80 transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
                 href={socialMedia.spotify}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
-                aria-label="Spotify"
+                className="text-primary hover:text-primary/80 transition-colors duration-300"
+                aria-label="Podcast"
               >
-                <Music className="w-5 h-5" />
+                <Mic className="w-5 h-5" />
               </a>
             </div>
           </div>

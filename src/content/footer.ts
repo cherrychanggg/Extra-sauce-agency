@@ -2,7 +2,7 @@
 // Edit this file to change footer information
 
 export const companyInfo = {
-  name: "Find Your Sauce",
+  name: "Extra Sauce",
   description: "Building the future of B2B content marketing through strategic founder-led initiatives.",
   ctaButton: {
     text: "Book A Strategy Call",
@@ -10,22 +10,29 @@ export const companyInfo = {
   }
 };
 
-export const quickLinks = {
-  title: "QUICK LINKS",
+export const companyLinks = {
+  title: "COMPANY",
   links: [
-    { name: "Privacy Policy", href: "/privacy-policy" },
-    { name: "Terms & Condition", href: "/terms-of-service" }
+    { name: "The Sauce Recipe", href: "/the-sauce-recipe" },
+    { name: "Company News", href: "/resources/company-news" },
+    { name: "Success Stories", href: "/success-stories" },
+    { name: "Blog", href: "/resources/blogs" }
+  ]
+};
+
+export const servicesLinks = {
+  title: "SERVICES",
+  links: [
+    { name: "Executive Ghostwriting", href: "/services/executive-ghostwriting" },
+    { name: "Video Content Engine", href: "/services/video-content-engine" },
+    { name: "Content-led GTM Coaching", href: "/services/content-led-gtm-coaching" },
+    { name: "Book a Call", href: "/book-strategy-call" }
   ]
 };
 
 export const location = {
-  title: "LOCATION",
-  address: "Headquarters based in Toronto, Canada"
-};
-
-export const contact = {
-  title: "PHONE",
-  phone: "+1 (647) 957 9757"
+  title: "HEADQUARTERS",
+  address: "Toronto, Canada"
 };
 
 export const email = {
