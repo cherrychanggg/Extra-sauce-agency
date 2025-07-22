@@ -78,7 +78,7 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* Secondary Hero Section */}
-      <section className="section-padding bg-muted/30">
+      <section className="py-12 lg:py-16 bg-muted/30">
         <div className="container-premium">
           <div className="max-w-6xl mx-auto text-center animate-fade-in">
             <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
@@ -109,7 +109,7 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* System Section */}
-      <section className="section-padding">
+      <section className="py-12 lg:py-16">
         <div className="container-premium">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 max-w-4xl mx-auto">
@@ -142,7 +142,7 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="section-padding bg-muted/30">
+      <section className="py-12 lg:py-16 bg-muted/30">
         <div className="container-premium">
           <div className="max-w-4xl mx-auto">
             <div className="card-premium p-12">
@@ -172,7 +172,7 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding">
+      <section className="py-12 lg:py-16">
         <div className="container-premium">
           <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Left Side */}
@@ -210,7 +210,7 @@ const ExecutiveGhostwriting = () => {
       </section>
 
       {/* Full-width CTA Section */}
-      <div className="mt-20">
+      <div className="mt-12">
         <CTASection />
       </div>
 
