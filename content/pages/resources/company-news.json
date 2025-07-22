@@ -1,0 +1,73 @@
+
+{
+  "meta": {
+    "description": "Company announcements, team updates, and milestone celebrations",
+    "lastUpdated": "2025-01-22", 
+    "editInstructions": "Add new company announcements to the 'news' array. Include date, title, content, and category for each announcement."
+  },
+  "heroSection": {
+    "headline": "Company News",
+    "subheadline": "Updates, milestones, and behind-the-scenes at Extra Sauce Agency.",
+    "description": "Stay updated with our latest announcements, team growth, and company milestones."
+  },
+  "categories": [
+    "All",
+    "Product Updates",
+    "Team News", 
+    "Milestones",
+    "Awards",
+    "Partnerships"
+  ],
+  "news": [
+    {
+      "id": "q4-2024-results",
+      "title": "Extra Sauce Agency Achieves Record Growth in Q4 2024",
+      "date": "2025-01-15",
+      "category": "Milestones",
+      "excerpt": "We're excited to share that Q4 2024 was our strongest quarter yet, with 150% growth in client pipeline generated.",
+      "content": "We're thrilled to announce that Q4 2024 marked a significant milestone for Extra Sauce Agency. Our client partners generated over $2.3M in qualified pipeline through our founder-led content strategies...",
+      "image": "/news-1.jpg",
+      "author": "Manny Jassal",
+      "featured": true
+    },
+    {
+      "id": "team-expansion-2025",
+      "title": "Welcoming New Team Members to Support Growing Client Base",
+      "date": "2025-01-10",
+      "category": "Team News", 
+      "excerpt": "We're expanding our team with three new specialists to better serve our growing roster of B2B clients.",
+      "content": "As we continue to scale, we're excited to welcome Sarah Martinez as our new Content Strategist, David Kim as Video Production Lead, and Lisa Rodriguez as Client Success Manager...",
+      "image": "/news-2.jpg",
+      "author": "Manny Jassal",
+      "featured": false
+    },
+    {
+      "id": "sauce-recipe-trademark",
+      "title": "The SAUCE Recipe™ Officially Trademarked",
+      "date": "2025-01-05",
+      "category": "Product Updates",
+      "excerpt": "Our proprietary methodology for founder-led content marketing is now officially trademarked.",
+      "content": "We're proud to announce that The SAUCE Recipe™, our systematic approach to founder-led content marketing, has been officially trademarked...",
+      "image": "/news-3.jpg", 
+      "author": "Manny Jassal",
+      "featured": false
+    },
+    {
+      "id": "linkedin-partnership",
+      "title": "Strategic Partnership with LinkedIn for B2B Content Excellence",
+      "date": "2024-12-20",
+      "category": "Partnerships",
+      "excerpt": "We're partnering with LinkedIn to provide exclusive insights on B2B content best practices.",
+      "content": "Extra Sauce Agency is excited to announce our strategic partnership with LinkedIn to help B2B companies maximize their presence on the platform...",
+      "image": "/news-4.jpg",
+      "author": "Manny Jassal", 
+      "featured": false
+    }
+  ],
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get company news and updates delivered to your inbox.",
+    "placeholder": "Enter your email",
+    "buttonText": "Subscribe to Updates"
+  }
+}
