@@ -94,28 +94,15 @@ const ContentLedGTMCoaching = () => {
       </section>
 
       {/* Secondary Hero Section */}
-      <section className="py-12 lg:py-16 bg-muted/30">
-        <div className="container-premium">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
-              Don't waste months trying out content. Use our proven systems.
-            </h2>
-            
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* System Section */}
-      <section className="py-12 lg:py-16">
+      <section className="py-16 lg:py-20 bg-muted/30">
         <div className="container-premium">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 max-w-4xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 max-w-4xl mx-auto">
               THIS ISN'T THEORY, WE'RE IN THE TRENCHES WITH YOU.
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The SAUCE Recipe™ isn't theory. We roll up our sleeves and work alongside you to craft strategy, create content, and drive real GTM results.
             </p>
           </div>

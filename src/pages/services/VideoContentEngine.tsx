@@ -94,28 +94,15 @@ const VideoContentEngine = () => {
       </section>
 
       {/* Secondary Hero Section */}
-      <section className="py-12 lg:py-16 bg-muted/30">
-        <div className="container-premium">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
-              Turn your expertise into a video engine that closes pipeline.
-            </h2>
-            
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Launch a binge-worthy video series—podcast, masterclass, or webinar—that fuels LinkedIn, YouTube, and your entire content engine while turning dream prospects into pipeline.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* System Section */}
-      <section className="py-12 lg:py-16">
+      <section className="py-16 lg:py-20 bg-muted/30">
         <div className="container-premium">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 max-w-4xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 max-w-4xl mx-auto">
               MORE THAN JUST VIDEO CLIPS. A SYSTEM FOR DEMAND AND SCALABILITY.
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The SAUCE Recipe™ sparks conversations with high-value prospects and keeps them coming back weekly to learn, trust, and eventually buy.
             </p>
           </div>
