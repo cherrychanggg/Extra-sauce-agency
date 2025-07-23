@@ -3,6 +3,9 @@ import Footer from "@/components/shared/Footer";
 import { blogPosts, blogCategories } from "@/content/resources/blogs";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import EnhancedSEOHead from "@/components/SEO/EnhancedSEOHead";
+import BreadcrumbNavigation from "@/components/SEO/BreadcrumbNavigation";
+import { organizationSchema } from "@/data/structured-data";
 
 const Blogs = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -11,12 +14,62 @@ const Blogs = () => {
     ? blogPosts 
     : blogPosts.filter(post => post.category === selectedCategory);
 
+  // Create structured data for blog listing
+  const blogListingSchema = {
+    "@type": "Blog",
+    "name": "Extra Sauce Agency Blog",
+    "description": "Insights, strategies, and stories from the world of content-led growth",
+    "url": "https://www.extrasauceagency.com/resources/blogs",
+    "publisher": {
+      "@type": "Organization", 
+      "name": "Extra Sauce Agency"
+    },
+    "blogPost": blogPosts.map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "datePublished": post.date,
+      "author": {
+        "@type": "Person",
+        "name": post.author
+      },
+      "url": `https://www.extrasauceagency.com/resources/blogs/${post.slug}`
+    }))
+  };
+
+  const breadcrumbItems = [
+    { name: 'Resources', href: '/resources' },
+    { name: 'Blog', href: '/resources/blogs', current: true }
+  ];
+
+  const structuredData = [organizationSchema, blogListingSchema];
+
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <>
+      <EnhancedSEOHead
+        title="Blog | B2B Marketing Insights | Extra Sauce Agency"
+        description="Read the latest insights on B2B marketing, founder-led growth strategies, and content marketing best practices from Extra Sauce Agency."
+        keywords={[
+          "B2B marketing blog",
+          "content marketing insights",
+          "founder-led marketing",
+          "SaaS growth strategies",
+          "thought leadership",
+          "marketing best practices",
+          "business growth content"
+        ]}
+        canonicalUrl="https://www.extrasauceagency.com/resources/blogs"
+        structuredData={structuredData}
+      />
+      
+      <div className="min-h-screen bg-background">
+        <Navigation />
       
       <main className="pt-20">
         <div className="container-premium py-16">
+          {/* Breadcrumb Navigation */}
+          <BreadcrumbNavigation items={breadcrumbItems} className="mb-8" />
+          
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Our <span className="text-primary">Blog</span>
@@ -82,7 +135,8 @@ const Blogs = () => {
       </main>
       
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

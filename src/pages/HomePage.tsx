@@ -8,14 +8,14 @@ import ServicesOverviewSection from "@/components/sections/homepage/ServicesOver
 import FAQSection from "@/components/sections/homepage/FAQSection";
 import CTASection from "@/components/sections/homepage/CTASection";
 import Footer from "@/components/shared/Footer";
-import SEOHead from "@/components/SEO/SEOHead";
+import EnhancedSEOHead from "@/components/SEO/EnhancedSEOHead";
 import { homepageStructuredData } from "@/data/structured-data";
 import { siteConfig } from "@/content/global/site-config";
 
 const HomePage = () => {
   return (
     <>
-      <SEOHead
+      <EnhancedSEOHead
         title={siteConfig.seo.defaultTitle}
         description={siteConfig.seo.defaultDescription}
         keywords={[

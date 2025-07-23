@@ -1,21 +1,74 @@
-// SEO Helper Functions
+// Enhanced SEO helper functions and utilities
 
-export const generatePageTitle = (pageTitle?: string, siteName: string = "Extra Sauce Agency") => {
-  if (!pageTitle) return siteName;
+export const generateMetaTitle = (pageTitle: string, siteName = "Extra Sauce Agency"): string => {
   return `${pageTitle} | ${siteName}`;
 };
 
-export const generateMetaDescription = (description: string, maxLength: number = 160) => {
+export const truncateDescription = (description: string, maxLength = 160): string => {
   if (description.length <= maxLength) return description;
-  return description.substring(0, maxLength - 3) + '...';
+  
+  const truncated = description.substring(0, maxLength);
+  const lastSpace = truncated.lastIndexOf(' ');
+  
+  return lastSpace > 0 ? `${truncated.substring(0, lastSpace)}...` : `${truncated}...`;
 };
 
-export const generateKeywords = (baseKeywords: string[], pageSpecificKeywords: string[] = []) => {
-  return [...new Set([...baseKeywords, ...pageSpecificKeywords])];
+export const generateSlug = (title: string): string => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim();
 };
 
-export const generateCanonicalUrl = (baseUrl: string, path: string = '') => {
-  return `${baseUrl}${path}`.replace(/\/+$/, '') || baseUrl;
+export const generateCanonicalUrl = (path: string, baseUrl = "https://www.extrasauceagency.com"): string => {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return `${baseUrl}${cleanPath}`;
+};
+
+export const formatDate = (date: string | Date): string => {
+  const dateObj = typeof date === 'string' ? new Date(date) : date;
+  return dateObj.toISOString();
+};
+
+export const extractKeywords = (content: string, additionalKeywords: string[] = []): string[] => {
+  // Simple keyword extraction - can be enhanced with more sophisticated NLP
+  const words = content.toLowerCase().match(/\b\w{3,}\b/g) || [];
+  const frequency: { [key: string]: number } = {};
+  
+  words.forEach(word => {
+    frequency[word] = (frequency[word] || 0) + 1;
+  });
+  
+  // Get most frequent words (excluding common stop words)
+  const stopWords = new Set(['the', 'and', 'for', 'are', 'but', 'not', 'you', 'all', 'can', 'had', 'her', 'was', 'one', 'our', 'out', 'day', 'get', 'has', 'him', 'his', 'how', 'its', 'may', 'new', 'now', 'old', 'see', 'two', 'who', 'boy', 'did', 'she', 'use', 'her', 'way', 'many', 'than', 'them', 'well', 'were']);
+  
+  const keywords = Object.entries(frequency)
+    .filter(([word, freq]) => freq > 1 && !stopWords.has(word) && word.length > 3)
+    .sort(([,a], [,b]) => b - a)
+    .slice(0, 10)
+    .map(([word]) => word);
+  
+  return [...new Set([...additionalKeywords, ...keywords])];
+};
+
+export const generateBreadcrumbs = (pathname: string) => {
+  const paths = pathname.split('/').filter(Boolean);
+  const breadcrumbs: Array<{name: string, href: string, current?: boolean}> = [{ name: 'Home', href: '/' }];
+  
+  let currentPath = '';
+  paths.forEach((path, index) => {
+    currentPath += `/${path}`;
+    const name = path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    breadcrumbs.push({
+      name,
+      href: currentPath,
+      current: index === paths.length - 1
+    });
+  });
+  
+  return breadcrumbs;
 };
 
 // Schema.org helpers

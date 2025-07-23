@@ -1,4 +1,4 @@
-// Structured Data for SEO
+// Enhanced Structured Data for SEO
 import { siteConfig } from "@/content/global/site-config";
 
 export const organizationSchema = {
@@ -151,12 +151,116 @@ export const breadcrumbSchema = (items: Array<{name: string, url: string}>) => (
   }))
 });
 
+// Local Business Schema for enhanced local SEO
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Extra Sauce Agency",
+  "description": "B2B SaaS content marketing agency specializing in founder-led marketing strategies",
+  "url": "https://www.extrasauceagency.com",
+  "telephone": "+1-647-957-9757",
+  "email": "manny@getextrasauce.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "CA",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "43.6532",
+    "longitude": "-79.3832"
+  },
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "priceRange": "$$",
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.6532",
+      "longitude": "-79.3832"
+    },
+    "geoRadius": "5000000"
+  }
+};
+
+// Person Schema for founder
+export const founderSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Manny Vargas",
+  "jobTitle": "Founder & CEO",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Extra Sauce Agency"
+  },
+  "url": "https://www.extrasauceagency.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/mannyvargas/",
+    "https://www.tiktok.com/@findyoursauce"
+  ],
+  "description": "Founder of Extra Sauce Agency, specializing in founder-led marketing strategies for B2B SaaS companies"
+};
+
+// Course/Educational Schema for The SAUCE Recipe
+export const sauceRecipeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "The SAUCE Recipe™",
+  "description": "A proven framework for content-led growth that helps B2B SaaS founders build authority and generate qualified leads",
+  "provider": {
+    "@type": "Organization",
+    "name": "Extra Sauce Agency"
+  },
+  "teaches": [
+    "Content Strategy",
+    "Founder-Led Marketing",
+    "B2B Growth",
+    "Thought Leadership"
+  ],
+  "courseMode": "online",
+  "inLanguage": "en",
+  "url": "https://www.extrasauceagency.com/the-sauce-recipe"
+};
+
+// Review Schema for testimonials
+export const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Extra Sauce Agency",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "20",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Alex Salois"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Manny and the team at Extra Sauce helped us go from 0 to 150k MRR by putting together an authentic founder-led marketing system."
+    }
+  ]
+};
+
 export const homepageStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
     organizationSchema,
     websiteSchema,
+    localBusinessSchema,
+    founderSchema,
     faqSchema,
+    reviewsSchema,
     ...serviceSchemas
   ]
 };

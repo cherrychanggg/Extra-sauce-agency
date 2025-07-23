@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/shared/ScrollToTop";
+import ServiceWorkerRegistration from "./components/performance/ServiceWorkerRegistration";
 import HomePage from "./pages/HomePage";
 import TheSauceRecipe from "./pages/TheSauceRecipe";
 import ExecutiveGhostwriting from "./pages/services/ExecutiveGhostwriting";
@@ -25,7 +26,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-        <ScrollToTop />
+      <ServiceWorkerRegistration />
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/the-sauce-recipe" element={<TheSauceRecipe />} />
