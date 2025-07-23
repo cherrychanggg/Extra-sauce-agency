@@ -27,7 +27,7 @@ const ProcessSection = () => {
           {processSection.steps.map((step, index) => (
             <div 
               key={index}
-              className="relative text-center group"
+              className="relative text-center group h-full flex flex-col"
             >
               {/* Connection Line */}
               {index < processSection.steps.length - 1 && (
@@ -45,16 +45,16 @@ const ProcessSection = () => {
               </div>
               
               {/* Content */}
-              <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-6 border border-border/30 group-hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
+              <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-6 border border-border/30 group-hover:border-primary/30 transition-all duration-300 hover:shadow-xl flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {step.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-4 flex-grow">
                   {step.description}
                 </p>
                 
-                <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full">
+                <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mt-auto self-center">
                   <span className="text-sm text-primary font-semibold">
                     {step.duration}
                   </span>
