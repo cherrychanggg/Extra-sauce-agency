@@ -54,7 +54,7 @@ export const processSection = {
       duration: "Kickoff"
     },
     {
-      title: "Enter The MarketFit Spinner™",
+      title: "Enter The MarketFit\nSpinner™",
       description: "We optimize the omnichannel presence to showcase a compelling offer your audience feels dumb to say no to.",
       duration: "Strategy"
     },
