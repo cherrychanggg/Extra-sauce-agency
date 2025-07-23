@@ -38,7 +38,7 @@ const Navigation = () => {
             <img 
               src={logo.sauceImage} 
               alt={logo.altText} 
-              className="h-12 w-auto hover:scale-105 transition-transform duration-300" 
+              className="h-16 w-auto hover:scale-105 transition-transform duration-300" 
             />
           </Link>
 
