@@ -29,7 +29,34 @@
     <!-- Performance and Preload -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+    
+    <!-- Critical CSS for LCP optimization -->
+    <style>
+      /* Critical above-the-fold styles to prevent render blocking */
+      .hero-critical {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+      }
+      .hero-title {
+        font-size: clamp(2.5rem, 8vw, 6rem);
+        line-height: 1.1;
+        font-weight: 700;
+        text-align: center;
+        font-display: swap;
+      }
+      /* Prevent layout shift */
+      * { box-sizing: border-box; }
+      html { font-display: swap; }
+    </style>
     
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">

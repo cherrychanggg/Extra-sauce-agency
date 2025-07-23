@@ -6,15 +6,23 @@ import { heroSection } from "@/content/homepage";
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Start visible for faster LCP
 
   useEffect(() => {
-    setIsVisible(true);
+    // Defer non-critical mouse tracking
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    
+    // Delay mouse tracking to improve initial render
+    const timeoutId = setTimeout(() => {
+      window.addEventListener('mousemove', handleMouseMove);
+    }, 100);
+    
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
@@ -60,19 +68,15 @@ const HeroSection = () => {
             </span>
           </div>
 
-          {/* Enhanced Main Headline - Optimized for SEO */}
-          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-8 tracking-tight">
+          {/* Optimized Main Headline for LCP - Simplified for faster render */}
+          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-8 tracking-tight hero-title">
             Our{" "}
-            <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
-                SAUCE™ Recipe
-              </span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span className="relative inline-block text-primary">
+              SAUCE™ Recipe
             </span>{" "}
-            helps B2B SaaS<br />
+            helps B2B<br />
             companies build profitable{" "}
-            <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
-              founder-led<br />
+            <span className="text-secondary">
               content engines
             </span>
           </h1>

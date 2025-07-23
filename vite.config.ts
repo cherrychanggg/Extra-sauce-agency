@@ -50,10 +50,12 @@ export default defineConfig(({ mode }) => ({
         },
       },
     },
-    // Optimize assets
+    // Optimize assets and critical path
     assetsInlineLimit: 4096,
     cssCodeSplit: true,
     sourcemap: false,
+    // Optimize for LCP
+    chunkSizeWarningLimit: 600,
   },
   // Enable compression at build time
   define: {

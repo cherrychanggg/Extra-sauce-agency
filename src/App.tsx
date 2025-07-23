@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import ScrollToTop from "./components/shared/ScrollToTop";
 import ServiceWorkerRegistration from "./components/performance/ServiceWorkerRegistration";
+import CriticalResourcePreloader from "./components/performance/CriticalResourcePreloader";
 import HomePage from "./pages/HomePage";
 
 // Lazy load non-critical pages
@@ -37,6 +38,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <ServiceWorkerRegistration />
+      <CriticalResourcePreloader />
       <ScrollToTop />
         <Suspense fallback={<PageLoader />}>
           <Routes>
