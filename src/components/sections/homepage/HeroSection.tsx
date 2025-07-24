@@ -71,7 +71,7 @@ const HeroSection = () => {
           {/* Optimized Main Headline for LCP - Simplified for faster render */}
           <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-8 tracking-tight hero-title">
             Our{" "}
-            <span className="relative inline-block text-primary">
+            <span className="relative inline-block text-primary bg-white/10 backdrop-blur-xl border border-primary/30 rounded-2xl px-6 py-2 shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:scale-105 glass-effect">
               SAUCE™ Recipe
             </span>{" "}
             helps B2B<br />
