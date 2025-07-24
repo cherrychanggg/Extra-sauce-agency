@@ -31,8 +31,8 @@ export const siteConfig = {
       altText: "Extra Sauce Logo"
     },
     colors: {
-      primary: "hsl(13, 99%, 67%)", // Coral/Salmon
-      secondary: "hsl(172, 63%, 36%)", // Teal  
+      primary: "hsl(13, 99%, 67%)", // Coral/Orange
+      secondary: "hsl(13, 85%, 75%)", // Lighter Orange  
       accent: "hsl(252, 26%, 36%)" // Dark Purple
     }
   },
