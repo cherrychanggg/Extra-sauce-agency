@@ -121,7 +121,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-6 border-t border-border/50">
+          <div className="lg:hidden py-6 border-t border-border/50 bg-background/95 backdrop-blur-xl">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
                 <Link
