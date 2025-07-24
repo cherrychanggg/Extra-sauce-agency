@@ -9,35 +9,35 @@
 /* === Color Variables & Gradients === */
 @layer base {
   :root {
-    /* Core Brand Colors - Sauce Theme */
-    --background: 0 0% 99%;
-    --foreground: 0 0% 8%;
+    /* Core Brand Colors - New Palette */
+    --background: 62 93% 98%;
+    --foreground: 248 25% 20%;
     /* Card System */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 8%;
     /* Popover System */
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
-    /* Primary - Rich Sauce Red */
-    --primary: 14 85% 55%;
+    /* Primary - Coral/Salmon */
+    --primary: 13 99% 67%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 14 90% 65%;
-    /* Secondary - Warm Orange */
-    --secondary: 25 95% 60%;
-    --secondary-foreground: 0 0% 8%;
-    /* Muted - Warm Neutrals */
-    --muted: 20 10% 96%;
-    --muted-foreground: 0 0% 45%;
-    /* Accent - Deep Sauce */
-    --accent: 8 75% 45%;
+    --primary-glow: 13 99% 77%;
+    /* Secondary - Teal */
+    --secondary: 172 63% 36%;
+    --secondary-foreground: 0 0% 98%;
+    /* Muted - Light Cream */
+    --muted: 62 93% 96%;
+    --muted-foreground: 248 25% 40%;
+    /* Accent - Dark Purple */
+    --accent: 252 26% 36%;
     --accent-foreground: 0 0% 98%;
     /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     /* Borders & Inputs */
-    --border: 20 15% 90%;
-    --input: 20 15% 90%;
-    --ring: 14 85% 55%;
+    --border: 62 30% 85%;
+    --input: 62 30% 85%;
+    --ring: 13 99% 67%;
     /* Premium Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
