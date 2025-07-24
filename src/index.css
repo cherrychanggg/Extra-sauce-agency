@@ -9,25 +9,25 @@
 /* === Color Variables & Gradients === */
 @layer base {
   :root {
-    /* Core Brand Colors - New Palette */
-    --background: 62 93% 98%;
-    --foreground: 248 25% 20%;
+    /* Core Brand Colors - Orange & Cream */
+    --background: 71 46% 95%;
+    --foreground: 4 30% 20%;
     /* Card System */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card: 71 46% 98%;
+    --card-foreground: 4 30% 20%;
     /* Popover System */
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 71 46% 98%;
+    --popover-foreground: 4 30% 20%;
     /* Primary - Coral/Orange */
-    --primary: 13 99% 67%;
+    --primary: 4 99% 67%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 13 99% 77%;
-    /* Secondary - Lighter Orange */
-    --secondary: 13 85% 75%;
-    --secondary-foreground: 248 25% 20%;
+    --primary-glow: 4 99% 77%;
+    /* Secondary - Warmer Orange */
+    --secondary: 12 95% 72%;
+    --secondary-foreground: 4 30% 20%;
     /* Muted - Light Cream */
-    --muted: 62 93% 96%;
-    --muted-foreground: 248 25% 40%;
+    --muted: 71 46% 92%;
+    --muted-foreground: 4 30% 40%;
     /* Accent - Dark Purple */
     --accent: 252 26% 36%;
     --accent-foreground: 0 0% 98%;
@@ -35,9 +35,9 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     /* Borders & Inputs */
-    --border: 62 30% 85%;
-    --input: 62 30% 85%;
-    --ring: 13 99% 67%;
+    --border: 71 30% 85%;
+    --input: 71 30% 85%;
+    --ring: 4 99% 67%;
     /* Premium Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
