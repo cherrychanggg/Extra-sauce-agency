@@ -1,4 +1,4 @@
-# Extra Sauce Agency
+# Extra Sauce Agency ---
 
 A modern, customizable web application built with Vite, React, TypeScript, shadcn-ui, and Tailwind CSS.
 
