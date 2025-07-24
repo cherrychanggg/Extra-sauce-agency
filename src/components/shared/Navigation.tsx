@@ -33,12 +33,12 @@ const Navigation = () => {
             <img 
               src={logo.chiliImage} 
               alt={logo.altText} 
-              className="h-16 w-auto hover:scale-110 transition-transform duration-300" 
+              className="h-20 w-auto hover:scale-110 transition-transform duration-300" 
             />
             <img 
               src={logo.sauceImage} 
               alt={logo.altText} 
-              className="h-16 w-auto hover:scale-105 transition-transform duration-300" 
+              className="h-20 w-auto hover:scale-105 transition-transform duration-300" 
             />
           </Link>
 
