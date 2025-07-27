@@ -48,6 +48,15 @@
 
 ### **Add Blog Post**
 1. Create new file: `src/content/resources/blogs/blog-title.ts`
+2. Copy format from existing blog
+3. Save file
+
+### **Add/Remove Client Logos**
+1. Open `src/content/homepage.ts`
+2. Find: `trustedBySection` and then `companies:`
+3. To add: Copy logo pattern and add new entry
+4. To remove: Delete the entire logo entry block
+5. Put logo image in `public/` folder first
 2. Copy template from existing blog
 3. Change title, content, date
 4. Save file

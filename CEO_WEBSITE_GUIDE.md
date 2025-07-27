@@ -178,9 +178,45 @@ export const footerContent = {
   image: "/customer-photo.png", // Add photo to public folder
   results: [
     "Specific result 1",
-    "Specific result 2", 
-    "Specific result 3"
+    "Specific result 2"
   ]
+}
+```
+
+### **6. 🏢 Add/Remove Client Logos (Trusted By Section)**
+**File to Edit**: `src/content/homepage.ts`
+
+**Step 1**: Add logo image to `public/` folder
+- Name it something simple like: `new-client-logo.png`
+- Keep it under 100KB for fast loading
+
+**Step 2**: Add to trusted by section
+```typescript
+// Find trustedBySection and add to companies array:
+{
+  name: "New Client Name",
+  logo: "/new-client-logo.png",
+},
+```
+
+**Step 3**: To remove a logo
+- Simply delete the entire logo block (from `{` to `},`)
+
+**📝 Example of full entry:**
+```typescript
+export const trustedBySection = {
+  title: "Trusted by",
+  companies: [
+    {
+      name: "Your New Client",
+      logo: "/your-new-client-logo.png",
+    },
+    // ... other companies
+  ]
+};
+```
+
+### **7. 📄 Update Service Pages**
 }
 ```
 

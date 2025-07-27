@@ -1,38 +1,7 @@
 import { trustedBySection } from "@/content/homepage";
 
-const companies = [
-  {
-    name: "Goalcast",
-    logo: "/goalcast.png",
-  },
-  {
-    name: "Alam Law",
-    logo: "/alam.png",
-  },
-  {
-    name: "FuelPlus",
-    logo: "/fuel.png",
-  },
-  {
-    name: "Khalsa Aid",
-    logo: "/khalsaaid.png",
-  },
-  {
-    name: "CymCorp",
-    logo: "/cymcorp.png",
-  },
-  {
-    name: "Depix",
-    logo: "/depix.png",
-  },
-  {
-    name: "TVO Kids",
-    logo: "/tvokids.png",
-  },
-];
-
 // Triple the logos for seamless infinite scroll
-const allCompanies = [...companies, ...companies, ...companies];
+const allCompanies = [...trustedBySection.companies, ...trustedBySection.companies, ...trustedBySection.companies];
 
 const TrustedBySection = () => {
   return (
@@ -50,7 +19,7 @@ const TrustedBySection = () => {
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-primary via-secondary to-accent rounded-full mx-auto shadow-lg"></div>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-            From startups to enterprise, we help high-growth companies build profitable content engines
+            {trustedBySection.subtitle}
           </p>
         </div>
         

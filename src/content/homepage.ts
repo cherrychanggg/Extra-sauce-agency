@@ -10,7 +10,38 @@ export const heroSection = {
 };
 
 export const trustedBySection = {
-  title: "Trusted by"
+  title: "Trusted by",
+  subtitle: "From startups to enterprise, we help high-growth companies build profitable content engines",
+  companies: [
+    {
+      name: "Goalcast",
+      logo: "/goalcast.png",
+    },
+    {
+      name: "Alam Law",
+      logo: "/alam.png",
+    },
+    {
+      name: "FuelPlus",
+      logo: "/fuel.png",
+    },
+    {
+      name: "Khalsa Aid",
+      logo: "/khalsaaid.png",
+    },
+    {
+      name: "CymCorp",
+      logo: "/cymcorp.png",
+    },
+    {
+      name: "Depix",
+      logo: "/depix.png",
+    },
+    {
+      name: "TVO Kids",
+      logo: "/tvokids.png",
+    },
+  ]
 };
 
 export const whoIsThisForSection = {
