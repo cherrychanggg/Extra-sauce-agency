@@ -6,16 +6,6 @@ import { InlineWidget } from "react-calendly";
 
 const BookingPage = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    guests: '',
-    goals: '',
-    budget: '',
-    challenges: '',
-    timeline: '',
-    hearAbout: ''
-  });
 
   const testimonials = [
     {

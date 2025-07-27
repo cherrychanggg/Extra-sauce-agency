@@ -37,4 +37,5 @@ export const successStories: SuccessStory[] = [
     authorRole: "CEO",
     detailed: `True Ally needed clarity in their messaging and a consistent way to drive demand. Through strategic rebranding, messaging refinement, and a thought leadership content engine on LinkedIn, we helped package their offer, craft a compelling narrative, and generate pipeline with content that resonated.`
   }
+  // Add more success stories as needed
 ]; 

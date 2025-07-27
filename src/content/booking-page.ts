@@ -11,21 +11,6 @@ export const heroSection = {
   ]
 };
 
-export const bookingWidget = {
-  title: "Schedule Your Strategy Call",
-  description: "Book a one-on-one session with our content experts and discover how founder-led content can transform your B2B pipeline",
-  companyName: "Extra Sauce Agency",
-  welcomeMessage: "Welcome to my scheduling page. Please follow the instructions to add an event to my calendar.",
-  sessionTitle: "GTM Strategy Session",
-  sessionDescription: "In an ever-evolving digital landscape, your SaaS company requires a do-it-for-you GTM strategy that not only aligns with your vision but also accelerates your growth.",
-  timeSlots: [
-    "10:00 AM - Available",
-    "2:00 PM - Available",
-    "4:00 PM - Available"
-  ],
-  buttonText: "Book Your Strategy Call"
-};
-
 export const testimonialSection = {
   quote: "We've had old prospects come back to book a demo and thought we were a completely different company.",
   author: "Vik Sejal",
