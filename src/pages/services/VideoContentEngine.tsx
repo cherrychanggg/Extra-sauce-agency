@@ -57,7 +57,7 @@ const VideoContentEngine = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-gradient-subtle pt-20">
+      <section className="min-h-[60vh] flex items-center justify-center relative overflow-visible bg-gradient-subtle pt-20">
         <div className="container-premium text-center relative z-10">
           <div className="max-w-4xl mx-auto animate-scale-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, BarChart3, Handshake, Zap, Eye, FileText, Lightbulb, PieChart, Coins, MousePointerClick, ChevronDown, ChevronUp, Sparkles } from "lucide-react";
+import { Play, Pause, Users, Target, TrendingUp, Building, MessageSquare, DollarSign, BarChart3, Handshake, Zap, Eye, FileText, Lightbulb, PieChart, Coins, MousePointerClick, ChevronDown, ChevronUp, Sparkles } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { sauceRecipeContent } from "@/content/pages/saucerecipe";
@@ -10,9 +10,13 @@ const SauceRecipe = () => {
   const [selectedJourneyCard, setSelectedJourneyCard] = useState<number | null>(null);
   const [isStoryVisible, setIsStoryVisible] = useState(false);
   const [isClickToLearnVisible, setIsClickToLearnVisible] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
   
   const storyRef = useRef<HTMLDivElement>(null);
   const clickToLearnRef = useRef<HTMLDivElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,6 +38,41 @@ const SauceRecipe = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  // Audio control functions
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime);
+    }
+  };
+
+  const handleLoadedMetadata = () => {
+    if (audioRef.current) {
+      setDuration(audioRef.current.duration);
+    }
+  };
+
+  const handleAudioEnded = () => {
+    setIsPlaying(false);
+    setCurrentTime(0);
+  };
+
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  };
 
   const steps = sauceRecipeContent.steps;
 
@@ -117,16 +156,33 @@ const SauceRecipe = () => {
               
               {/* Audio Player */}
               <div className="mt-8 flex items-center gap-4 bg-background/50 rounded-xl p-4">
-                <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full p-3">
-                  <Play className="w-4 h-4" />
+                <audio 
+                  ref={audioRef}
+                  src="/howitstarted.mp3"
+                  onTimeUpdate={handleTimeUpdate}
+                  onLoadedMetadata={handleLoadedMetadata}
+                  onEnded={handleAudioEnded}
+                  preload="metadata"
+                />
+                <Button 
+                  size="sm" 
+                  onClick={toggleAudio}
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full p-3"
+                >
+                  {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                 </Button>
                 <div className="flex-1">
                   <div className="text-sm font-medium text-foreground">{sauceRecipeContent.audioLabel}</div>
                   <div className="w-full bg-muted h-2 rounded-full mt-2">
-                    <div className="bg-accent h-2 rounded-full w-1/3"></div>
+                    <div 
+                      className="bg-accent h-2 rounded-full transition-all duration-300" 
+                      style={{ width: duration ? `${(currentTime / duration) * 100}%` : '0%' }}
+                    ></div>
                   </div>
                 </div>
-                <div className="text-sm text-muted-foreground">{sauceRecipeContent.audioDuration}</div>
+                <div className="text-sm text-muted-foreground">
+                  {duration ? `${formatTime(currentTime)} / ${formatTime(duration)}` : sauceRecipeContent.audioDuration}
+                </div>
               </div>
             </div>
           </div>
