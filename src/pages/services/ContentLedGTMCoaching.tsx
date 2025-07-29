@@ -81,20 +81,23 @@ const ContentLedGTMCoaching = () => {
             </div>
             
             {/* Metrics with floating element */}
-            <div className="relative flex flex-col sm:flex-row items-center justify-center gap-8">
-              {/* Animated floating element beside stats */}
-              <div className="absolute left-4 xl:left-[-280px] 2xl:left-[-320px] top-1/2 transform -translate-y-1/2 animate-fade-in animation-delay-2000 hidden lg:block">
-                <div className="relative">
-                  <div className="bg-slate-800 text-white p-4 xl:p-6 rounded-lg shadow-xl max-w-[280px] xl:max-w-xs transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
-                    <div className="text-xs xl:text-sm font-bold text-green-400 mb-2">"You know how to ask the right questions to extract the right information from the chaos in my head as a founder."</div>
-                    <div className="text-xs text-slate-300">
-                      Over the years, we've built The Sauce Recipe™ that include the top frameworks and methodologies used by the biggest creators in the world.
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center max-w-6xl mx-auto">
+              {/* Animated floating element as first column */}
+              <div className="lg:col-span-1 flex justify-center lg:justify-start">
+                <div className="animate-fade-in animation-delay-2000">
+                  <div className="relative">
+                    <div className="bg-slate-800 text-white p-4 xl:p-6 rounded-lg shadow-xl max-w-[280px] transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
+                      <div className="text-xs xl:text-sm font-bold text-green-400 mb-2">"You know how to ask the right questions to extract the right information from the chaos in my head as a founder."</div>
+                      <div className="text-xs text-slate-300">
+                        Over the years, we've built The Sauce Recipe™ that include the top frameworks and methodologies used by the biggest creators in the world.
+                      </div>
                     </div>
+                    <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
-                  <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 </div>
               </div>
 
+              {/* Stats as remaining 3 columns */}
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">6 Sessions</div>
                 <div className="text-sm text-muted-foreground">Full GTM Ready Execution</div>

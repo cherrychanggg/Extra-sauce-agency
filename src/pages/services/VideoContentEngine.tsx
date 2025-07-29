@@ -80,20 +80,23 @@ const VideoContentEngine = () => {
             </div>
             
             {/* Metrics with floating element */}
-            <div className="relative flex flex-col sm:flex-row items-center justify-center gap-8">
-              {/* Animated floating element beside stats */}
-              <div className="absolute left-4 xl:left-[-280px] 2xl:left-[-320px] top-1/2 transform -translate-y-1/2 animate-fade-in animation-delay-1500 hidden lg:block">
-                <div className="relative">
-                  <div className="bg-slate-800 text-white p-4 xl:p-6 rounded-lg shadow-xl max-w-[280px] xl:max-w-xs transform rotate-[3deg] hover:rotate-0 transition-transform duration-300">
-                    <div className="text-xs xl:text-sm font-bold text-green-400 mb-2">"Video finally feels like us. It captures our voice, shows our expertise, and actually keeps prospects engaged."</div>
-                    <div className="text-xs text-slate-300">
-                      After producing video content for Goalcast—one of the world's top media brands, we're now bringing the same storytelling engine to B2B. That same system helped us generate 16M+ views in just 4 months.
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center max-w-6xl mx-auto">
+              {/* Animated floating element as first column */}
+              <div className="lg:col-span-1 flex justify-center lg:justify-start">
+                <div className="animate-fade-in animation-delay-1500">
+                  <div className="relative">
+                    <div className="bg-slate-800 text-white p-4 xl:p-6 rounded-lg shadow-xl max-w-[280px] transform rotate-[3deg] hover:rotate-0 transition-transform duration-300">
+                      <div className="text-xs xl:text-sm font-bold text-green-400 mb-2">"Video finally feels like us. It captures our voice, shows our expertise, and actually keeps prospects engaged."</div>
+                      <div className="text-xs text-slate-300">
+                        After producing video content for Goalcast—one of the world's top media brands, we're now bringing the same storytelling engine to B2B. That same system helped us generate 16M+ views in just 4 months.
+                      </div>
                     </div>
+                    <div className="absolute -top-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
-                  <div className="absolute -top-1 -left-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 </div>
               </div>
 
+              {/* Stats as remaining 3 columns */}
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">4 Hr/mo</div>
                 <div className="text-sm text-muted-foreground">Minimal time investment</div>
