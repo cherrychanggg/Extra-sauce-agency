@@ -45,7 +45,7 @@ export const acceleratorNews = {
       info@extrasauceagency.com</p>
     </div>
   `,
-  date: "2024-12-02",
+  date: "2024-12-03",
   category: "Partnership",
   location: "Toronto, ON",
   slug: "extra-sauce-joins-accelerators"

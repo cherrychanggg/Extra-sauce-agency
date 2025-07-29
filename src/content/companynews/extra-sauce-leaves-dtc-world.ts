@@ -54,7 +54,7 @@ export const extraSauceLeavesNews = {
       info@extrasauceagency.com</p>
     </div>
   `,
-  date: "2024-03-16",
+  date: "2024-03-17",
   category: "Company",
   location: "Toronto, ON",
   slug: "extra-sauce-leaves-dtc-world"

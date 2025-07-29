@@ -45,7 +45,7 @@ export const sauceRecipeNews = {
       info@extrasauceagency.com</p>
     </div>
   `,
-  date: "2024-08-02",
+  date: "2024-08-03",
   category: "Product",
   location: "Toronto, ON",
   slug: "introducing-sauce-recipe"

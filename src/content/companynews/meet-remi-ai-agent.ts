@@ -45,7 +45,7 @@ export const remiNews = {
       info@extrasauceagency.com</p>
     </div>
   `,
-  date: "2025-06-02",
+  date: "2025-06-03",
   category: "Product",
   location: "Toronto, ON",
   slug: "meet-remi-ai-agent"
