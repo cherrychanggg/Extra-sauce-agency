@@ -36,9 +36,7 @@ const SuccessStories: React.FC = () => {
           </h1>
           
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Extra Sauce is trusted by more than 50+ of the world's leading B2B brands. 
-            Read their stories to discover how teams like yours are revolutionizing 
-            how they build demand for the web.
+            From creating brand demand to booking meetings, these stories show the impact of The Sauce Recipe™
           </p>
           
           <Button 
