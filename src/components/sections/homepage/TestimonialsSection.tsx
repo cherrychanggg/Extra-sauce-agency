@@ -10,14 +10,13 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "We've had old prospects come back to book a demo and thought we were a completely different company.",
-      author: "Vik Soni",
+      author: "Vik Saini",
       title: "Head of Sales",
-      company: "TechCorp",
       avatar: "/viksoni.png",
-      impact: "300% increase in demo bookings",
+      impact: "16M+ Views Generated",
       metrics: [
-        { label: "Demo Bookings", value: "+300%", icon: TrendingUp },
-        { label: "Pipeline Quality", value: "5x Better", icon: BarChart3 }
+        { label: "Views Generated", value: "16M+", icon: TrendingUp },
+        { label: "Revenue Added", value: "$124K", icon: DollarSign }
       ],
       caseStudyUrl: "/success-stories",
       verified: true,
@@ -25,14 +24,13 @@ const Testimonials = () => {
     },
     {
       quote: "I just want to say, I have a good ghostwriter.",
-      author: "Nadia Isani",
+      author: "Nadia Irani",
       title: "CEO & Founder", 
-      company: "InnovateLabs",
       avatar: "/nadiairani.png",
-      impact: "Built thought leadership presence",
+      impact: "$428K ARR Added",
       metrics: [
-        { label: "LinkedIn Reach", value: "10x Growth", icon: Users },
-        { label: "Brand Authority", value: "+250%", icon: TrendingUp }
+        { label: "ARR Added", value: "$428K", icon: DollarSign },
+        { label: "Qualified Meetings", value: "16+/month", icon: Users }
       ],
       caseStudyUrl: "/success-stories",
       verified: true,
@@ -42,12 +40,11 @@ const Testimonials = () => {
       quote: "Manny came in and helped us streamline our social media distribution system and kept us up to date with the best strategies. We've seen massive growth the last 6 months.",
       author: "Alex Salois",
       title: "Senior Content Manager",
-      company: "GrowthTech", 
       avatar: "/alexsalois.png",
-      impact: "500% growth in 6 months",
+      impact: "500K+ Followers Gained",
       metrics: [
-        { label: "Growth Rate", value: "+500%", icon: TrendingUp },
-        { label: "Reach", value: "2M+ Views", icon: Users }
+        { label: "Followers Growth", value: "500K+", icon: Users },
+        { label: "Channel Growth", value: "0-60K", icon: TrendingUp }
       ],
       caseStudyUrl: "/success-stories",
       verified: true,
@@ -57,12 +54,11 @@ const Testimonials = () => {
       quote: "Manny's expertise & dedication have been instrumental in crafting a compelling strategic narrative, and generating insightful content on LinkedIn that drives leads.",
       author: "Sharlene Gumbs",
       title: "CEO & Founder",
-      company: "ScaleUp Inc",
       avatar: "/sharlenegumbs.png", 
-      impact: "Consistent lead generation",
+      impact: "Complete Brand Transformation",
       metrics: [
-        { label: "Lead Quality", value: "+180%", icon: BarChart3 },
-        { label: "Pipeline Value", value: "$2.1M+", icon: DollarSign }
+        { label: "Pipeline Generated", value: "Consistent", icon: BarChart3 },
+        { label: "Brand Clarity", value: "100%", icon: CheckCircle }
       ],
       caseStudyUrl: "/success-stories",
       verified: true,
@@ -104,53 +100,10 @@ const Testimonials = () => {
 
         {/* Main Testimonials Layout */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
             
-            {/* Left: Testimonials List */}
-            <div className="space-y-6">
-              {testimonials.map((testimonial, index) => (
-                <Card 
-                  key={index}
-                  className={`cursor-pointer transition-all duration-300 ${
-                    index === currentTestimonial
-                      ? 'border-primary/30 shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5'
-                      : 'border-border hover:border-primary/20 hover:shadow-md'
-                  }`}
-                  onClick={() => setCurrentTestimonial(index)}
-                >
-                  <CardContent className="p-6">
-                    {/* Author */}
-                    <div className="flex items-center mb-4">
-                      {testimonial.avatar ? (
-                        <img
-                          src={testimonial.avatar}
-                          alt={testimonial.author}
-                          className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary"
-                        />
-                      ) : (
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold mr-4">
-                          {testimonial.author.split(' ').map(n => n[0]).join('')}
-                        </div>
-                      )}
-                      <div>
-                        <div className="font-bold text-foreground">{testimonial.author}</div>
-                        <div className="text-sm text-muted-foreground">
-                          {testimonial.title} • {testimonial.company}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Quote */}
-                    <blockquote className="text-foreground leading-relaxed">
-                      "{testimonial.quote}"
-                    </blockquote>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Right: Featured Testimonial */}
-            <div className="lg:sticky lg:top-8">
+            {/* Featured Testimonial - Shows first on mobile, right on desktop */}
+            <div className="lg:sticky lg:top-8 order-1 lg:order-2">
               <Card className="border-primary/20 shadow-xl bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="mb-4">
@@ -188,7 +141,7 @@ const Testimonials = () => {
                         {testimonials[currentTestimonial].author}
                       </div>
                       <div className="text-muted-foreground">
-                        {testimonials[currentTestimonial].title} • {testimonials[currentTestimonial].company}
+                        {testimonials[currentTestimonial].title}
                       </div>
                     </div>
                   </div>
@@ -221,6 +174,49 @@ const Testimonials = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* Testimonials List - Shows second on mobile, left on desktop */}
+            <div className="space-y-6 order-2 lg:order-1">
+              {testimonials.map((testimonial, index) => (
+                <Card 
+                  key={index}
+                  className={`cursor-pointer transition-all duration-300 ${
+                    index === currentTestimonial
+                      ? 'border-primary/30 shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5'
+                      : 'border-border hover:border-primary/20 hover:shadow-md'
+                  }`}
+                  onClick={() => setCurrentTestimonial(index)}
+                >
+                  <CardContent className="p-6">
+                    {/* Author */}
+                    <div className="flex items-center mb-4">
+                      {testimonial.avatar ? (
+                        <img
+                          src={testimonial.avatar}
+                          alt={testimonial.author}
+                          className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary"
+                        />
+                      ) : (
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold mr-4">
+                          {testimonial.author.split(' ').map(n => n[0]).join('')}
+                        </div>
+                      )}
+                      <div>
+                        <div className="font-bold text-foreground">{testimonial.author}</div>
+                        <div className="text-sm text-muted-foreground">
+                          {testimonial.title}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Quote */}
+                    <blockquote className="text-foreground leading-relaxed">
+                      "{testimonial.quote}"
+                    </blockquote>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
