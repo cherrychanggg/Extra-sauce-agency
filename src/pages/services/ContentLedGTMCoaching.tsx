@@ -83,10 +83,10 @@ const ContentLedGTMCoaching = () => {
             {/* Metrics with floating element */}
             <div className="relative flex flex-col sm:flex-row items-center justify-center gap-8">
               {/* Animated floating element beside stats */}
-              <div className="absolute left-[-300px] lg:left-[-350px] top-1/2 transform -translate-y-1/2 animate-fade-in animation-delay-2000 hidden xl:block">
+              <div className="absolute left-4 xl:left-[-280px] 2xl:left-[-320px] top-1/2 transform -translate-y-1/2 animate-fade-in animation-delay-2000 hidden lg:block">
                 <div className="relative">
-                  <div className="bg-slate-800 text-white p-6 rounded-lg shadow-xl max-w-xs transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
-                    <div className="text-sm font-bold text-green-400 mb-2">"You know how to ask the right questions to extract the right information from the chaos in my head as a founder."</div>
+                  <div className="bg-slate-800 text-white p-4 xl:p-6 rounded-lg shadow-xl max-w-[280px] xl:max-w-xs transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
+                    <div className="text-xs xl:text-sm font-bold text-green-400 mb-2">"You know how to ask the right questions to extract the right information from the chaos in my head as a founder."</div>
                     <div className="text-xs text-slate-300">
                       Over the years, we've built The Sauce Recipe™ that include the top frameworks and methodologies used by the biggest creators in the world.
                     </div>
