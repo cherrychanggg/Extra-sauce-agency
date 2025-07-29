@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Linkedin, Mic, Instagram, Facebook, Video } from "lucide-react";
+import { Linkedin, Mic, Instagram, Facebook, Video, ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { companyInfo, companyLinks, servicesLinks, quickLinks, location, email, socialMedia } from "@/content/footer";
 
@@ -18,8 +18,11 @@ const Footer = () => {
               {companyInfo.description}
             </p>
             <Link to={companyInfo.ctaButton.link}>
-              <Button className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25">
-                {companyInfo.ctaButton.text}
+              <Button className="group relative overflow-hidden bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105 focus-enhanced">
+                <span className="relative z-10">
+                  {companyInfo.ctaButton.text}
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
           </div>

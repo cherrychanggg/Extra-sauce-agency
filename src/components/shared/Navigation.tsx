@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { navigationItems, servicesDropdown, resourcesDropdown, ctaButton, logo } from "@/content/navigation";
 import { ChevronDown } from "lucide-react";
@@ -104,8 +104,11 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link to={ctaButton.link}>
-              <Button className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25">
-                {ctaButton.text}
+              <Button className="group relative overflow-hidden bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105 focus-enhanced">
+                <span className="relative z-10">
+                  {ctaButton.text}
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
           </div>
@@ -165,8 +168,11 @@ const Navigation = () => {
               </div>
               
               <Link to={ctaButton.link}>
-                <Button className="btn-hero mt-4">
-                  {ctaButton.text}
+                <Button className="group relative overflow-hidden bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-semibold text-lg shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105 focus-enhanced mt-4">
+                  <span className="relative z-10">
+                    {ctaButton.text}
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
               </Link>
             </div>
