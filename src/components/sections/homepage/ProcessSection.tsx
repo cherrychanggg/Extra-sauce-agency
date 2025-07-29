@@ -45,7 +45,7 @@ const ProcessSection = () => {
               </div>
               
               {/* Content */}
-              <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-6 border border-border/30 group-hover:border-primary/30 transition-all duration-300 hover:shadow-xl flex flex-col flex-grow">
+              <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-6 border-2 border-[#FE615A] group-hover:border-[#FE615A]/80 transition-all duration-300 hover:shadow-xl flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300 whitespace-pre-line">
                   {step.title}
                 </h3>
