@@ -1,6 +1,6 @@
 import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
-import { Check, Clock, Video, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { InlineWidget } from "react-calendly";
 
