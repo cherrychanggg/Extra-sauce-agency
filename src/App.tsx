@@ -11,6 +11,7 @@ import ServiceWorkerRegistration from "./components/performance/ServiceWorkerReg
 import CriticalResourcePreloader from "./components/performance/CriticalResourcePreloader";
 import HomePage from "./pages/HomePage";
 import BlogPost from "./pages/resources/BlogPost";
+import Blogs from "./pages/resources/Blogs";
 
 // Lazy load non-critical pages
 const TheSauceRecipe = lazy(() => import("./pages/TheSauceRecipe"));
@@ -22,7 +23,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const SuccessStories = lazy(() => import("./pages/SuccessStories"));
-const Blogs = lazy(() => import("./pages/resources/Blogs"));
+// Removed lazy loading for Blogs - now imported directly above
 const Newsletters = lazy(() => import("./pages/resources/Newsletters"));
 const CompanyNews = lazy(() => import("./pages/resources/CompanyNews"));
 
