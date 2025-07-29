@@ -2,6 +2,10 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.tsx'
 import './index.css'
+import { initEmailJS } from './lib/emailjs'
+
+// Initialize EmailJS
+initEmailJS();
 
 // Simple error handler for production
 window.addEventListener('error', (e) => {

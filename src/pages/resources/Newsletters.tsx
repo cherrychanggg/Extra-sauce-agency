@@ -27,29 +27,41 @@ const Newsletters = () => {
     setIsSubmitting(true);
     
     try {
+      // Get environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const welcomeTemplate = import.meta.env.VITE_EMAILJS_WELCOME_TEMPLATE;
+      const notificationTemplate = import.meta.env.VITE_EMAILJS_NOTIFICATION_TEMPLATE;
+      const notificationEmail = import.meta.env.VITE_NOTIFICATION_EMAIL;
+
+      // Check if environment variables are set
+      if (!serviceId || !publicKey) {
+        throw new Error('EmailJS configuration missing. Please check your environment variables.');
+      }
+
       // Send welcome email to subscriber
       await emailjs.send(
-        'YOUR_SERVICE_ID', // You'll need to set this up in EmailJS
-        'welcome_template', // Template for welcome email
+        serviceId,
+        welcomeTemplate,
         {
           to_email: data.email,
           to_name: `${data.firstName} ${data.lastName}`,
           from_name: 'Extra Sauce Team',
         },
-        'YOUR_PUBLIC_KEY' // You'll need to get this from EmailJS
+        publicKey
       );
 
       // Send notification email to you
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'notification_template', // Template for internal notification
+        serviceId,
+        notificationTemplate,
         {
-          to_email: 'manny@getextrasauce.com',
+          to_email: notificationEmail,
           subscriber_email: data.email,
           subscriber_name: `${data.firstName} ${data.lastName}`,
           hear_about: data.hearAbout,
         },
-        'YOUR_PUBLIC_KEY'
+        publicKey
       );
 
       toast({
