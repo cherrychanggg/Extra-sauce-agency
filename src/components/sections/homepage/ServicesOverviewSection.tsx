@@ -16,11 +16,10 @@ const ServicesOverviewSection = () => {
       <div className="container-premium">
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            {servicesOverviewSection.headline.split(' - ')[0]}{" "}
+            We are not just another B2B content agency{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {servicesOverviewSection.headline.split(' - ')[1]?.split(' ')[0]} {servicesOverviewSection.headline.split(' - ')[1]?.split(' ')[1]} {servicesOverviewSection.headline.split(' - ')[1]?.split(' ')[2]} {servicesOverviewSection.headline.split(' - ')[1]?.split(' ')[3]}
-            </span>{" "}
-            - {servicesOverviewSection.headline.split(' - ')[2]}
+              - we align your marketing & sales efforts
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             {servicesOverviewSection.subheadline}
