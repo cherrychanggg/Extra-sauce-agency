@@ -10,7 +10,7 @@ const BookingPage = () => {
   const testimonials = [
     {
       quote: "We've had old prospects come back to book a demo and thought we were a completely different company.",
-      author: "Vik Soni",
+      author: "Vik Saini",
       title: "Head Of Sales",
       avatar: "/viksoni.png"
     },
@@ -78,50 +78,50 @@ const BookingPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="pt-32 pb-20">
+      <div className="pt-20 sm:pt-32 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div className="flex flex-col xl:grid xl:grid-cols-2 gap-6 sm:gap-8 xl:gap-16 items-start">
             {/* Left Content */}
-            <div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8 leading-tight">
+            <div className="order-2 xl:order-1 w-full">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-4xl 2xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 leading-tight">
                 Stop wasting your sales team's time with{" "}
                 <span className="text-primary">unqualified leads.</span>
               </h1>
               
-              <div className="mb-8">
-                <p className="text-primary font-semibold mb-6">
+              <div className="mb-6 sm:mb-8">
+                <p className="text-primary font-semibold mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg xl:text-base">
                   Book a 1:1 call with our team to uncover how to build a high-leverage 
                   content engine around your executive leadership, powered by The SAUCE Recipe™
                 </p>
                 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                      <p className="text-muted-foreground">{benefit}</p>
+                    <div key={index} className="flex items-start gap-2 sm:gap-3">
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-accent mt-1 flex-shrink-0" />
+                      <p className="text-muted-foreground text-sm sm:text-base lg:text-lg xl:text-sm 2xl:text-base leading-relaxed">{benefit}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Company Logos Scrolling Section */}
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-foreground mb-4 text-center">
+              <div className="mb-6 sm:mb-8">
+                <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4 text-center">
                   Trusted by
                 </h3>
-                <div className="relative overflow-hidden rounded-2xl bg-white/30 backdrop-blur-sm border border-border/30 p-6">
+                <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/30 backdrop-blur-sm border border-border/30 py-4 px-2 sm:p-6">
                   <div className="scrolling-logos-wrapper">
                     <div className="scrolling-logos animate-scroll">
                       {allCompanies.map((company, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center opacity-60 hover:opacity-100 transition-all duration-300 group flex-shrink-0"
+                          className="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 group flex-shrink-0 min-w-[60px] sm:min-w-[80px]"
                         >
-                          <div className="relative">
+                          <div className="relative flex items-center justify-center h-12 sm:h-16">
                             <img
                               src={company.logo}
                               alt={company.name}
-                              className="h-12 w-auto max-w-[120px] object-contain transition-all duration-300 group-hover:scale-110"
+                              className="h-6 sm:h-8 md:h-10 w-auto max-w-[60px] sm:max-w-[80px] md:max-w-[100px] object-contain transition-all duration-300 group-hover:scale-110"
                               draggable="false"
                               onError={(e) => {
                                 console.log(`Failed to load image for ${company.name}:`, company.logo);
@@ -137,19 +137,19 @@ const BookingPage = () => {
                 </div>
               </div>
 
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <div 
-                  className="relative bg-white/30 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-border/30" 
+                  className="relative bg-white/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border/30" 
                   style={{
-                    background: 'linear-gradient(135deg, #ff6b35, #f7931e)', 
-                    minHeight: '200px',
-                    overflow: 'hidden'
+                    background: '#FE615A', 
+                    minHeight: 'auto',
+                    overflow: 'visible'
                   }}
                 >
                   {/* Navigation Arrows */}
                   <button
                     onClick={prevTestimonial}
-                    className="absolute left-1 sm:left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
                     aria-label="Previous testimonial"
                   >
                     <ChevronLeft className="w-4 h-4 text-white" />
@@ -157,23 +157,23 @@ const BookingPage = () => {
                   
                   <button
                     onClick={nextTestimonial}
-                    className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
                     aria-label="Next testimonial"
                   >
                     <ChevronRight className="w-4 h-4 text-white" />
                   </button>
 
-                  <div className="px-4 sm:px-6">
-                    <div className="flex items-start gap-3 sm:gap-4 mb-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full overflow-hidden flex-shrink-0">
+                  <div className="px-12 py-2">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4">
+                      <div className="w-12 h-12 bg-white rounded-full overflow-hidden flex-shrink-0 mx-auto sm:mx-0">
                         <img 
                           src={testimonials[currentTestimonial].avatar}
                           alt={testimonials[currentTestimonial].author}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <blockquote className="text-sm sm:text-lg font-semibold text-white mb-2 leading-tight">
+                      <div className="flex-1 text-center sm:text-left">
+                        <blockquote className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 leading-relaxed">
                           "{testimonials[currentTestimonial].quote}"
                         </blockquote>
                         <div className="text-white/90 text-sm font-medium">
@@ -186,7 +186,7 @@ const BookingPage = () => {
                     </div>
                     
                     {/* Pagination dots */}
-                    <div className="flex justify-center gap-2">
+                    <div className="flex justify-center gap-2 pt-2">
                       {testimonials.map((_, index) => (
                         <button
                           key={index}
@@ -204,21 +204,21 @@ const BookingPage = () => {
             </div>
 
             {/* Right Calendly Widget */}
-            <div className="w-full lg:order-2">
-              <div className="w-full max-w-2xl mx-auto">
+            <div className="w-full order-1 xl:order-2">
+              <div className="w-full max-w-2xl xl:max-w-none mx-auto">
                 {/* Header */}
-                <div className="text-center mb-6">
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                <div className="text-center mb-4 sm:mb-6">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-2xl 2xl:text-3xl font-bold mb-2 sm:mb-4">
                     Schedule Your <span className="text-primary">Strategy Call</span>
                   </h2>
-                  <p className="text-muted-foreground text-sm sm:text-base">
+                  <p className="text-muted-foreground text-xs sm:text-sm md:text-base xl:text-sm 2xl:text-base px-2">
                     Book a one-on-one session with our content experts and discover how founder-led content can transform your B2B pipeline
                   </p>
                 </div>
 
                 {/* Calendly Embed */}
-                <div className="card-premium p-0 overflow-hidden rounded-2xl border-2 border-orange-400 shadow-lg bg-gradient-to-br from-orange-50 via-white to-white">
-                  <div className="h-[500px] sm:h-[600px] lg:h-[680px]">
+                <div className="card-premium p-0 overflow-hidden rounded-xl sm:rounded-2xl border-2 border-orange-400 shadow-lg bg-gradient-to-br from-orange-50 via-white to-white">
+                  <div className="h-[400px] sm:h-[500px] md:h-[600px] xl:h-[700px] 2xl:h-[750px]">
                     <InlineWidget 
                       url="https://calendly.com/extrasauceagency"
                       styles={{
@@ -241,18 +241,31 @@ const BookingPage = () => {
           overflow: hidden;
           width: 100%;
           position: relative;
+          height: 48px;
+        }
+        @media (min-width: 640px) {
+          .scrolling-logos-wrapper {
+            height: 64px;
+          }
         }
         .scrolling-logos {
           display: flex;
-          gap: 2rem;
+          gap: 0.75rem;
           width: max-content;
+          align-items: center;
+          height: 100%;
+        }
+        @media (min-width: 640px) {
+          .scrolling-logos {
+            gap: 1.5rem;
+          }
         }
         @keyframes scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
         .animate-scroll {
-          animation: scroll 15s linear infinite;
+          animation: scroll 20s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;

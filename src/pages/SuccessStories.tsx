@@ -49,45 +49,45 @@ const SuccessStories: React.FC = () => {
           </Button>
         </div>
 
-        {/* Floating success metrics - Hidden on mobile to prevent text overlap */}
-        <div className="hidden lg:block absolute top-1/4 left-16 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg">
-          <div className="text-3xl font-bold text-primary">16M+</div>
-          <div className="text-sm text-muted-foreground">Total Views Generated</div>
+        {/* Floating success metrics - Now responsive for smaller screens */}
+        <div className="hidden sm:block absolute top-1/4 left-4 sm:left-8 lg:left-16 bg-card/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-border/30 animate-fade-in shadow-lg">
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">16M+</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">Total Views Generated</div>
         </div>
         
-        <div className="hidden lg:block absolute top-1/3 right-16 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '300ms' }}>
-          <div className="text-3xl font-bold text-primary">$428K</div>
-          <div className="text-sm text-muted-foreground">ARR Added</div>
+        <div className="hidden sm:block absolute top-1/3 right-4 sm:right-8 lg:right-16 bg-card/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '300ms' }}>
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">$428K</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">ARR Added</div>
         </div>
         
-        <div className="hidden xl:block absolute bottom-1/4 left-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '600ms' }}>
-          <div className="text-3xl font-bold text-primary">500K+</div>
-          <div className="text-sm text-muted-foreground">Followers Gained</div>
+        <div className="hidden md:block absolute bottom-1/4 left-1/4 bg-card/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '600ms' }}>
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">500K+</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">Followers Gained</div>
         </div>
 
-        <div className="hidden lg:block absolute top-16 left-1/2 transform -translate-x-1/2 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '900ms' }}>
-          <div className="text-3xl font-bold text-primary">50+</div>
-          <div className="text-sm text-muted-foreground">B2B Brands Served</div>
+        <div className="hidden sm:block absolute top-16 left-1/2 transform -translate-x-1/2 bg-card/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '900ms' }}>
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">50+</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">B2B Brands Served</div>
         </div>
 
-        <div className="hidden xl:block absolute bottom-1/4 right-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1200ms' }}>
-          <div className="text-3xl font-bold text-primary">16+</div>
-          <div className="text-sm text-muted-foreground">Qualified Meetings/Month</div>
+        <div className="hidden md:block absolute bottom-1/4 right-1/4 bg-card/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1200ms' }}>
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">16+</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">Qualified Meetings/Month</div>
         </div>
 
-        <div className="hidden lg:block absolute top-1/2 left-8 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1500ms' }}>
-          <div className="text-3xl font-bold text-primary">8X</div>
-          <div className="text-sm text-muted-foreground">ROI Improvement</div>
+        <div className="hidden sm:block absolute top-1/2 left-2 sm:left-4 lg:left-8 bg-card/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1500ms' }}>
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">8X</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">ROI Improvement</div>
         </div>
 
-        <div className="hidden lg:block absolute bottom-16 right-20 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1800ms' }}>
-          <div className="text-3xl font-bold text-primary">90%</div>
-          <div className="text-sm text-muted-foreground">Time Saved on Content</div>
+        <div className="hidden sm:block absolute bottom-16 right-4 sm:right-8 lg:right-20 bg-card/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1800ms' }}>
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">90%</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">Time Saved on Content</div>
         </div>
 
-        <div className="hidden xl:block absolute top-2/3 left-1/3 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '2100ms' }}>
-          <div className="text-3xl font-bold text-primary">$2B+</div>
-          <div className="text-sm text-muted-foreground">Enterprise Client Value</div>
+        <div className="hidden md:block absolute top-2/3 left-1/3 bg-card/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '2100ms' }}>
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">$2B+</div>
+          <div className="text-xs sm:text-sm text-muted-foreground">Enterprise Client Value</div>
         </div>
       </section>
 
@@ -166,45 +166,54 @@ const SuccessStories: React.FC = () => {
       {/* Modal/Lightbox */}
       {openIndex !== null && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 animate-fade-in"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 animate-fade-in p-2 sm:p-4 overflow-y-auto"
           onClick={closeModal}
         >
           <div 
-            className="relative bg-background rounded-2xl shadow-2xl max-w-4xl w-full flex flex-col md:flex-row overflow-hidden"
+            className="relative bg-background rounded-xl sm:rounded-2xl shadow-2xl max-w-4xl w-full flex flex-col lg:flex-row overflow-hidden my-2 sm:my-4 max-h-[95vh] sm:max-h-[90vh] lg:max-h-[80vh]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Image */}
-            <div className="md:w-1/2 bg-black flex items-center justify-center p-6">
-              <div className="w-full aspect-[16/9] md:h-[32rem] h-56 max-w-full flex items-center justify-center overflow-hidden rounded-xl bg-black">
+            <div className="lg:w-1/2 bg-black flex items-center justify-center p-2 sm:p-4 lg:p-6">
+              <div className="w-full aspect-[16/9] lg:h-[32rem] h-40 sm:h-48 md:h-56 max-w-full flex items-center justify-center overflow-hidden rounded-lg sm:rounded-xl bg-black">
                 <img
                   src={successStories[openIndex].image}
                   alt={successStories[openIndex].title}
-                  className="w-full h-full object-contain rounded-xl"
+                  className="w-full h-full object-contain rounded-lg sm:rounded-xl"
                 />
               </div>
             </div>
             {/* Details */}
-            <div className="md:w-1/2 p-8 flex flex-col justify-between">
-              <div>
-                <h2 className="text-3xl font-bold mb-4 text-foreground">
+            <div className="lg:w-1/2 p-3 sm:p-4 md:p-6 lg:p-8 flex flex-col justify-between overflow-y-auto">
+              <div className="flex-1">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 lg:mb-4 text-foreground leading-tight">
                   {successStories[openIndex].title}
                 </h2>
-                <div className="mb-4 text-muted-foreground">
-                  <span className="font-semibold text-primary">{successStories[openIndex].author}</span>
+                <div className="mb-2 sm:mb-3 lg:mb-4 text-muted-foreground">
+                  <span className="font-semibold text-primary text-xs sm:text-sm md:text-base">{successStories[openIndex].author}</span>
                   {successStories[openIndex].authorRole && (
-                    <span className="ml-2 text-sm">({successStories[openIndex].authorRole})</span>
+                    <span className="ml-1 sm:ml-2 text-xs">({successStories[openIndex].authorRole})</span>
                   )}
                 </div>
-                <p className="text-lg text-foreground mb-6 whitespace-pre-line">
+                <div className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground mb-3 sm:mb-4 lg:mb-6 whitespace-pre-line leading-relaxed overflow-y-auto max-h-[150px] sm:max-h-[200px] md:max-h-[300px] lg:max-h-none">
                   {successStories[openIndex].detailed}
-                </p>
+                </div>
               </div>
-              <div className="flex items-center justify-between mt-4">
-                <Button variant="ghost" onClick={prevStory}>&larr; Prev</Button>
-                <Button variant="outline" onClick={closeModal}>Close</Button>
-                <Button variant="ghost" onClick={nextStory}>Next &rarr;</Button>
+              <div className="flex items-center justify-between mt-3 sm:mt-4 gap-1 sm:gap-2 flex-wrap sm:flex-nowrap">
+                <Button variant="ghost" onClick={prevStory} size="sm" className="text-xs sm:text-sm px-2 sm:px-3">&larr; Prev</Button>
+                <Button variant="outline" onClick={closeModal} size="sm" className="text-xs sm:text-sm px-2 sm:px-3 order-last sm:order-none">Close</Button>
+                <Button variant="ghost" onClick={nextStory} size="sm" className="text-xs sm:text-sm px-2 sm:px-3">Next &rarr;</Button>
               </div>
             </div>
+            
+            {/* Close button - positioned absolutely for easy access */}
+            <button
+              onClick={closeModal}
+              className="absolute top-1 right-1 sm:top-2 sm:right-2 lg:top-4 lg:right-4 w-6 h-6 sm:w-8 sm:h-8 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center text-white transition-colors z-10 text-sm sm:text-base"
+              aria-label="Close modal"
+            >
+              ×
+            </button>
           </div>
         </div>
       )}
