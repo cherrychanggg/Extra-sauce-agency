@@ -3,7 +3,7 @@ export const videoBlogPost = {
   title: "Video Content That Converts",
   excerpt: "Stay tuned for expert insights and case studies on creating video content that drives real business results.",
   content: `
-    <div className="prose prose-lg max-w-none">
+    <div class="prose prose-lg max-w-none">
       <h2>The Power of Video in B2B Marketing</h2>
       
       <p>Video content has become the cornerstone of effective B2B marketing strategies. It's not just about creating videos—it's about creating video content that genuinely converts prospects into customers.</p>

@@ -4,7 +4,7 @@ import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
 import EnhancedSEOHead from "@/components/SEO/EnhancedSEOHead";
 import BreadcrumbNavigation from "@/components/SEO/BreadcrumbNavigation";
 import { organizationSchema } from "@/data/structured-data";
@@ -82,17 +82,24 @@ const BlogPost = () => {
                     {post.category}
                   </Badge>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
                       {new Date(post.date).toLocaleDateString('en-US', { 
                         year: 'numeric', 
                         month: 'long', 
                         day: 'numeric' 
                       })}
-                    </span>
+                    </div>
                     {post.readTime && (
-                      <span>{post.readTime}</span>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {post.readTime}
+                      </div>
                     )}
-                    <span>{post.author}</span>
+                    <div className="flex items-center gap-1">
+                      <User className="w-4 h-4" />
+                      {post.author}
+                    </div>
                   </div>
                 </div>
                 
