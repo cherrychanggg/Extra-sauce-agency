@@ -109,7 +109,11 @@ const SauceRecipe = () => {
         {/* Mission Statement */}
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl lg:text-6xl font-bold mb-8 max-w-4xl mx-auto leading-tight">
-            {sauceRecipeContent.missionHeadline}
+            OUR MISSION IS TO HELP B2B COMPANIES{" "}
+            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              GROW PROFITABLY
+            </span>{" "}
+            WITH EXECUTIVE CONTENT
           </h2>
         </div>
 
