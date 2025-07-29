@@ -79,11 +79,11 @@ const BookingPage = () => {
       <Navigation />
       
       <div className="pt-32 pb-20">
-        <div className="container-premium">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left Content */}
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8 leading-tight">
                 Stop wasting your sales team's time with{" "}
                 <span className="text-primary">unqualified leads.</span>
               </h1>
@@ -137,20 +137,19 @@ const BookingPage = () => {
                 </div>
               </div>
 
-              {/* Testimonial Section - Within Left Column */}
               <div className="mb-8">
                 <div 
-                  className="relative bg-white/30 backdrop-blur-sm rounded-2xl p-6 border border-border/30" 
+                  className="relative bg-white/30 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-border/30" 
                   style={{
                     background: 'linear-gradient(135deg, #ff6b35, #f7931e)', 
-                    height: '220px', 
+                    minHeight: '200px',
                     overflow: 'hidden'
                   }}
                 >
                   {/* Navigation Arrows */}
                   <button
                     onClick={prevTestimonial}
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+                    className="absolute left-1 sm:left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
                     aria-label="Previous testimonial"
                   >
                     <ChevronLeft className="w-4 h-4 text-white" />
@@ -158,23 +157,23 @@ const BookingPage = () => {
                   
                   <button
                     onClick={nextTestimonial}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
+                    className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 z-10"
                     aria-label="Next testimonial"
                   >
                     <ChevronRight className="w-4 h-4 text-white" />
                   </button>
 
-                  <div className="px-6">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 bg-white rounded-full overflow-hidden flex-shrink-0">
+                  <div className="px-4 sm:px-6">
+                    <div className="flex items-start gap-3 sm:gap-4 mb-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full overflow-hidden flex-shrink-0">
                         <img 
                           src={testimonials[currentTestimonial].avatar}
                           alt={testimonials[currentTestimonial].author}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="flex-1">
-                        <blockquote className="text-lg font-semibold text-white mb-2 leading-tight">
+                      <div className="flex-1 min-w-0">
+                        <blockquote className="text-sm sm:text-lg font-semibold text-white mb-2 leading-tight">
                           "{testimonials[currentTestimonial].quote}"
                         </blockquote>
                         <div className="text-white/90 text-sm font-medium">
@@ -205,24 +204,29 @@ const BookingPage = () => {
             </div>
 
             {/* Right Calendly Widget */}
-            <div className="flex flex-col justify-center items-center h-full min-h-[500px] lg:min-h-[700px] -mt-14">
+            <div className="w-full lg:order-2">
               <div className="w-full max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-6">
-                  <h2 className="text-3xl font-bold mb-4">
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                     Schedule Your <span className="text-primary">Strategy Call</span>
                   </h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     Book a one-on-one session with our content experts and discover how founder-led content can transform your B2B pipeline
                   </p>
                 </div>
 
                 {/* Calendly Embed */}
-                <div
-                  className="card-premium p-0 overflow-hidden rounded-2xl border-2 border-orange-400 shadow-lg bg-gradient-to-br from-orange-50 via-white to-white"
-                  style={{ height: 680 }}
-                >
-                  <InlineWidget url="https://calendly.com/extrasauceagency" />
+                <div className="card-premium p-0 overflow-hidden rounded-2xl border-2 border-orange-400 shadow-lg bg-gradient-to-br from-orange-50 via-white to-white">
+                  <div className="h-[500px] sm:h-[600px] lg:h-[680px]">
+                    <InlineWidget 
+                      url="https://calendly.com/extrasauceagency"
+                      styles={{
+                        height: '100%',
+                        width: '100%'
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
