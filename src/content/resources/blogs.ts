@@ -1,6 +1,7 @@
 import { futureBlogPost } from "../blogposts/future-of-content-led-growth";
 import { executiveBlogPost } from "../blogposts/building-executive-thought-leadership";
 import { videoBlogPost } from "../blogposts/video-content-that-converts";
+import { masteringB2BContentStrategy } from "../blogposts/mastering-b2b-content-strategy";
 
 export interface BlogPost {
   id: string;
@@ -18,6 +19,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  masteringB2BContentStrategy,
   futureBlogPost,
   executiveBlogPost,
   videoBlogPost
@@ -28,6 +30,7 @@ export const blogCategories = [
   "Strategy",
   "Leadership", 
   "Video Marketing",
+  "Content Marketing",
   "Case Studies",
   "Industry Insights"
 ];
