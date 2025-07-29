@@ -111,7 +111,8 @@ const SuccessStories: React.FC = () => {
             {successStories.map((story, idx) => (
               <div
                 key={story.id}
-                className="group bg-card rounded-3xl border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-2"
+                className="group bg-card rounded-3xl border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-2 cursor-pointer"
+                onClick={() => openModal(idx)}
               >
                 <div className="aspect-[16/10] overflow-hidden relative bg-muted">
                   <img
@@ -151,8 +152,7 @@ const SuccessStories: React.FC = () => {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      onClick={() => openModal(idx)}
-                      className="hover:bg-primary hover:text-primary-foreground transition-colors"
+                      className="hover:bg-primary hover:text-primary-foreground transition-colors pointer-events-none"
                     >
                       Read story
                     </Button>
@@ -165,8 +165,14 @@ const SuccessStories: React.FC = () => {
       </section>
       {/* Modal/Lightbox */}
       {openIndex !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 animate-fade-in">
-          <div className="relative bg-background rounded-2xl shadow-2xl max-w-4xl w-full flex flex-col md:flex-row overflow-hidden">
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 animate-fade-in"
+          onClick={closeModal}
+        >
+          <div 
+            className="relative bg-background rounded-2xl shadow-2xl max-w-4xl w-full flex flex-col md:flex-row overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Image */}
             <div className="md:w-1/2 bg-black flex items-center justify-center p-6">
               <div className="w-full aspect-[16/9] md:h-[32rem] h-56 max-w-full flex items-center justify-center overflow-hidden rounded-xl bg-black">
