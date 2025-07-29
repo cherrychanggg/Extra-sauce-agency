@@ -4,7 +4,6 @@ import { blogPosts, blogCategories } from "@/content/resources/blogs";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Calendar, User } from "lucide-react";
 import EnhancedSEOHead from "@/components/SEO/EnhancedSEOHead";
 import BreadcrumbNavigation from "@/components/SEO/BreadcrumbNavigation";
 import { organizationSchema } from "@/data/structured-data";
@@ -129,22 +128,15 @@ const Blogs = () => {
                 
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                    <div className="flex items-center gap-1">
-                      <User className="w-4 h-4" />
-                      {post.author}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
+                    <span>{post.author}</span>
+                    <span>
                       {new Date(post.date).toLocaleDateString('en-US', { 
                         month: 'short', 
                         day: 'numeric' 
                       })}
-                    </div>
+                    </span>
                     {post.readTime && (
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </div>
+                      <span>{post.readTime}</span>
                     )}
                   </div>
                   
