@@ -3,10 +3,72 @@ import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import { newsletterPageContent } from "@/content/resources/newsletters";
+import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
+
+interface FormData {
+  email: string;
+  firstName: string;
+  lastName: string;
+  hearAbout: string;
+}
 
 const Newsletters = () => {
   const { hero, benefits, form } = newsletterPageContent;
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
+
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Send welcome email to subscriber
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // You'll need to set this up in EmailJS
+        'welcome_template', // Template for welcome email
+        {
+          to_email: data.email,
+          to_name: `${data.firstName} ${data.lastName}`,
+          from_name: 'Extra Sauce Team',
+        },
+        'YOUR_PUBLIC_KEY' // You'll need to get this from EmailJS
+      );
+
+      // Send notification email to you
+      await emailjs.send(
+        'YOUR_SERVICE_ID',
+        'notification_template', // Template for internal notification
+        {
+          to_email: 'manny@getextrasauce.com',
+          subscriber_email: data.email,
+          subscriber_name: `${data.firstName} ${data.lastName}`,
+          hear_about: data.hearAbout,
+        },
+        'YOUR_PUBLIC_KEY'
+      );
+
+      toast({
+        title: "Successfully subscribed!",
+        description: "Welcome to the Content-Led GTM Report. Check your email for confirmation.",
+      });
+      
+      reset();
+    } catch (error) {
+      console.error('Error sending emails:', error);
+      toast({
+        title: "Subscription failed",
+        description: "There was an error processing your subscription. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -50,18 +112,21 @@ const Newsletters = () => {
               
               {/* Right Form */}
               <div className="bg-card p-8 rounded-xl shadow-lg border">
-                <div className="space-y-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
                       {form.fields.email.label}
                     </label>
                     <Input
+                      {...register("email", { required: "Email is required" })}
                       id="email"
                       type="email"
                       placeholder={form.fields.email.placeholder}
                       className="w-full"
-                      required={form.fields.email.required}
                     />
+                    {errors.email && (
+                      <p className="text-sm text-destructive mt-1">{errors.email.message}</p>
+                    )}
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -70,24 +135,30 @@ const Newsletters = () => {
                         {form.fields.firstName.label}
                       </label>
                       <Input
+                        {...register("firstName", { required: "First name is required" })}
                         id="firstName"
                         type="text"
                         placeholder={form.fields.firstName.placeholder}
                         className="w-full"
-                        required={form.fields.firstName.required}
                       />
+                      {errors.firstName && (
+                        <p className="text-sm text-destructive mt-1">{errors.firstName.message}</p>
+                      )}
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium mb-2">
                         {form.fields.lastName.label}
                       </label>
                       <Input
+                        {...register("lastName", { required: "Last name is required" })}
                         id="lastName"
                         type="text"
                         placeholder={form.fields.lastName.placeholder}
                         className="w-full"
-                        required={form.fields.lastName.required}
                       />
+                      {errors.lastName && (
+                        <p className="text-sm text-destructive mt-1">{errors.lastName.message}</p>
+                      )}
                     </div>
                   </div>
                   
@@ -96,18 +167,25 @@ const Newsletters = () => {
                       {form.fields.hearAbout.label}
                     </label>
                     <Textarea
+                      {...register("hearAbout", { required: "This field is required" })}
                       id="hearAbout"
                       placeholder={form.fields.hearAbout.placeholder}
                       className="w-full"
                       rows={4}
-                      required={form.fields.hearAbout.required}
                     />
+                    {errors.hearAbout && (
+                      <p className="text-sm text-destructive mt-1">{errors.hearAbout.message}</p>
+                    )}
                   </div>
                   
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg font-semibold">
-                    {form.submitButton}
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg font-semibold"
+                  >
+                    {isSubmitting ? "Subscribing..." : form.submitButton}
                   </Button>
-                </div>
+                </form>
               </div>
             </div>
           </div>
