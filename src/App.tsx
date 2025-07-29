@@ -45,25 +45,28 @@ const App = () => (
       <ScrollToTop />
       <Analytics />
       <SpeedInsights />
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/the-sauce-recipe" element={<TheSauceRecipe />} />
-            <Route path="/services/executive-ghostwriting" element={<ExecutiveGhostwriting />} />
-            <Route path="/services/video-content-engine" element={<VideoContentEngine />} />
-            <Route path="/services/content-led-gtm-coaching" element={<ContentLedGTMCoaching />} />
-            <Route path="/book-strategy-call" element={<BookingPage />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/success-stories" element={<SuccessStories />} />
-            <Route path="/resources/blogs" element={<Blogs />} />
-            <Route path="/resources/blogs/:slug" element={<BlogPost />} />
-            <Route path="/resources/newsletters" element={<Newsletters />} />
-            <Route path="/resources/company-news" element={<CompanyNews />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/resources/blogs/:slug" element={<BlogPost />} />
+        <Route path="*" element={
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/the-sauce-recipe" element={<TheSauceRecipe />} />
+              <Route path="/services/executive-ghostwriting" element={<ExecutiveGhostwriting />} />
+              <Route path="/services/video-content-engine" element={<VideoContentEngine />} />
+              <Route path="/services/content-led-gtm-coaching" element={<ContentLedGTMCoaching />} />
+              <Route path="/book-strategy-call" element={<BookingPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/success-stories" element={<SuccessStories />} />
+              <Route path="/resources/blogs" element={<Blogs />} />
+              <Route path="/resources/newsletters" element={<Newsletters />} />
+              <Route path="/resources/company-news" element={<CompanyNews />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        } />
+      </Routes>
     </TooltipProvider>
   </QueryClientProvider>
 );
