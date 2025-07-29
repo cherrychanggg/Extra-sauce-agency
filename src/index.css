@@ -19,9 +19,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
     /* Primary - Rich Sauce Red */
-    --primary: 0 100% 67%; /* #FF5A5A - exact match */
+    --primary: 3 99% 67%; /* #FE615A - brand color */
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 0 100% 72%; /* Lighter version of primary */
+    --primary-glow: 3 99% 72%; /* Lighter version of primary */
     /* Secondary - Warm Orange */
     --secondary: 14 100% 64%; /* #FF7648 */
     --secondary-foreground: 0 0% 8%;
@@ -37,7 +37,7 @@
     /* Borders & Inputs */
     --border: 20 15% 90%;
     --input: 20 15% 90%;
-    --ring: 0 100% 67%; /* Match primary color exactly */
+    --ring: 3 99% 67%; /* Match primary color exactly */
     /* Premium Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
