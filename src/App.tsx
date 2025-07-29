@@ -10,6 +10,7 @@ import ScrollToTop from "./components/shared/ScrollToTop";
 import ServiceWorkerRegistration from "./components/performance/ServiceWorkerRegistration";
 import CriticalResourcePreloader from "./components/performance/CriticalResourcePreloader";
 import HomePage from "./pages/HomePage";
+import BlogPost from "./pages/resources/BlogPost";
 
 // Lazy load non-critical pages
 const TheSauceRecipe = lazy(() => import("./pages/TheSauceRecipe"));
@@ -22,7 +23,6 @@ const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const SuccessStories = lazy(() => import("./pages/SuccessStories"));
 const Blogs = lazy(() => import("./pages/resources/Blogs"));
-const BlogPost = lazy(() => import("./pages/resources/BlogPost"));
 const Newsletters = lazy(() => import("./pages/resources/Newsletters"));
 const CompanyNews = lazy(() => import("./pages/resources/CompanyNews"));
 
