@@ -2,13 +2,16 @@ import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
 import { blogPosts, blogCategories } from "@/content/resources/blogs";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
+import { Clock, Calendar, User } from "lucide-react";
 import EnhancedSEOHead from "@/components/SEO/EnhancedSEOHead";
 import BreadcrumbNavigation from "@/components/SEO/BreadcrumbNavigation";
 import { organizationSchema } from "@/data/structured-data";
 
 const Blogs = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const navigate = useNavigate();
 
   const filteredPosts = selectedCategory === "All" 
     ? blogPosts 
@@ -70,13 +73,19 @@ const Blogs = () => {
           {/* Breadcrumb Navigation */}
           <BreadcrumbNavigation items={breadcrumbItems} className="mb-8" />
           
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our <span className="text-primary">Blog</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Insights, strategies, and stories from the world of content-led growth
-            </p>
+          {/* Hero Section */}
+          <div className="text-center mb-16 bg-gradient-to-br from-background via-background to-muted/30 py-16 -mt-8 border-b">
+            <div className="container-premium">
+              <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+                INSIDE THE MODERN B2B PIPELINE PLAYBOOK
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+                Tried-and-true founder-led tactics that actually drive revenue.
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Get the frameworks, content plays, and narrative shifts B2B founders use to build trust and close pipeline. Turn your voice into a growth engine.
+              </p>
+            </div>
           </div>
 
           {/* Category Filter */}
@@ -98,35 +107,53 @@ const Blogs = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <article key={post.id} className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow">
+              <article 
+                key={post.id} 
+                className="bg-card rounded-xl overflow-hidden shadow-sm border hover:shadow-lg transition-all duration-300 cursor-pointer group"
+                onClick={() => navigate(`/resources/blogs/${post.slug}`)}
+              >
                 {post.image && (
-                  <div className="h-48 bg-muted rounded-lg mb-4 overflow-hidden">
+                  <div className="aspect-[16/9] bg-muted overflow-hidden relative">
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
+                    <div className="absolute top-4 left-4">
+                      <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm">
+                        {post.category}
+                      </Badge>
+                    </div>
                   </div>
                 )}
-                <div className="flex items-center gap-2 mb-3">
-                  <Badge variant="secondary" className="text-xs">
-                    {post.category}
-                  </Badge>
-                  <span className="text-xs text-muted-foreground">
-                    {new Date(post.date).toLocaleDateString()}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                <p className="text-muted-foreground mb-4">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">
-                    By {post.author}
-                  </span>
-                  <div className="text-sm text-primary hover:text-primary/80 cursor-pointer">
-                    Read More →
+                
+                <div className="p-6">
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center gap-1">
+                      <User className="w-4 h-4" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      {new Date(post.date).toLocaleDateString('en-US', { 
+                        month: 'short', 
+                        day: 'numeric' 
+                      })}
+                    </div>
+                    {post.readTime && (
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {post.readTime}
+                      </div>
+                    )}
                   </div>
+                  
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm line-clamp-3 leading-relaxed">
+                    {post.excerpt}
+                  </p>
                 </div>
               </article>
             ))}

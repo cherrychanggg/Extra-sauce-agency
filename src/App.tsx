@@ -22,6 +22,7 @@ const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const SuccessStories = lazy(() => import("./pages/SuccessStories"));
 const Blogs = lazy(() => import("./pages/resources/Blogs"));
+const BlogPost = lazy(() => import("./pages/resources/BlogPost"));
 const Newsletters = lazy(() => import("./pages/resources/Newsletters"));
 const CompanyNews = lazy(() => import("./pages/resources/CompanyNews"));
 
@@ -56,6 +57,7 @@ const App = () => (
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/success-stories" element={<SuccessStories />} />
             <Route path="/resources/blogs" element={<Blogs />} />
+            <Route path="/resources/blogs/:slug" element={<BlogPost />} />
             <Route path="/resources/newsletters" element={<Newsletters />} />
             <Route path="/resources/company-news" element={<CompanyNews />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
