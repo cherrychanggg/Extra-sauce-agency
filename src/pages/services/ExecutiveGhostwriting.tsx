@@ -64,12 +64,12 @@ const ExecutiveGhostwriting = () => {
               Executive <span className="text-primary">Ghostwriting</span>
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Transform your expertise into thought leadership content that positions you as an industry authority and drives qualified leads to your business.
+              Become a thought leader. Great executive content is the perfect blend of your expertise and personality.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">
                 <Button className="btn-hero">
-                  Get Started Today
+                  Learn More
                 </Button>
               </Link>
             </div>

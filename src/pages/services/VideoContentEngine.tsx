@@ -61,15 +61,15 @@ const VideoContentEngine = () => {
         <div className="container-premium text-center relative z-10">
           <div className="max-w-4xl mx-auto animate-scale-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-              Video Content <span className="text-primary">Engine</span>
+              Executive-Led Video <span className="text-primary">Engine</span>
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Build a systematic video content production process that turns your expertise into binge-worthy content that drives leads and builds trust.
+              Turn your expertise into a video engine that closes pipeline. Launch a binge-worthy video series—podcast, masterclass, or webinar—that fuels LinkedIn, YouTube, and your entire content engine while turning dream prospects into pipeline.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">
                 <Button className="btn-hero">
-                  Launch Your Engine
+                  Learn More
                 </Button>
               </Link>
             </div>

@@ -65,12 +65,12 @@ const ContentLedGTMCoaching = () => {
               Content Led <span className="text-primary">GTM Coaching</span>
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Strategic coaching to integrate content into your entire go-to-market motion, from awareness to conversion, creating a predictable growth engine.
+              Don't waste months trying out content. Use our proven systems. Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">
                 <Button className="btn-hero">
-                  Start Your GTM Journey
+                  Learn More
                 </Button>
               </Link>
             </div>
