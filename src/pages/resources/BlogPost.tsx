@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
 import EnhancedSEOHead from "@/components/SEO/EnhancedSEOHead";
-import BreadcrumbNavigation from "@/components/SEO/BreadcrumbNavigation";
 import { organizationSchema } from "@/data/structured-data";
 
 const BlogPost = () => {
@@ -19,12 +18,6 @@ const BlogPost = () => {
     navigate("/resources/blogs");
     return null;
   }
-
-  const breadcrumbItems = [
-    { name: 'Resources', href: '/resources' },
-    { name: 'Blog', href: '/resources/blogs' },
-    { name: post.title, href: `/resources/blogs/${post.slug}`, current: true }
-  ];
 
   const blogPostSchema = {
     "@type": "BlogPosting",
@@ -65,8 +58,6 @@ const BlogPost = () => {
           {/* Hero Section with dark overlay */}
           <div className="relative bg-gradient-to-br from-background to-muted border-b">
             <div className="container-premium py-16">
-              <BreadcrumbNavigation items={breadcrumbItems} className="mb-8" />
-              
               <Button
                 variant="ghost"
                 onClick={() => navigate("/resources/blogs")}

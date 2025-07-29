@@ -58,41 +58,9 @@ const BlogSEO = ({
     "url": canonicalUrl
   };
 
-  // Create breadcrumb schema
-  const breadcrumbSchema = {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.extrasauceagency.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Resources",
-        "item": "https://www.extrasauceagency.com/resources"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Blog",
-        "item": "https://www.extrasauceagency.com/resources/blogs"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": title,
-        "item": canonicalUrl
-      }
-    ]
-  };
-
   const structuredData = [
     organizationSchema,
-    articleSchema,
-    breadcrumbSchema
+    articleSchema
   ];
 
   const keywords = [

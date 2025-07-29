@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Calendar, User } from "lucide-react";
 import EnhancedSEOHead from "@/components/SEO/EnhancedSEOHead";
-import BreadcrumbNavigation from "@/components/SEO/BreadcrumbNavigation";
 import { organizationSchema } from "@/data/structured-data";
 
 const Blogs = () => {
@@ -40,11 +39,6 @@ const Blogs = () => {
     }))
   };
 
-  const breadcrumbItems = [
-    { name: 'Resources', href: '/resources' },
-    { name: 'Blog', href: '/resources/blogs', current: true }
-  ];
-
   const structuredData = [organizationSchema, blogListingSchema];
 
   return (
@@ -70,8 +64,6 @@ const Blogs = () => {
       
       <main className="pt-20">
         <div className="container-premium py-16">
-          {/* Breadcrumb Navigation */}
-          <BreadcrumbNavigation items={breadcrumbItems} className="mb-8" />
           
           {/* Hero Section */}
           <div className="text-center mb-16 bg-gradient-to-br from-background via-background to-muted/30 py-16 -mt-8 border-b">
