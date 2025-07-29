@@ -104,7 +104,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link to={ctaButton.link}>
-              <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25">
+              <Button className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25">
                 {ctaButton.text}
               </Button>
             </Link>
