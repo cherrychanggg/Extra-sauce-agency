@@ -3,7 +3,7 @@ export const futureBlogPost = {
   title: "The Future of Content-Led Growth",
   excerpt: "Discover how content-led strategies are reshaping B2B marketing and driving unprecedented growth for forward-thinking companies.",
   content: `
-    <div class="prose prose-lg max-w-none">
+    <div className="prose prose-lg max-w-none">
       <h2>Why Content-Led Growth is Revolutionizing B2B Marketing</h2>
       
       <p>In today's competitive landscape, traditional marketing tactics are becoming less effective as buyers seek more authentic and trust-driven relationships with the executives behind the companies they buy from.</p>

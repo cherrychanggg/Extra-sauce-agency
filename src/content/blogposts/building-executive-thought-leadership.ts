@@ -3,7 +3,7 @@ export const executiveBlogPost = {
   title: "Building Executive Thought Leadership",
   excerpt: "Learn how to transform your executive team into industry thought leaders through strategic content creation.",
   content: `
-    <div class="prose prose-lg max-w-none">
+    <div className="prose prose-lg max-w-none">
       <h2>Transforming Executives into Thought Leaders</h2>
       
       <p>Executive thought leadership is more than just sharing opinions—it's about establishing credibility, building trust, and positioning your leadership team as the go-to experts in your industry.</p>
