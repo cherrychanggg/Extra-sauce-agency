@@ -2,9 +2,9 @@
 // Edit this file to change content for the Video Content Engine service page
 
 export const heroSection = {
-  title: "Video Content Engine",
-  description: "Build a systematic video content production process that turns your expertise into binge-worthy content that drives leads and builds trust.",
-  primaryButton: "Launch Your Engine"
+  title: "Executive-Led Video Engine",
+  description: "Turn your expertise into a video engine that closes pipeline. Launch a binge-worthy video series—podcast, masterclass, or webinar—that fuels LinkedIn, YouTube, and your entire content engine while turning dream prospects into pipeline.",
+  primaryButton: "Learn More"
 };
 
 export const secondaryHeroSection = {

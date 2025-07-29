@@ -3,8 +3,8 @@
 
 export const heroSection = {
   title: "Content Led GTM Coaching",
-  description: "Strategic coaching to integrate content into your entire go-to-market motion, from awareness to conversion, creating a predictable growth engine.",
-  primaryButton: "Start Your GTM Journey"
+  description: "Don't waste months trying out content. Use our proven systems. Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.",
+  primaryButton: "Learn More"
 };
 
 export const secondaryHeroSection = {

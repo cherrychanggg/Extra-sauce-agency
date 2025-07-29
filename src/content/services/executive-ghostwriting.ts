@@ -3,8 +3,8 @@
 
 export const heroSection = {
   title: "Executive Ghostwriting",
-  description: "Transform your expertise into thought leadership content that positions you as an industry authority and drives qualified leads to your business.",
-  primaryButton: "Get Started Today"
+  description: "Become a thought leader. Great executive content is the perfect blend of your expertise and personality.",
+  primaryButton: "Learn More"
 };
 
 export const secondaryHeroSection = {
