@@ -55,97 +55,72 @@ const BlogPost = () => {
         <Navigation />
         
         <main className="pt-20">
-          {/* Hero Section with dark overlay */}
-          <div className="relative bg-gradient-to-br from-background to-muted border-b">
-            <div className="container-premium py-16">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+            <div className="container max-w-4xl mx-auto px-6 py-16">
               <Button
                 variant="ghost"
                 onClick={() => navigate("/resources/blogs")}
-                className="mb-8 hover:bg-muted/50"
+                className="mb-8 text-white/70 hover:text-white hover:bg-white/10"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
               </Button>
               
-              <div className="max-w-4xl">
-                <div className="flex items-center gap-4 mb-6">
-                  <Badge variant="secondary" className="text-sm">
-                    {post.category}
-                  </Badge>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
-                    </div>
-                    {post.readTime && (
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </div>
-                    )}
-                    <div className="flex items-center gap-1">
-                      <User className="w-4 h-4" />
-                      {post.author}
-                    </div>
-                  </div>
+              {/* Author info header */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">ES</span>
                 </div>
-                
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  {post.title}
-                </h1>
-                
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  {post.excerpt}
-                </p>
+                <div className="flex items-center gap-6 text-sm text-white/70">
+                  <span className="font-medium text-white">{post.author}</span>
+                  <span>extrasauceagency@gmail.com</span>
+                  <span>•</span>
+                  <span>{new Date(post.date).toLocaleDateString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric' 
+                  })}</span>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
               </div>
+              
+              <h1 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                {post.title}
+              </h1>
             </div>
           </div>
           
-          {/* Featured Image */}
-          {post.image && (
-            <div className="container-premium py-8">
-              <div className="max-w-4xl mx-auto">
-                <div className="aspect-[16/9] rounded-xl overflow-hidden bg-muted">
-                  <img 
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-          
-          {/* Blog Content */}
-          <div className="container-premium pb-16">
-            <div className="max-w-4xl mx-auto">
-              <article 
-                className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+          {/* Content Section */}
+          <div className="bg-white">
+            <div className="container max-w-4xl mx-auto px-6 py-16">
+              <article className="prose prose-lg max-w-none">
+                <div 
+                  className="[&>div]:space-y-6 [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:text-slate-900 [&_h2]:mt-12 [&_h2]:mb-6 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-slate-900 [&_h3]:mt-8 [&_h3]:mb-4 [&_p]:text-lg [&_p]:text-slate-700 [&_p]:leading-relaxed [&_p]:mb-6 [&_ul]:space-y-3 [&_ul]:mb-6 [&_li]:text-lg [&_li]:text-slate-700 [&_li]:leading-relaxed [&_strong]:text-slate-900 [&_strong]:font-semibold [&_ol]:space-y-3 [&_ol]:mb-6"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
+              </article>
               
-              {/* Tags */}
-              <div className="mt-12 pt-8 border-t">
-                <h3 className="text-lg font-semibold mb-4">Tags</h3>
-                <div className="flex flex-wrap gap-2">
+              {/* Tags Section */}
+              <div className="mt-16 pt-8 border-t border-slate-200">
+                <div className="flex flex-wrap gap-3">
                   {post.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-sm">
+                    <Badge 
+                      key={tag} 
+                      variant="secondary" 
+                      className="px-3 py-1 text-sm bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    >
                       {tag}
                     </Badge>
                   ))}
                 </div>
               </div>
               
-              {/* Navigation */}
-              <div className="mt-12 pt-8 border-t">
+              {/* Back Button */}
+              <div className="mt-12 pt-8 border-t border-slate-200">
                 <Button
                   variant="outline"
                   onClick={() => navigate("/resources/blogs")}
-                  className="w-full sm:w-auto"
+                  className="border-slate-300 text-slate-700 hover:bg-slate-50"
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to All Posts
