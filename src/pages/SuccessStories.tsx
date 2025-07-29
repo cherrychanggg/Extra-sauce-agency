@@ -51,43 +51,43 @@ const SuccessStories: React.FC = () => {
           </Button>
         </div>
 
-        {/* Floating success metrics */}
-        <div className="absolute top-1/4 left-8 lg:left-16 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg">
+        {/* Floating success metrics - Hidden on mobile to prevent text overlap */}
+        <div className="hidden lg:block absolute top-1/4 left-16 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg">
           <div className="text-3xl font-bold text-primary">16M+</div>
           <div className="text-sm text-muted-foreground">Total Views Generated</div>
         </div>
         
-        <div className="absolute top-1/3 right-8 lg:right-16 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '300ms' }}>
+        <div className="hidden lg:block absolute top-1/3 right-16 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '300ms' }}>
           <div className="text-3xl font-bold text-primary">$428K</div>
           <div className="text-sm text-muted-foreground">ARR Added</div>
         </div>
         
-        <div className="absolute bottom-1/4 left-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '600ms' }}>
+        <div className="hidden xl:block absolute bottom-1/4 left-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '600ms' }}>
           <div className="text-3xl font-bold text-primary">500K+</div>
           <div className="text-sm text-muted-foreground">Followers Gained</div>
         </div>
 
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '900ms' }}>
+        <div className="hidden lg:block absolute top-16 left-1/2 transform -translate-x-1/2 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '900ms' }}>
           <div className="text-3xl font-bold text-primary">50+</div>
           <div className="text-sm text-muted-foreground">B2B Brands Served</div>
         </div>
 
-        <div className="absolute bottom-1/4 right-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1200ms' }}>
+        <div className="hidden xl:block absolute bottom-1/4 right-1/4 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1200ms' }}>
           <div className="text-3xl font-bold text-primary">16+</div>
           <div className="text-sm text-muted-foreground">Qualified Meetings/Month</div>
         </div>
 
-        <div className="absolute top-1/2 left-4 lg:left-8 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1500ms' }}>
+        <div className="hidden lg:block absolute top-1/2 left-8 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1500ms' }}>
           <div className="text-3xl font-bold text-primary">8X</div>
           <div className="text-sm text-muted-foreground">ROI Improvement</div>
         </div>
 
-        <div className="absolute bottom-16 right-8 lg:right-20 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1800ms' }}>
+        <div className="hidden lg:block absolute bottom-16 right-20 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '1800ms' }}>
           <div className="text-3xl font-bold text-primary">90%</div>
           <div className="text-sm text-muted-foreground">Time Saved on Content</div>
         </div>
 
-        <div className="absolute top-2/3 left-1/3 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '2100ms' }}>
+        <div className="hidden xl:block absolute top-2/3 left-1/3 bg-card/80 backdrop-blur-md rounded-2xl p-6 border border-border/30 animate-fade-in shadow-lg" style={{ animationDelay: '2100ms' }}>
           <div className="text-3xl font-bold text-primary">$2B+</div>
           <div className="text-sm text-muted-foreground">Enterprise Client Value</div>
         </div>
