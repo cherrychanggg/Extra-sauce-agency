@@ -63,8 +63,13 @@ const ExecutiveGhostwriting = () => {
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
               Executive <span className="text-primary">Ghostwriting</span>
             </h1>
+            
+            <h2 className="text-2xl lg:text-3xl font-semibold text-primary mb-6">
+              Become a thought leader.
+            </h2>
+            
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Become a thought leader. Great executive content is the perfect blend of your expertise and personality.
+              Great executive content is the perfect blend of your expertise and personality.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">

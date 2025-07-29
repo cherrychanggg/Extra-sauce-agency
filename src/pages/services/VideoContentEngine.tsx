@@ -63,8 +63,13 @@ const VideoContentEngine = () => {
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
               Executive-Led Video <span className="text-primary">Engine</span>
             </h1>
+            
+            <h2 className="text-2xl lg:text-3xl font-semibold text-primary mb-6">
+              Turn your expertise into a video engine that closes pipeline.
+            </h2>
+            
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Turn your expertise into a video engine that closes pipeline. Launch a binge-worthy video series—podcast, masterclass, or webinar—that fuels LinkedIn, YouTube, and your entire content engine while turning dream prospects into pipeline.
+              Launch a binge-worthy video series—podcast, masterclass, or webinar—that fuels LinkedIn, YouTube, and your entire content engine while turning dream prospects into pipeline.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">

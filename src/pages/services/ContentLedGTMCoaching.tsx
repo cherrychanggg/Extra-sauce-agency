@@ -64,8 +64,13 @@ const ContentLedGTMCoaching = () => {
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
               Content Led <span className="text-primary">GTM Coaching</span>
             </h1>
+            
+            <h2 className="text-2xl lg:text-3xl font-semibold text-primary mb-6">
+              Don't waste months trying out content. Use our proven systems.
+            </h2>
+            
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Don't waste months trying out content. Use our proven systems. Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.
+              Work directly with a GTM strategist to access The Sauce Recipe.™ Sharpen your messaging, build a demand-driven content engine, and fast-track your way to qualified pipeline.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link to="/book-strategy-call">
