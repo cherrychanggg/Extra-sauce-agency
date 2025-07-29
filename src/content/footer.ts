@@ -2,7 +2,7 @@
 // Edit this file to change footer information
 
 export const companyInfo = {
-  name: "Extra Sauce Agency",
+  name: "Extra Sauce",
   description: "Building the future of B2B content marketing through strategic founder-led initiatives.",
   ctaButton: {
     text: "Book A Strategy Call",
