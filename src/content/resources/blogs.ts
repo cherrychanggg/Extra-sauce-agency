@@ -8,6 +8,8 @@ import { marketingBlogPost } from "../blogposts/b2b-content-marketing";
 import { masterOnePlatformBlogPost } from "../blogposts/master-one-platform";
 import { b2bContentBlogPost} from "../blogposts/b2b-content-engine-win-buy-in";
 import { storytellingBlogPost} from "../blogposts/storytelling-in-b2b-marketing";
+import {linkedinstrategyBlogPost} from "../blogposts/b2b-linkedin-strategy-for-founders";
+import {b2bfoundersBlogPost} from "../blogposts/how-b2b-founders-grow-on-linkedin";
 
 export interface BlogPost {
   id: string;
@@ -34,7 +36,9 @@ export const blogPosts: BlogPost[] = [
   marketingBlogPost,
   masterOnePlatformBlogPost,
   b2bContentBlogPost,
-  storytellingBlogPost
+  storytellingBlogPost,
+  linkedinstrategyBlogPost,
+  b2bfoundersBlogPost
 ];
 
 export const blogCategories = [
