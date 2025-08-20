@@ -1,7 +1,7 @@
 export const insightBlogPost = {
   id: "6",
-  title: "How to Create LinkedIn Content That Actually Brings in Leads in Toronto",
-  excerpt: "Discover how Toronto businesses can create LinkedIn content that attracts qualified leads. Proven strategies, local insights, and FAQs for B2B success.",
+  title: "How to Create LinkedIn Content That Actually Brings in Leads in Toronto and Canada",
+  excerpt: "Discover how Toronto and Canadian businesses can create LinkedIn content that attracts qualified leads. Proven strategies, local insights, and FAQs for B2B success.",
   content: `
     <div class="prose prose-lg max-w-none">
       <h2>How Toronto Businesses Can Create LinkedIn Content That Drives Leads</h2>
@@ -46,9 +46,9 @@ export const insightBlogPost = {
   author: "The Sauce Team",
   date: "2025-03-27",
   category: "Strategy",
-  tags: ["LinkedIn", "Content Strategy", "Lead Generation", "B2B Marketing", "Toronto", "Toronto Business", "Toronto Marketing"],
+  tags: ["LinkedIn", "Content Strategy", "Lead Generation", "B2B Marketing", "Toronto", "Canada", "Toronto Business", "Toronto Marketing"],
   image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-  slug: "how-to-create-linkedin-content-that-actually-brings-in-leads-toronto",
+  slug: "how-to-create-linkedin-content-that-actually-brings-in-leads-toronto-canada",
   featured: false,
   readTime: "7 min read"
 };
