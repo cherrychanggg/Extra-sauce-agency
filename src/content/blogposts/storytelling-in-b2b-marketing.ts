@@ -1,5 +1,5 @@
 export const storytellingBlogPost = {
-  id: "storytelling-b2b-2024",
+  id: "10",
   title: "The Power of Building an Audience with Stories in B2B Marketing",
   excerpt: "Learn how storytelling in B2B marketing builds brand affinity, drives engagement, and positions your business as the go-to solution.",
   content: `
