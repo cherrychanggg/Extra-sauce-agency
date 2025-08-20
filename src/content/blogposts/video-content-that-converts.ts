@@ -30,6 +30,14 @@ export const videoBlogPost = {
       <p>Creating great video content is only half the battle. Strategic distribution across LinkedIn, YouTube, email campaigns, and your website ensures maximum reach and impact.</p>
       
       <p>Remember: the goal isn't just views—it's conversions. Every video should have a clear purpose and call-to-action that moves prospects closer to becoming customers. This is especially true for Toronto and Canadian B2B brands looking to stand out in competitive markets.</p>
+      
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      <ul>
+        <li><strong>Q: How often should Toronto businesses post on LinkedIn?</strong><br/>A: Consistency is key. Aim for 2-3 times per week with high-value content.</li>
+        <li><strong>Q: What type of LinkedIn content works best for Toronto B2B companies?</strong><br/>A: Educational posts, local case studies, and video series tailored to Toronto’s market perform well.</li>
+        <li><strong>Q: How can I target Toronto leads specifically?</strong><br/>A: Use location-based hashtags, mention Toronto in your posts, and engage with local LinkedIn groups.</li>
+        <li><strong>Q: Should I use paid LinkedIn ads for Toronto lead generation?</strong><br/>A: Organic content is effective, but combining it with targeted LinkedIn ads can accelerate results in Toronto.</li>
+      </ul>
     </div>
   `,
   author: "The Sauce Team",
@@ -44,5 +52,6 @@ export const videoBlogPost = {
   ],
   image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
   slug: "video-content-that-converts-toronto-canada",
-  readTime: "3 min read"
+  featured: false,
+  readTime: "5 min read"
 };
