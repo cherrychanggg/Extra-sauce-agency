@@ -1,7 +1,7 @@
 export const executiveBlogPost = {
   id: "2",
-  title: "Building Executive Thought Leadership",
-  excerpt: "Learn how to transform your executive team into industry thought leaders through strategic content creation.",
+  title: "Building Executive Thought Leadership in Toronto",
+  excerpt: "Learn how to transform your Toronto executive team into industry thought leaders through strategic content creation for Canadian businesses.",
   content: `
     <div class="prose prose-lg max-w-none">
       <h2>Transforming Executives into Thought Leaders</h2>
@@ -25,14 +25,20 @@ export const executiveBlogPost = {
       
       <p>Consistent messaging across all platforms helps establish your executives as trusted voices in the industry. This includes LinkedIn content, podcast appearances, conference speaking, and thought leadership articles.</p>
       
-      <p>The key is authenticity—audiences can tell when content is genuine versus when it's purely promotional. Focus on providing real value to your audience, and the business results will follow.</p>
+      <p>The key is authenticity—audiences can tell when content is genuine versus when it's purely promotional. Focus on providing real value to your audience, and the business results will follow. This approach is especially effective for Toronto and Canadian executive teams looking to stand out in their industries.</p>
     </div>
   `,
   author: "The Sauce Team",
   date: "2024-10-10",
   category: "Leadership",
-  tags: ["executive", "thought leadership", "content"],
+  tags: [
+    "Toronto executive leadership",
+    "Canada thought leadership",
+    "executive",
+    "thought leadership",
+    "content"
+  ],
   image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop",
-  slug: "building-executive-thought-leadership",
+  slug: "building-executive-thought-leadership-toronto",
   readTime: "4 min read"
 };
