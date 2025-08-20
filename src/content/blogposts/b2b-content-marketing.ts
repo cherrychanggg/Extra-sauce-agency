@@ -1,7 +1,7 @@
 export const marketingBlogPost = {
   id: "7",
-  title: "Thought Leadership for Founders: Master One Platform to Build Authority and Drive Leads in Toronto",
-  excerpt: "Discover the 6-step B2B thought leadership strategy for Toronto founders—master LinkedIn, build authority, and attract high-quality leads with founder-led content.",
+  title: "Thought Leadership for Founders: Master One Platform to Build Authority and Drive Leads in Toronto and Canada",
+  excerpt: "Discover the 6-step B2B thought leadership strategy for Toronto and Canadian founders—master LinkedIn, build authority, and attract high-quality leads with founder-led content.",
   content: `
     <div class="prose prose-lg max-w-none">
       <h2>Master One Platform Before Expanding: The Key to Thought Leadership Success for Toronto B2B Founders</h2>
@@ -54,7 +54,7 @@ export const marketingBlogPost = {
         <li>Focus on LinkedIn before scaling to other platforms.</li>
         <li>Invest in founder-led video for maximum authority.</li>
       </ul>
-      <p><strong>Final thought:</strong> The best time to start was yesterday. The second-best time is today. Don’t wait for competitors to dominate the Toronto B2B conversation — own your market now.</p>
+      <p><strong>Final thought:</strong> The best time to start was yesterday. The second-best time is today. Don’t wait for competitors to dominate the Toronto and Canadian B2B conversation — own your market now.</p>
 
       <h3>Frequently Asked Questions (FAQ)</h3>
       <ul>
@@ -69,9 +69,18 @@ export const marketingBlogPost = {
   author: "The Sauce Team",
   date: "2025-03-11",
   category: "Strategy",
-  tags: ["thought leadership", "founder branding", "B2B marketing", "LinkedIn strategy", "content strategy", "Toronto", "B2B"],
+  tags: [
+    "thought leadership",
+    "founder branding",
+    "B2B marketing",
+    "LinkedIn strategy",
+    "content strategy",
+    "Toronto",
+    "Canada",
+    "B2B"
+  ],
   image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80",
-  slug: "master-one-platform-before-expanding",
+  slug: "master-one-platform-before-expanding-toronto-canada",
   featured: false,
   readTime: "6 min read"
 };
