@@ -1,8 +1,8 @@
 export const newBlogPost = {
   id: "4",
-  title: "Founder-Led Marketing for B2B SaaS: Who Should Use It & How to Win in 2025",
-  excerpt: "Discover how founder-led marketing can accelerate growth for B2B SaaS companies in Toronto. Learn who should use it, key benefits, and actionable strategies for building trust, authority, and inbound leads.",
-  metaDescription: "Learn how founder-led marketing drives growth for B2B SaaS companies. Find out if your business qualifies, why it works, and how to implement it for maximum impact in Toronto and beyond.",
+  title: "Founder-Led Marketing for B2B SaaS in Toronto & Canada: Who Should Use It & How to Win in 2025",
+  excerpt: "Discover how founder-led marketing can accelerate growth for B2B SaaS companies in Toronto and Canada. Learn who should use it, key benefits, and actionable strategies for building trust, authority, and inbound leads.",
+  metaDescription: "Learn how founder-led marketing drives growth for B2B SaaS companies in Toronto and Canada. Find out if your business qualifies, why it works, and how to implement it for maximum impact locally and beyond.",
   content: `
 <div class="prose prose-lg max-w-none">
   <p><strong>Founder-led marketing for B2B SaaS companies in Toronto</strong> is one of the fastest ways to build trust, win authority, and accelerate inbound leads in competitive tech markets. This guide explains exactly who should use founder-led marketing (FLM), why it works, and how to implement it for 2025 SaaS growth.</p>
@@ -50,6 +50,7 @@ export const newBlogPost = {
 
   <h2>Case Study: Toronto SaaS Brand Using FLM for Rapid Growth</h2>
   <p>When Extra Sauce Agency’s CEO embraced FLM for a previous company, a shift to storytelling centered on the founder’s journey delivered higher sales and a loyal customer base—without massive ad spend. <a href="/success-stories">Read more SaaS growth stories here.</a></p>
+  <p>This approach is now helping B2B SaaS brands across Toronto and Canada stand out and grow faster in competitive markets.</p>
 
   <h2>FAQ: Founder-Led Marketing for Toronto SaaS</h2>
   <ul>
@@ -73,12 +74,13 @@ export const newBlogPost = {
     "founder-led marketing",
     "B2B SaaS",
     "Toronto",
+    "Canada",
     "personal branding",
     "thought leadership",
     "content marketing"
   ],
   image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop",
-  slug: "founder-led-marketing-b2b-saas-2025",
+  slug: "founder-led-marketing-b2b-saas-toronto-canada-2025",
   featured: false,
   readTime: "4 min read"
 };
