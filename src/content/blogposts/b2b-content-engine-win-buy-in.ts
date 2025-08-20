@@ -1,8 +1,8 @@
 export const b2bContentBlogPost = {
   id: "9",
-  title: "B2B Content Engine Strategy: How to Win Buy-In Without Immediate ROI",
+  title: "Toronto B2B Content Engine Strategy: How to Win Buy-In Without Immediate ROI",
   excerpt:
-    "Launch a B2B content engine without ROI pressure—secure leadership buy-in, prove value with quick wins, and scale with founder-led content.",
+    "Launch a B2B content engine in Toronto without ROI pressure—secure leadership buy-in, prove value with quick wins, and scale with founder-led content for Canadian businesses.",
   content: `
     <div class="prose prose-lg max-w-none">
       <h2>How to Build a B2B Content Engine Without Immediate ROI Pressure</h2>
@@ -73,7 +73,7 @@ export const b2bContentBlogPost = {
         <li>Expand to video, podcasts, and deeper thought leadership over time</li>
         <li>Use early success metrics to earn budget and scale</li>
       </ul>
-      <p><strong>Content isn’t a campaign—it’s an asset.</strong> Start small, show value, then make it non-negotiable in your revenue mix.</p>
+      <p><strong>Content isn’t a campaign—it’s an asset.</strong> Start small, show value, then make it non-negotiable in your revenue mix. This approach works especially well for Toronto and Canadian B2B companies.</p>
 
       <h3>FAQ</h3>
       <ul>
@@ -87,16 +87,16 @@ export const b2bContentBlogPost = {
   date: "2025-03-27",
   category: "Strategy",
   tags: [
-    "B2B content engine",
-    "content strategy",
+    "Toronto B2B content engine",
+    "Canada content strategy",
     "founder-led content",
     "content ROI",
     "self-reported attribution",
     "ABM",
     "thought leadership"
   ],
-  image: "https://source.unsplash.com/featured/?b2b,content,marketing",
-  slug: "b2b-content-engine-without-immediate-roi",
+  image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+  slug: "toronto-b2b-content-engine-without-immediate-roi",
   featured: false,
   readTime: "6 min read"
 };
