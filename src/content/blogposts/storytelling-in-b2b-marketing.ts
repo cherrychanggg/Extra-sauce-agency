@@ -35,6 +35,14 @@ export const storytellingBlogPost = {
       <h3>Key Takeaways</h3>
       <p>Storytelling builds trust with the 95% of your audience not ready to buy. When they are, your brand is top of mind. You don’t need a massive budget—just authentic stories and a strategic content system.</p>
       <p>Ready to boost your B2B marketing? Start sharing your story today.</p>
+
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      <ul>
+        <li><strong>Q: How often should Toronto businesses post on LinkedIn?</strong><br/>A: Consistency is key. Aim for 2-3 times per week with high-value content.</li>
+        <li><strong>Q: What type of LinkedIn content works best for Toronto B2B companies?</strong><br/>A: Educational posts, local case studies, and video series tailored to Toronto’s market perform well.</li>
+        <li><strong>Q: How can I target Toronto leads specifically?</strong><br/>A: Use location-based hashtags, mention Toronto in your posts, and engage with local LinkedIn groups.</li>
+        <li><strong>Q: Should I use paid LinkedIn ads for Toronto lead generation?</strong><br/>A: Organic content is effective, but combining it with targeted LinkedIn ads can accelerate results in Toronto.</li>
+      </ul>
     </div>
   `,
   author: "The Sauce Team",
@@ -44,5 +52,5 @@ export const storytellingBlogPost = {
   image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=900&q=80",
   slug: "storytelling-in-b2b-marketing",
   featured: false,
-  readTime: "5 min read"
+  readTime: "5 min read",
 };
